@@ -18,6 +18,78 @@
   --color-text-dark: #09090A;
 }
 
+/* Keyframe Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes glow {
+  0%, 100% {
+    opacity: 0.1;
+  }
+  50% {
+    opacity: 0.2;
+  }
+}
+
 /* Global Styles */
 * {
   margin: 0;
@@ -101,15 +173,23 @@ body {
   text-decoration: none;
   border-radius: 8px;
   transition: all 0.3s ease;
+  animation: fadeInDown 0.6s ease-out backwards;
 }
+
+.nav-link:nth-child(1) { animation-delay: 0.1s; }
+.nav-link:nth-child(2) { animation-delay: 0.2s; }
+.nav-link:nth-child(3) { animation-delay: 0.3s; }
+.nav-link:nth-child(4) { animation-delay: 0.4s; }
 
 .nav-link:hover {
   background: rgba(255, 255, 255, 0.08);
   color: var(--color-white);
+  transform: translateY(-2px);
 }
 
 .logo {
   flex-shrink: 0;
+  animation: fadeIn 0.8s ease-out;
 }
 
 .nav-right {
@@ -198,6 +278,7 @@ body {
   left: 100px;
   top: 0;
   background: linear-gradient(135deg, #BDFFDF 0%, transparent 100%);
+  animation: glow 8s ease-in-out infinite;
 }
 
 .gradient-pink {
@@ -206,6 +287,7 @@ body {
   right: 0;
   top: 0;
   background: linear-gradient(135deg, #FFBDE8 0%, transparent 100%);
+  animation: glow 8s ease-in-out infinite 2s;
 }
 
 .ellipse-blur {
@@ -217,6 +299,7 @@ body {
   background: #9CEDFF;
   border-radius: 50%;
   opacity: 0.2;
+  animation: glow 8s ease-in-out infinite 4s;
 }
 
 .noise-texture {
@@ -258,7 +341,8 @@ body {
   padding: 4px 13px;
   border-radius: 40px;
   background: rgba(255, 255, 255, 0.04);
-  margin-bottom: 25px; /* Adjusted to halfway between 20px and 30px */
+  margin-bottom: 25px;
+  animation: fadeInDown 0.8s ease-out 0.2s backwards;
 }
 
 .beta-text {
@@ -270,6 +354,7 @@ body {
 .hero-title {
   text-align: center;
   margin-bottom: 44px;
+  animation: fadeInUp 1s ease-out 0.4s backwards;
 }
 
 .title-line {
@@ -277,7 +362,7 @@ body {
   font-family: Inter, -apple-system, Roboto, Helvetica, sans-serif;
   font-size: 64px;
   font-weight: 500;
-  line-height: 62.72px;
+  line-height: 70px;
   letter-spacing: -3.686px;
   background: linear-gradient(180deg, #FFF 0%, #BABABA 100%);
   -webkit-background-clip: text;
@@ -289,6 +374,7 @@ body {
   text-align: center;
   margin-bottom: 40px;
   opacity: 0.5;
+  animation: fadeInUp 1s ease-out 0.6s backwards;
 }
 
 .hero-description span {
@@ -315,22 +401,24 @@ body {
   text-decoration: none;
   transition: all 0.3s ease;
   cursor: pointer;
+  animation: fadeInUp 1s ease-out 0.8s backwards;
 }
 
 .btn-get-started:hover {
-  transform: translateY(-2px);
+  transform: translateY(-2px) scale(1.05);
   box-shadow: 0 8px 24px 0 rgba(255, 255, 255, 0.24);
 }
 
 .hero-image {
   width: 100%;
   max-width: 1440px;
-  margin: 110px auto 0; /* Adjusted to halfway between 100px and 120px */
+  margin: 110px auto 0;
   display: flex;
   justify-content: center;
   position: relative;
   z-index: 5;
   padding: 0 80px;
+  animation: scaleIn 1.2s ease-out 1s backwards;
 }
 
 .hero-image img {
@@ -341,6 +429,11 @@ body {
   border: 1px solid rgba(255, 255, 255, 0.08);
   box-shadow: 0 32px 80px rgba(0, 0, 0, 0.6),
               0 0 0 1px rgba(255, 255, 255, 0.06);
+  transition: transform 0.3s ease;
+}
+
+.hero-image img:hover {
+  transform: scale(1.02);
 }
 
 /* Logo Cloud Section */

@@ -67,12 +67,12 @@ const LandingPage = () => {
             </svg>
           </div>
           <h1 className="hero-title">
-            <span className="title-line">AI for teams building</span>
-            <span className="title-line">what's next.</span>
+            <span className="title-line">The platform for teams</span>
+            <span className="title-line">building dreams together.</span>
           </h1>
           <p className="hero-description">
-            <span>Scout gives you the tools to build custom agents and</span>
-            <span>workflows in record time.</span>
+            <span>Devmates helps creators and developers</span>
+            <span>connect, collaborate, and grow together.</span>
           </p>
           <a href="#signup" className="btn-get-started">
             <span>Get Started</span>
