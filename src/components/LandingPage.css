@@ -44,25 +44,41 @@ body {
 .header {
   width: 100%;
   height: 73px;
-  border-bottom: 1px solid var(--color-white-06);
+  border-bottom: none;
   position: fixed;
   top: 0;
   left: 0;
-  background: rgba(27, 27, 29, 0.95);
-  backdrop-filter: blur(10px);
+  background: transparent;
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
   z-index: 1000;
+  transition: background 0.3s ease-in-out, backdrop-filter 0.3s ease-in-out, border-bottom 0.3s ease-in-out, top 0.3s ease-in-out, left 0.3s ease-in-out, transform 0.3s ease-in-out, width 0.3s ease-in-out, padding 0.3s ease-in-out, border-radius 0.3s ease-in-out;
+}
+
+.header.scrolled {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  background: rgba(7, 7, 8, 0.4);
+  backdrop-filter: blur(24px) saturate(180%);
+  -webkit-backdrop-filter: blur(24px) saturate(180%);
+  border-radius: 40px;
+  width: fit-content;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 0 20px;
+  top: 20px;
 }
 
 .nav-container {
   max-width: 1425px;
   margin: 0 auto;
   height: 100%;
-  padding: 0 237.5px;
+  padding: 0 237.5px; /* Original padding */
+  padding-top: 20px; /* Added to push content down inside nav-container */
 }
 
 .nav-content {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   height: 100%;
 }
@@ -149,7 +165,7 @@ body {
 .hero-section {
   width: 100%;
   min-height: calc(100vh + 200px);
-  padding-top: 73px;
+  padding-top: 35px; /* Adjusted to halfway between 20px and 50px */
   padding-bottom: 120px;
   position: relative;
   display: flex;
@@ -227,7 +243,7 @@ body {
 .hero-content {
   width: 100%;
   max-width: 800px;
-  padding-top: 120px;
+  padding-top: 70px; /* Adjusted to halfway between 60px and 80px */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -242,7 +258,7 @@ body {
   padding: 4px 13px;
   border-radius: 40px;
   background: rgba(255, 255, 255, 0.04);
-  margin-bottom: 59px;
+  margin-bottom: 25px; /* Adjusted to halfway between 20px and 30px */
 }
 
 .beta-text {
@@ -309,7 +325,7 @@ body {
 .hero-image {
   width: 100%;
   max-width: 1440px;
-  margin: 100px auto 0;
+  margin: 110px auto 0; /* Adjusted to halfway between 100px and 120px */
   display: flex;
   justify-content: center;
   position: relative;

@@ -1,11 +1,31 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import './LandingPage.css';
 
 const LandingPage = () => {
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const offset = window.scrollY;
+      if (offset > 50) {
+        setScrolled(true);
+      } else {
+        setScrolled(false);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
+  const headerClass = `header ${scrolled ? 'scrolled' : ''}`;
+
   return (
     <div className="landing-page">
       {/* Header */}
-      <header className="header">
+      <header className={headerClass}>
         <nav className="nav-container">
           <div className="nav-content">
             <div className="nav-left">
