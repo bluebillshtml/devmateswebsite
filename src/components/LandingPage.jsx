@@ -54,6 +54,11 @@ const LandingPage = () => {
           <div className="noise-texture"></div>
           <div className="stars-bg"></div>
           <div className="ellipse-blur"></div>
+
+          {/* Subtle Color Orbs */}
+          <div className="color-orb orb-1"></div>
+          <div className="color-orb orb-2"></div>
+          <div className="color-orb orb-3"></div>
         </div>
         <div className="hero-content">
           <div className="beta-badge">
@@ -61,18 +66,18 @@ const LandingPage = () => {
               <path d="M25.1125 4.09994L23.6308 4.36239C23.5688 4.17284 23.4703 3.99241 23.3355 3.82109C23.2043 3.64977 23.0257 3.50943 22.7997 3.40008C22.5736 3.29072 22.2912 3.23605 21.9522 3.23605C21.4893 3.23605 21.1029 3.33993 20.7931 3.5477C20.4832 3.75183 20.3283 4.0161 20.3283 4.34052C20.3283 4.62119 20.4322 4.84718 20.64 5.0185C20.8477 5.18982 21.183 5.33016 21.646 5.43951L22.9801 5.74572C23.7528 5.92432 24.3288 6.19949 24.7079 6.57132C25.087 6.9431 25.2765 7.42607 25.2765 8.02023C25.2765 8.52326 25.1307 8.97159 24.8391 9.36525C24.5511 9.75529 24.1484 10.0615 23.6308 10.2838C23.1168 10.5062 22.5208 10.6174 21.8428 10.6174C20.9024 10.6174 20.1351 10.4169 19.541 10.0159C18.9468 9.61133 18.5823 9.03725 18.4474 8.29363L20.0275 8.05305C20.126 8.46492 20.3283 8.7766 20.6345 8.98803C20.9406 9.19578 21.3398 9.29965 21.8319 9.29965C22.3677 9.29965 22.796 9.18852 23.1168 8.96615C23.4376 8.74014 23.5979 8.46492 23.5979 8.14054C23.5979 7.87808 23.4995 7.65757 23.3027 7.47897C23.1095 7.30031 22.8124 7.16548 22.4114 7.07436L20.9899 6.76268C20.2062 6.58408 19.6266 6.29973 19.2512 5.90975C18.8794 5.51971 18.6935 5.02579 18.6935 4.428C18.6935 3.93226 18.832 3.4985 19.109 3.1267C19.386 2.75489 19.7688 2.46511 20.2572 2.25734C20.7456 2.04592 21.3052 1.94022 21.9358 1.94022C22.8434 1.94022 23.5578 2.13705 24.0791 2.53072C24.6003 2.92075 24.9448 3.44382 25.1125 4.09994ZM30.3036 10.6174C29.4908 10.6174 28.7909 10.4333 28.2041 10.0652C27.6208 9.69332 27.1725 9.18121 26.859 8.52871C26.5455 7.87627 26.3888 7.12902 26.3888 6.28698C26.3888 5.43404 26.5492 4.68133 26.8699 4.02886C27.1907 3.37274 27.6427 2.86061 28.2259 2.49245C28.8091 2.12429 29.4963 1.94022 30.2872 1.94022C30.9251 1.94022 31.4937 2.05868 31.9931 2.29562C32.4925 2.5289 32.8953 2.85696 33.2015 3.27979C33.5113 3.70262 33.6954 4.19653 33.7537 4.76152H32.1626C32.0751 4.36785 31.8746 4.02886 31.5612 3.74454C31.2513 3.46022 30.8358 3.31806 30.3145 3.31806C29.8589 3.31806 29.4598 3.43835 29.1172 3.67893C28.7782 3.91586 28.5139 4.25485 28.3243 4.69591C28.1348 5.13332 28.04 5.65092 28.04 6.2487C28.04 6.86111 28.133 7.38961 28.3189 7.83436C28.5047 8.27906 28.7672 8.62351 29.1062 8.86772C29.4489 9.11192 29.8516 9.23405 30.3145 9.23405C30.6244 9.23405 30.9051 9.17758 31.1566 9.06458C31.4117 8.94794 31.625 8.78204 31.7963 8.56698C31.9713 8.35192 32.0934 8.09314 32.1626 7.79059H33.7537C33.6954 8.33372 33.5186 8.8185 33.2233 9.24499C32.9281 9.67149 32.5326 10.0068 32.0369 10.251C31.5448 10.4953 30.967 10.6174 30.3036 10.6174ZM38.7316 10.6174C37.9443 10.6174 37.2572 10.4369 36.6703 10.0761C36.0834 9.7152 35.6278 9.21035 35.3034 8.56154C34.979 7.91272 34.8168 7.15454 34.8168 6.28698C34.8168 5.41582 34.979 4.65399 35.3034 4.00152C35.6278 3.34904 36.0834 2.84238 36.6703 2.48151C37.2572 2.12065 37.9443 1.94022 38.7316 1.94022C39.519 1.94022 40.2061 2.12065 40.7929 2.48151C41.3798 2.84238 41.8354 3.34904 42.1598 4.00152C42.4842 4.65399 42.6465 5.41582 42.6465 6.28698C42.6465 7.15454 42.4842 7.91272 42.1598 8.56154C41.8354 9.21035 41.3798 9.7152 40.7929 10.0761C40.2061 10.4369 39.519 10.6174 38.7316 10.6174ZM38.7371 9.24499C39.2474 9.24499 39.6702 9.11011 40.0056 8.84039C40.3409 8.57067 40.5888 8.21159 40.7492 7.76326C40.9132 7.31494 40.9952 6.82103 40.9952 6.28153C40.9952 5.74572 40.9132 5.25361 40.7492 4.80527C40.5888 4.35327 40.3409 3.99058 40.0056 3.7172C39.6702 3.44382 39.2474 3.30713 38.7371 3.30713C38.2231 3.30713 37.7967 3.44382 37.4577 3.7172C37.1223 3.99058 36.8726 4.35327 36.7086 4.80527C36.5482 5.25361 36.468 5.74572 36.468 6.28153C36.468 6.82103 36.5482 7.31494 36.7086 7.76326C36.8726 8.21159 37.1223 8.57067 37.4577 8.84039C37.7967 9.11011 38.2231 9.24499 38.7371 9.24499ZM49.4833 6.96499V2.04957H51.1237V10.4479H49.5162V8.99347H49.4287C49.2355 9.44185 48.9257 9.81545 48.4992 10.1144C48.0763 10.4096 47.5497 10.5572 46.9191 10.5572C46.3796 10.5572 45.902 10.4387 45.4865 10.2019C45.0746 9.96128 44.7502 9.60589 44.5133 9.13562C44.28 8.66541 44.1633 8.08401 44.1633 7.39148V2.04957H45.7982V7.19462C45.7982 7.76689 45.9567 8.22253 46.2739 8.56154C46.591 8.90054 47.0029 9.07002 47.5095 9.07002C47.8158 9.07002 48.1201 8.99347 48.4227 8.84039C48.7288 8.6873 48.9822 8.45585 49.1827 8.14599C49.3868 7.83618 49.487 7.44251 49.4833 6.96499ZM56.9326 2.04957V3.36181H52.3453V2.04957H56.9326ZM53.5755 0.0374756H55.2103V7.98195C55.2103 8.29908 55.2577 8.53784 55.3525 8.69824C55.4473 8.85496 55.5694 8.96252 55.7188 9.0208C55.8719 9.07552 56.0378 9.10285 56.2164 9.10285C56.3476 9.10285 56.4624 9.09372 56.5609 9.07552C56.6593 9.05726 56.7358 9.04269 56.7905 9.03175L57.0857 10.3823C56.991 10.4187 56.8561 10.4552 56.6811 10.4916C56.5061 10.5317 56.2875 10.5536 56.025 10.5572C55.5949 10.5645 55.1939 10.488 54.8221 10.3276C54.4503 10.1672 54.1496 9.91932 53.92 9.584C53.6903 9.24862 53.5755 8.82763 53.5755 8.32096V0.0374756Z" fill="white"/>
               <path fillRule="evenodd" clipRule="evenodd" d="M9.16971 11.2213C8.71417 11.2193 8.34652 10.8483 8.34854 10.3928L8.363 7.12865L5.4569 8.80647C5.06239 9.03429 4.55793 8.89907 4.33016 8.50458C4.10238 8.11009 4.23755 7.60562 4.63207 7.37786L7.42892 5.76305L4.60457 4.13244C4.21006 3.90466 4.07489 3.40021 4.30266 3.00569C4.53043 2.61118 5.03489 2.47601 5.42941 2.70378L8.37507 4.40446L8.38996 1.04478C8.39198 0.589245 8.7629 0.221592 9.21844 0.223611C9.67401 0.225629 10.0416 0.596553 10.0396 1.05209L10.0254 4.26401L12.7278 2.70378C13.1223 2.47601 13.6267 2.61118 13.8545 3.00569C14.0823 3.40021 13.9471 3.90466 13.5526 4.13244L10.7283 5.76305L13.5251 7.37786C13.9196 7.60562 14.0548 8.11009 13.827 8.50458C13.5992 8.89907 13.0948 9.03429 12.7003 8.80647L10.0121 7.25452L9.99816 10.4001C9.99619 10.8556 9.62525 11.2233 9.16971 11.2213Z" fill="white"/>
             </svg>
-            <span className="beta-text">is currently in beta</span>
+            <span className="beta-text">is currently in development</span>
             <svg width="21" height="20" viewBox="0 0 21 20" fill="none">
               <path d="M8.69995 13.5999L12.3 9.9999L8.69995 6.3999" stroke="white" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
             </svg>
           </div>
           <h1 className="hero-title">
-            <span className="title-line">The platform for teams</span>
-            <span className="title-line">building dreams together.</span>
+            <span className="title-line">Find your perfect team,</span>
+            <span className="title-line">not freelancers.</span>
           </h1>
           <p className="hero-description">
-            <span>Devmates helps creators and developers</span>
-            <span>connect, collaborate, and grow together.</span>
+            <span>DevMates connects builders who share goals, skills, and vision</span>
+            <span>to form genuine startup teams — not just hire contractors.</span>
           </p>
           <a href="#signup" className="btn-get-started">
             <span>Get Started</span>
@@ -81,8 +86,134 @@ const LandingPage = () => {
             </svg>
           </a>
         </div>
-        <div className="hero-image">
-          <img src="https://api.builder.io/api/v1/image/assets/TEMP/f0265d9a0f468ddffa2364a10cdd712c6e7ea0a6?width=1900" alt="Scout Platform" />
+        <div className="hero-phones">
+          {/* Phone Mockup 1 - Profile Screen */}
+          <div className="phone-mockup phone-1">
+            <div className="phone-frame">
+              <div className="phone-notch"></div>
+              <div className="phone-screen">
+                <div className="screen-header">
+                  <div className="header-avatar">DM</div>
+                  <div className="header-title">Profile</div>
+                  <div className="header-action">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                      <circle cx="10" cy="5" r="1.5" fill="#fff"/>
+                      <circle cx="10" cy="10" r="1.5" fill="#fff"/>
+                      <circle cx="10" cy="15" r="1.5" fill="#fff"/>
+                    </svg>
+                  </div>
+                </div>
+                <div className="screen-content">
+                  <div className="profile-image"></div>
+                  <div className="profile-name">Sarah Chen</div>
+                  <div className="profile-title">Full-Stack Developer</div>
+                  <div className="profile-tags">
+                    <span className="tag">React</span>
+                    <span className="tag">Node.js</span>
+                    <span className="tag">TypeScript</span>
+                  </div>
+                  <div className="profile-bio">
+                    <div className="bio-text">Building the future, one startup at a time. Looking for co-founders to create something amazing.</div>
+                  </div>
+                  <div className="profile-stats">
+                    <div className="stat">
+                      <div className="stat-value">12</div>
+                      <div className="stat-label">Projects</div>
+                    </div>
+                    <div className="stat">
+                      <div className="stat-value">4.8</div>
+                      <div className="stat-label">Rating</div>
+                    </div>
+                    <div className="stat">
+                      <div className="stat-value">156</div>
+                      <div className="stat-label">Matches</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Phone Mockup 2 - Swipe Screen */}
+          <div className="phone-mockup phone-2">
+            <div className="phone-frame">
+              <div className="phone-notch"></div>
+              <div className="phone-screen">
+                <div className="screen-header">
+                  <div className="header-logo">DevMates</div>
+                  <div className="header-filter">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                      <path d="M3 6h14M6 10h8M8 14h4" stroke="#fff" strokeWidth="2" strokeLinecap="round"/>
+                    </svg>
+                  </div>
+                </div>
+                <div className="swipe-card">
+                  <div className="card-image"></div>
+                  <div className="card-content">
+                    <div className="card-name">Alex Rodriguez</div>
+                    <div className="card-role">UI/UX Designer • 3 years</div>
+                    <div className="card-tags">
+                      <span className="tag">Figma</span>
+                      <span className="tag">Product Design</span>
+                    </div>
+                    <div className="card-bio">Passionate about creating delightful user experiences for early-stage startups.</div>
+                  </div>
+                  <div className="card-actions">
+                    <button className="action-btn reject">
+                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <path d="M6 18L18 6M6 6l12 12" stroke="#ff4458" strokeWidth="2.5" strokeLinecap="round"/>
+                      </svg>
+                    </button>
+                    <button className="action-btn like">
+                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" fill="#00d25b" stroke="#00d25b" strokeWidth="1.5"/>
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Phone Mockup 3 - Chat Screen */}
+          <div className="phone-mockup phone-3">
+            <div className="phone-frame">
+              <div className="phone-notch"></div>
+              <div className="phone-screen">
+                <div className="screen-header">
+                  <div className="back-btn">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                      <path d="M12 16L6 10l6-6" stroke="#fff" strokeWidth="2" strokeLinecap="round"/>
+                    </svg>
+                  </div>
+                  <div className="chat-avatar"></div>
+                  <div className="chat-name">Jamie Lee</div>
+                </div>
+                <div className="chat-messages">
+                  <div className="message received">
+                    <div className="message-bubble">Hey! Love your portfolio. Want to collaborate on a project?</div>
+                    <div className="message-time">2:45 PM</div>
+                  </div>
+                  <div className="message sent">
+                    <div className="message-bubble">Absolutely! I've been looking for a designer to team up with.</div>
+                    <div className="message-time">2:47 PM</div>
+                  </div>
+                  <div className="message received">
+                    <div className="message-bubble">Perfect! Let's schedule a call this week?</div>
+                    <div className="message-time">2:48 PM</div>
+                  </div>
+                </div>
+                <div className="chat-input">
+                  <input type="text" placeholder="Type a message..." />
+                  <button className="send-btn">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                      <path d="M18 2L9 11M18 2l-6 16-3-7-7-3 16-6z" fill="#fff"/>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
