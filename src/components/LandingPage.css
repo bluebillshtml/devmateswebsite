@@ -2879,8 +2879,8 @@ body {
 .pricing-orb {
   position: absolute;
   border-radius: 50%;
-  filter: blur(60px);
-  opacity: 0.08;
+  filter: blur(70px);
+  opacity: 0.02;
   animation: float 8s ease-in-out infinite;
 }
 
