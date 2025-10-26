@@ -2879,35 +2879,36 @@ body {
 .pricing-orb {
   position: absolute;
   border-radius: 50%;
-  filter: blur(40px);
-  opacity: 0.15;
-  animation: float 6s ease-in-out infinite;
+  filter: blur(60px);
+  opacity: 0.08;
+  animation: float 8s ease-in-out infinite;
 }
 
 .pricing-orb-green {
-  width: 600px;
-  height: 600px;
+  width: 400px;
+  height: 400px;
   background: linear-gradient(135deg, #10834B, #09F785);
-  top: 5%;
-  left: 0%;
+  top: 20%;
+  left: 15%;
   animation-delay: 0s;
 }
 
 .pricing-orb-purple {
-  width: 550px;
-  height: 550px;
+  width: 350px;
+  height: 350px;
   background: linear-gradient(135deg, #C495FF, #BF68CF);
-  top: 40%;
-  right: 0%;
+  top: 30%;
+  right: 20%;
   animation-delay: 2s;
 }
 
 .pricing-orb-blue {
-  width: 580px;
-  height: 580px;
+  width: 380px;
+  height: 380px;
   background: linear-gradient(135deg, #5E6AD2, #5790FF);
-  bottom: 5%;
-  left: 30%;
+  bottom: 25%;
+  left: 50%;
+  transform: translateX(-50%);
   animation-delay: 4s;
 }
 
