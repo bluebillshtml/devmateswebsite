@@ -957,49 +957,49 @@ const LandingPage = () => {
               </svg>
               <span>Pro</span>
             </div>
-            <div className="plan-price">$50</div>
+            <div className="plan-price">$15</div>
             <p className="plan-description">
-              <span>Perfect for building and</span>
-              <span>scaling models with</span>
-              <span>limited context.</span>
+              <span>Unlimited matches and</span>
+              <span>premium features to</span>
+              <span>find your ideal co-founder.</span>
             </p>
-            <a href="#signup" className="btn-plan btn-plan-primary">Sign Up</a>
+            <a href="#signup" className="btn-plan btn-plan-primary">Get Pro</a>
             <ul className="plan-features">
               <li>
                 <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
                   <path d="M17.5 11.6837L12.25 17.7948L9.91666 15.5725M24.5 14.4614C24.5 19.9842 19.7989 24.4614 14 24.4614C8.201 24.4614 3.5 19.9842 3.5 14.4614C3.5 8.93859 8.201 4.46143 14 4.46143C19.7989 4.46143 24.5 8.93859 24.5 14.4614Z" stroke="#434343" strokeWidth="1.5"/>
                 </svg>
-                <span>Unlimited Interactions</span>
+                <span>Unlimited Matches</span>
               </li>
               <li>
                 <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
                   <path d="M17.5 11.6837L12.25 17.7948L9.91666 15.5725M24.5 14.4614C24.5 19.9842 19.7989 24.4614 14 24.4614C8.201 24.4614 3.5 19.9842 3.5 14.4614C3.5 8.93859 8.201 4.46143 14 4.46143C19.7989 4.46143 24.5 8.93859 24.5 14.4614Z" stroke="#434343" strokeWidth="1.5"/>
                 </svg>
-                <span>$0.09 per Interaction</span>
+                <span>Unlimited Messages</span>
               </li>
               <li>
                 <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
                   <path d="M17.5 11.6837L12.25 17.7948L9.91666 15.5725M24.5 14.4614C24.5 19.9842 19.7989 24.4614 14 24.4614C8.201 24.4614 3.5 19.9842 3.5 14.4614C3.5 8.93859 8.201 4.46143 14 4.46143C19.7989 4.46143 24.5 8.93859 24.5 14.4614Z" stroke="#434343" strokeWidth="1.5"/>
                 </svg>
-                <span>Deploy 10 Apps</span>
+                <span>See Who Liked You</span>
               </li>
               <li>
                 <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
                   <path d="M17.5 11.6837L12.25 17.7948L9.91666 15.5725M24.5 14.4614C24.5 19.9842 19.7989 24.4614 14 24.4614C8.201 24.4614 3.5 19.9842 3.5 14.4614C3.5 8.93859 8.201 4.46143 14 4.46143C19.7989 4.46143 24.5 8.93859 24.5 14.4614Z" stroke="#434343" strokeWidth="1.5"/>
                 </svg>
-                <span>Connect 10 Collections</span>
+                <span>Boost Your Profile</span>
               </li>
               <li>
                 <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
                   <path d="M17.5 11.6837L12.25 17.7948L9.91666 15.5725M24.5 14.4614C24.5 19.9842 19.7989 24.4614 14 24.4614C8.201 24.4614 3.5 19.9842 3.5 14.4614C3.5 8.93859 8.201 4.46143 14 4.46143C19.7989 4.46143 24.5 8.93859 24.5 14.4614Z" stroke="#434343" strokeWidth="1.5"/>
                 </svg>
-                <span>1TB of Storage</span>
+                <span>Advanced Skill Verification</span>
               </li>
               <li>
                 <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
                   <path d="M17.5 11.6837L12.25 17.7948L9.91666 15.5725M24.5 14.4614C24.5 19.9842 19.7989 24.4614 14 24.4614C8.201 24.4614 3.5 19.9842 3.5 14.4614C3.5 8.93859 8.201 4.46143 14 4.46143C19.7989 4.46143 24.5 8.93859 24.5 14.4614Z" stroke="#434343" strokeWidth="1.5"/>
                 </svg>
-                <span>Community & Email Support</span>
+                <span>Priority Support</span>
               </li>
             </ul>
           </div>
