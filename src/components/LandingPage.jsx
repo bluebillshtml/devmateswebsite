@@ -1131,8 +1131,8 @@ const LandingPage = () => {
               <span>Add On</span>
             </div>
             <div className="addon-price">
-              <div className="price">$750</div>
-              <div className="price-period">monthly</div>
+              <div className="price">$250</div>
+              <div className="price-period">one-time</div>
             </div>
             <a href="#contact" className="btn-addon">Request Access</a>
             <p className="addon-note">No long term contract obligation.</p>
