@@ -212,57 +212,165 @@ const LandingPage = () => {
 
       {/* Logo Cloud Section */}
       <section className="logo-cloud-section">
-        <div className="logo-cloud-title">
-          <h2>Used by teams at Statsig, Deno,</h2>
-          <h2>Dagster, Evidence and more.</h2>
+        {/* Top marquee - scrolling left */}
+        <div className="logo-marquee-wrapper">
+          <div className="logo-marquee logo-marquee-left">
+            <div className="logo-scroll-item logo-large" style={{transform: 'rotate(-5deg)'}}>
+              <img src="/logo1.png" alt="Logo 1" className="logo-image" />
+            </div>
+            <div className="logo-scroll-item logo-small" style={{transform: 'rotate(3deg)'}}>
+              <img src="/logo2.png" alt="Logo 2" className="logo-image" />
+            </div>
+            <div className="logo-scroll-item logo-medium" style={{transform: 'rotate(-2deg)'}}>
+              <img src="/logo3.png" alt="Logo 3" className="logo-image" />
+            </div>
+            <div className="logo-scroll-item logo-large" style={{transform: 'rotate(4deg)'}}>
+              <img src="/logo4.png" alt="Logo 4" className="logo-image" />
+            </div>
+            <div className="logo-scroll-item logo-small" style={{transform: 'rotate(-3deg)'}}>
+              <img src="/logo5.png" alt="Logo 5" className="logo-image" />
+            </div>
+            <div className="logo-scroll-item logo-medium" style={{transform: 'rotate(2deg)'}}>
+              <img src="/logo6.png" alt="Logo 6" className="logo-image" />
+            </div>
+            <div className="logo-scroll-item logo-large" style={{transform: 'rotate(-4deg)'}}>
+              <img src="/logo7.png" alt="Logo 7" className="logo-image" />
+            </div>
+            <div className="logo-scroll-item logo-small" style={{transform: 'rotate(5deg)'}}>
+              <img src="/logo8.png" alt="Logo 8" className="logo-image" />
+            </div>
+            <div className="logo-scroll-item logo-large" style={{transform: 'rotate(-5deg)'}}>
+              <img src="/logo1.png" alt="Logo 1" className="logo-image" />
+            </div>
+            <div className="logo-scroll-item logo-small" style={{transform: 'rotate(3deg)'}}>
+              <img src="/logo2.png" alt="Logo 2" className="logo-image" />
+            </div>
+            <div className="logo-scroll-item logo-medium" style={{transform: 'rotate(-2deg)'}}>
+              <img src="/logo3.png" alt="Logo 3" className="logo-image" />
+            </div>
+            <div className="logo-scroll-item logo-large" style={{transform: 'rotate(4deg)'}}>
+              <img src="/logo4.png" alt="Logo 4" className="logo-image" />
+            </div>
+            <div className="logo-scroll-item logo-small" style={{transform: 'rotate(-3deg)'}}>
+              <img src="/logo5.png" alt="Logo 5" className="logo-image" />
+            </div>
+            <div className="logo-scroll-item logo-medium" style={{transform: 'rotate(2deg)'}}>
+              <img src="/logo6.png" alt="Logo 6" className="logo-image" />
+            </div>
+            <div className="logo-scroll-item logo-large" style={{transform: 'rotate(-4deg)'}}>
+              <img src="/logo7.png" alt="Logo 7" className="logo-image" />
+            </div>
+            <div className="logo-scroll-item logo-small" style={{transform: 'rotate(5deg)'}}>
+              <img src="/logo8.png" alt="Logo 8" className="logo-image" />
+            </div>
+            <div className="logo-scroll-item logo-large" style={{transform: 'rotate(-5deg)'}}>
+              <img src="/logo1.png" alt="Logo 1" className="logo-image" />
+            </div>
+            <div className="logo-scroll-item logo-small" style={{transform: 'rotate(3deg)'}}>
+              <img src="/logo2.png" alt="Logo 2" className="logo-image" />
+            </div>
+            <div className="logo-scroll-item logo-medium" style={{transform: 'rotate(-2deg)'}}>
+              <img src="/logo3.png" alt="Logo 3" className="logo-image" />
+            </div>
+            <div className="logo-scroll-item logo-large" style={{transform: 'rotate(4deg)'}}>
+              <img src="/logo4.png" alt="Logo 4" className="logo-image" />
+            </div>
+            <div className="logo-scroll-item logo-small" style={{transform: 'rotate(-3deg)'}}>
+              <img src="/logo5.png" alt="Logo 5" className="logo-image" />
+            </div>
+            <div className="logo-scroll-item logo-medium" style={{transform: 'rotate(2deg)'}}>
+              <img src="/logo6.png" alt="Logo 6" className="logo-image" />
+            </div>
+            <div className="logo-scroll-item logo-large" style={{transform: 'rotate(-4deg)'}}>
+              <img src="/logo7.png" alt="Logo 7" className="logo-image" />
+            </div>
+            <div className="logo-scroll-item logo-small" style={{transform: 'rotate(5deg)'}}>
+              <img src="/logo8.png" alt="Logo 8" className="logo-image" />
+            </div>
+          </div>
         </div>
-        <div className="logo-cloud-grid">
-          <div className="logo-item">
-            <div className="company-logo">
-              <div className="logo-icon">M</div>
-              <span className="company-name">STATSIG</span>
+
+        {/* Center text */}
+        <div className="logo-cloud-title">
+          <h2>Used by developers, designers,</h2>
+          <h2>and startup founders building</h2>
+          <h2>the next big thing.</h2>
+        </div>
+
+        {/* Bottom marquee - scrolling right */}
+        <div className="logo-marquee-wrapper">
+          <div className="logo-marquee logo-marquee-right">
+            <div className="logo-scroll-item logo-small" style={{transform: 'rotate(2deg)'}}>
+              <img src="/logo5.png" alt="Logo 5" className="logo-image" />
             </div>
-          </div>
-          <div className="logo-item">
-            <div className="company-logo">
-              <div className="logo-icon">D</div>
-              <span className="company-name">Deno</span>
+            <div className="logo-scroll-item logo-large" style={{transform: 'rotate(-3deg)'}}>
+              <img src="/logo6.png" alt="Logo 6" className="logo-image" />
             </div>
-          </div>
-          <div className="logo-item">
-            <div className="company-logo">
-              <div className="logo-icon">M</div>
-              <span className="company-name">Modal</span>
+            <div className="logo-scroll-item logo-medium" style={{transform: 'rotate(4deg)'}}>
+              <img src="/logo7.png" alt="Logo 7" className="logo-image" />
             </div>
-          </div>
-          <div className="logo-item">
-            <div className="company-logo">
-              <div className="logo-icon">⚡</div>
-              <span className="company-name">hyper</span>
+            <div className="logo-scroll-item logo-small" style={{transform: 'rotate(-5deg)'}}>
+              <img src="/logo8.png" alt="Logo 8" className="logo-image" />
             </div>
-          </div>
-          <div className="logo-item">
-            <div className="company-logo">
-              <div className="logo-icon">E</div>
-              <span className="company-name">evidence</span>
+            <div className="logo-scroll-item logo-large" style={{transform: 'rotate(3deg)'}}>
+              <img src="/logo1.png" alt="Logo 1" className="logo-image" />
             </div>
-          </div>
-          <div className="logo-item">
-            <div className="company-logo">
-              <div className="logo-icon">D</div>
-              <span className="company-name">dagster</span>
+            <div className="logo-scroll-item logo-medium" style={{transform: 'rotate(-2deg)'}}>
+              <img src="/logo2.png" alt="Logo 2" className="logo-image" />
             </div>
-          </div>
-          <div className="logo-item">
-            <div className="company-logo">
-              <div className="logo-icon">💼</div>
-              <span className="company-name">case status</span>
+            <div className="logo-scroll-item logo-small" style={{transform: 'rotate(4deg)'}}>
+              <img src="/logo3.png" alt="Logo 3" className="logo-image" />
             </div>
-          </div>
-          <div className="logo-item">
-            <div className="company-logo">
-              <div className="logo-icon">D</div>
-              <span className="company-name">DIG SOUTH</span>
+            <div className="logo-scroll-item logo-large" style={{transform: 'rotate(-4deg)'}}>
+              <img src="/logo4.png" alt="Logo 4" className="logo-image" />
+            </div>
+            <div className="logo-scroll-item logo-small" style={{transform: 'rotate(2deg)'}}>
+              <img src="/logo5.png" alt="Logo 5" className="logo-image" />
+            </div>
+            <div className="logo-scroll-item logo-large" style={{transform: 'rotate(-3deg)'}}>
+              <img src="/logo6.png" alt="Logo 6" className="logo-image" />
+            </div>
+            <div className="logo-scroll-item logo-medium" style={{transform: 'rotate(4deg)'}}>
+              <img src="/logo7.png" alt="Logo 7" className="logo-image" />
+            </div>
+            <div className="logo-scroll-item logo-small" style={{transform: 'rotate(-5deg)'}}>
+              <img src="/logo8.png" alt="Logo 8" className="logo-image" />
+            </div>
+            <div className="logo-scroll-item logo-large" style={{transform: 'rotate(3deg)'}}>
+              <img src="/logo1.png" alt="Logo 1" className="logo-image" />
+            </div>
+            <div className="logo-scroll-item logo-medium" style={{transform: 'rotate(-2deg)'}}>
+              <img src="/logo2.png" alt="Logo 2" className="logo-image" />
+            </div>
+            <div className="logo-scroll-item logo-small" style={{transform: 'rotate(4deg)'}}>
+              <img src="/logo3.png" alt="Logo 3" className="logo-image" />
+            </div>
+            <div className="logo-scroll-item logo-large" style={{transform: 'rotate(-4deg)'}}>
+              <img src="/logo4.png" alt="Logo 4" className="logo-image" />
+            </div>
+            <div className="logo-scroll-item logo-small" style={{transform: 'rotate(2deg)'}}>
+              <img src="/logo5.png" alt="Logo 5" className="logo-image" />
+            </div>
+            <div className="logo-scroll-item logo-large" style={{transform: 'rotate(-3deg)'}}>
+              <img src="/logo6.png" alt="Logo 6" className="logo-image" />
+            </div>
+            <div className="logo-scroll-item logo-medium" style={{transform: 'rotate(4deg)'}}>
+              <img src="/logo7.png" alt="Logo 7" className="logo-image" />
+            </div>
+            <div className="logo-scroll-item logo-small" style={{transform: 'rotate(-5deg)'}}>
+              <img src="/logo8.png" alt="Logo 8" className="logo-image" />
+            </div>
+            <div className="logo-scroll-item logo-large" style={{transform: 'rotate(3deg)'}}>
+              <img src="/logo1.png" alt="Logo 1" className="logo-image" />
+            </div>
+            <div className="logo-scroll-item logo-medium" style={{transform: 'rotate(-2deg)'}}>
+              <img src="/logo2.png" alt="Logo 2" className="logo-image" />
+            </div>
+            <div className="logo-scroll-item logo-small" style={{transform: 'rotate(4deg)'}}>
+              <img src="/logo3.png" alt="Logo 3" className="logo-image" />
+            </div>
+            <div className="logo-scroll-item logo-large" style={{transform: 'rotate(-4deg)'}}>
+              <img src="/logo4.png" alt="Logo 4" className="logo-image" />
             </div>
           </div>
         </div>
@@ -276,8 +384,191 @@ const LandingPage = () => {
           <div className="glow-orb-purple" style={{top: '60%', right: '20%'}}></div>
           <div className="glow-orb-blue" style={{top: '40%', left: '70%'}}></div>
         </div>
-        <div className="features-image">
-          <img src="https://api.builder.io/api/v1/image/assets/TEMP/525f92b823587c4060fabcdd2d4b539d36414a56?width=1900" alt="Features" />
+
+        <div className="feature-cards-container">
+          {/* Row 1 */}
+          <div className="feature-cards-row">
+            {/* Card 1: AI where you work */}
+            <div className="feature-card">
+              <div className="feature-card-visual">
+                <div className="workflow-diagram">
+                  <div className="workflow-node">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                      <path d="M12 2L2 7L12 12L22 7L12 2Z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                      <path d="M2 17L12 22L22 17" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                      <path d="M2 12L12 17L22 12" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                    </svg>
+                  </div>
+                  <div className="workflow-connector"></div>
+                  <div className="workflow-node">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                      <rect x="3" y="3" width="18" height="18" rx="2" stroke="currentColor" strokeWidth="2"/>
+                      <path d="M9 9L15 15M15 9L9 15" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/>
+                    </svg>
+                  </div>
+                  <div className="workflow-connector"></div>
+                  <div className="workflow-node">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                      <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z" stroke="currentColor" strokeWidth="2"/>
+                    </svg>
+                  </div>
+                </div>
+              </div>
+              <div className="feature-card-text">
+                <h3>AI where you work</h3>
+                <p>Deploy Scout Apps to Slack or Discord</p>
+              </div>
+            </div>
+
+            {/* Card 2: Customize your AI */}
+            <div className="feature-card">
+              <div className="feature-card-visual">
+                <div className="form-preview">
+                  <div className="form-field">
+                    <label>Name</label>
+                    <input type="text" placeholder="Short answer" readOnly />
+                  </div>
+                  <div className="form-field">
+                    <label>Value</label>
+                    <input type="text" placeholder="Short answer" readOnly />
+                  </div>
+                  <div className="form-add-btn">+</div>
+                  <div className="form-tabs">
+                    <span>Text</span>
+                    <span>LLM</span>
+                    <span>Web</span>
+                    <span>HTTP</span>
+                    <span>Save</span>
+                  </div>
+                </div>
+              </div>
+              <div className="feature-card-text">
+                <h3>Customize your AI</h3>
+                <p>Build custom workflows and apps in minutes</p>
+              </div>
+            </div>
+
+            {/* Card 3: Access to the right data */}
+            <div className="feature-card">
+              <div className="feature-card-visual">
+                <div className="data-preview">
+                  <div className="data-header">
+                    <div className="data-icon">
+                      <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                        <circle cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="2"/>
+                        <path d="M12 6v6l4 2" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/>
+                      </svg>
+                    </div>
+                    <span>ELI5 Account</span>
+                  </div>
+                  <div className="data-text">This is a sample data output which we can replace.</div>
+                  <div className="data-actions">
+                    <button className="data-btn-delete">Delete</button>
+                    <button className="data-btn-save">Save</button>
+                  </div>
+                </div>
+              </div>
+              <div className="feature-card-text">
+                <h3>Access to the right data</h3>
+                <p>Control what your AI knows and what it forgets</p>
+              </div>
+            </div>
+          </div>
+
+          {/* Row 2 */}
+          <div className="feature-cards-row">
+            {/* Card 4: Accelerate your product */}
+            <div className="feature-card">
+              <div className="feature-card-visual">
+                <div className="api-preview">
+                  <div className="api-buttons">
+                    <button className="api-btn">
+                      <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                        <path d="M12 2L2 7L12 12L22 7L12 2Z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                      </svg>
+                    </button>
+                    <button className="api-btn">AI</button>
+                  </div>
+                  <div className="api-badge">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                      <rect x="3" y="3" width="18" height="18" rx="2" stroke="currentColor" strokeWidth="2"/>
+                    </svg>
+                    <span>Feature request on Slack</span>
+                  </div>
+                  <div className="api-link">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                      <circle cx="12" cy="12" r="10" stroke="#5E6AD2" strokeWidth="2"/>
+                    </svg>
+                    <span>Linear ticket for that feature</span>
+                  </div>
+                </div>
+              </div>
+              <div className="feature-card-text">
+                <h3>Accelerate your product</h3>
+                <p>Use Scout API to enable AI-features for your customers</p>
+              </div>
+            </div>
+
+            {/* Card 5: Automate your work */}
+            <div className="feature-card">
+              <div className="feature-card-visual">
+                <div className="automate-preview">
+                  <div className="automate-badge">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                      <path d="M12 2L2 7L12 12L22 7L12 2Z" stroke="currentColor" strokeWidth="2"/>
+                    </svg>
+                    <span>Scout AI</span>
+                  </div>
+                  <div className="automate-link">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                      <circle cx="12" cy="12" r="10" stroke="#5E6AD2" strokeWidth="2"/>
+                    </svg>
+                    <span>Linear ticket for that feature</span>
+                  </div>
+                </div>
+              </div>
+              <div className="feature-card-text">
+                <h3>Automate your work</h3>
+                <p>Connect your existing tools and eliminate the busy work</p>
+              </div>
+            </div>
+
+            {/* Card 6: An Inbox with superpowers */}
+            <div className="feature-card">
+              <div className="feature-card-visual">
+                <div className="inbox-preview">
+                  <div className="inbox-message">
+                    <div className="inbox-icon">
+                      <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                        <circle cx="12" cy="12" r="10" fill="#B868C7"/>
+                      </svg>
+                    </div>
+                    <span>Thanks Scout. You just saved me a bunch of time</span>
+                  </div>
+                  <div className="inbox-option">
+                    <div className="inbox-icon-sm">
+                      <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                        <path d="M12 2L2 7L12 12L22 7L12 2Z" stroke="currentColor" strokeWidth="2"/>
+                      </svg>
+                    </div>
+                    <span>Use the Inspect option to review previous runs</span>
+                  </div>
+                  <div className="inbox-option">
+                    <div className="inbox-icon-sm">
+                      <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                        <circle cx="12" cy="12" r="10" fill="#B868C7"/>
+                      </svg>
+                    </div>
+                    <span>How do I replay a previous app run?</span>
+                  </div>
+                </div>
+              </div>
+              <div className="feature-card-text">
+                <h3>An Inbox with superpowers</h3>
+                <p>Curate responses and reviews results for each interaction</p>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
