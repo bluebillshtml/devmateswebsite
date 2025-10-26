@@ -4,22 +4,26 @@ import './TermsOfService.css';
 const TermsOfService = () => {
   return (
     <div className="terms-page">
+      {/* Background Elements */}
+      <div className="terms-bg">
+        <div className="gradient-green"></div>
+        <div className="gradient-pink"></div>
+        <div className="noise-texture"></div>
+        <div className="stars-bg"></div>
+        <div className="ellipse-blur"></div>
+
+        {/* Subtle Color Orbs */}
+        <div className="color-orb orb-1"></div>
+        <div className="color-orb orb-2"></div>
+        <div className="color-orb orb-3"></div>
+      </div>
+
       {/* Navigation */}
       <nav className="terms-nav">
         <div className="nav-container">
           <div className="nav-left">
             <a href="/" className="logo">
-              <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
-                <circle cx="16" cy="16" r="16" fill="url(#logo-gradient)"/>
-                <path d="M12 8L20 16L12 24" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                <defs>
-                  <linearGradient id="logo-gradient" x1="16" y1="0" x2="16" y2="32">
-                    <stop stopColor="#10834B"/>
-                    <stop offset="1" stopColor="#09F785"/>
-                  </linearGradient>
-                </defs>
-              </svg>
-              <span>DevMates</span>
+              <img src="/logo.png" alt="DevMates Logo" width="110" height="20" />
             </a>
           </div>
           <div className="nav-right">
