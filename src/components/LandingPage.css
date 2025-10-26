@@ -1118,36 +1118,34 @@ body {
   top: 0;
   left: 0;
   pointer-events: none;
+  z-index: 5;
 }
 
 .glow-orb-green {
   position: absolute;
-  width: 600px;
-  height: 600px;
+  width: 900px;
+  height: 900px;
   background: radial-gradient(circle, rgba(16, 131, 75, 0.3) 0%, rgba(9, 247, 133, 0.1) 50%, transparent 70%);
   border-radius: 50%;
   filter: blur(80px);
-  animation: floatGlow 6s ease-in-out infinite;
 }
 
 .glow-orb-purple {
   position: absolute;
-  width: 500px;
-  height: 500px;
+  width: 800px;
+  height: 800px;
   background: radial-gradient(circle, rgba(184, 104, 199, 0.4) 0%, rgba(122, 88, 221, 0.2) 50%, transparent 70%);
   border-radius: 50%;
   filter: blur(90px);
-  animation: floatGlow 8s ease-in-out infinite reverse;
 }
 
 .glow-orb-blue {
   position: absolute;
-  width: 450px;
-  height: 450px;
+  width: 750px;
+  height: 750px;
   background: radial-gradient(circle, rgba(94, 106, 210, 0.3) 0%, rgba(87, 144, 255, 0.15) 50%, transparent 70%);
   border-radius: 50%;
   filter: blur(85px);
-  animation: floatGlow 7s ease-in-out infinite;
 }
 
 @keyframes floatGlow {

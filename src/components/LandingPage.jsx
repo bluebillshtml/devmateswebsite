@@ -380,160 +380,161 @@ const LandingPage = () => {
       <section className="features-section">
         <div className="features-bg"></div>
         <div className="features-glow-orbs">
-          <div className="glow-orb-green" style={{top: '20%', left: '15%'}}></div>
-          <div className="glow-orb-purple" style={{top: '60%', right: '20%'}}></div>
-          <div className="glow-orb-blue" style={{top: '40%', left: '70%'}}></div>
+          <div className="glow-orb-green" style={{top: '10%', left: '5%'}}></div>
+          <div className="glow-orb-purple" style={{top: '70%', right: '10%'}}></div>
+          <div className="glow-orb-blue" style={{top: '-10%', right: '5%'}}></div>
         </div>
 
         <div className="feature-cards-container">
           {/* Row 1 */}
           <div className="feature-cards-row">
-            {/* Card 1: AI where you work */}
+            {/* Card 1: Smart Matching Algorithm */}
             <div className="feature-card">
               <div className="feature-card-visual">
                 <div className="workflow-diagram">
                   <div className="workflow-node">
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-                      <path d="M12 2L2 7L12 12L22 7L12 2Z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                      <path d="M2 17L12 22L22 17" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                      <path d="M2 12L12 17L22 12" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                      <circle cx="12" cy="8" r="4" stroke="currentColor" strokeWidth="2"/>
+                      <path d="M6 21v-2a4 4 0 0 1 4-4h4a4 4 0 0 1 4 4v2" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/>
                     </svg>
                   </div>
                   <div className="workflow-connector"></div>
                   <div className="workflow-node">
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-                      <rect x="3" y="3" width="18" height="18" rx="2" stroke="currentColor" strokeWidth="2"/>
-                      <path d="M9 9L15 15M15 9L9 15" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/>
+                      <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
                     </svg>
                   </div>
                   <div className="workflow-connector"></div>
                   <div className="workflow-node">
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-                      <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z" stroke="currentColor" strokeWidth="2"/>
+                      <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/>
+                      <circle cx="9" cy="7" r="4" stroke="currentColor" strokeWidth="2"/>
+                      <path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/>
                     </svg>
                   </div>
                 </div>
               </div>
               <div className="feature-card-text">
-                <h3>AI where you work</h3>
-                <p>Deploy Scout Apps to Slack or Discord</p>
+                <h3>Smart Co-Founder Matching</h3>
+                <p>Find teammates with complementary skills and shared vision</p>
               </div>
             </div>
 
-            {/* Card 2: Customize your AI */}
+            {/* Card 2: Build Your Profile */}
             <div className="feature-card">
               <div className="feature-card-visual">
                 <div className="form-preview">
                   <div className="form-field">
-                    <label>Name</label>
-                    <input type="text" placeholder="Short answer" readOnly />
+                    <label>Skills</label>
+                    <input type="text" placeholder="React, Node.js, UI/UX" readOnly />
                   </div>
                   <div className="form-field">
-                    <label>Value</label>
-                    <input type="text" placeholder="Short answer" readOnly />
+                    <label>Role</label>
+                    <input type="text" placeholder="Full-Stack Developer" readOnly />
                   </div>
                   <div className="form-add-btn">+</div>
                   <div className="form-tabs">
-                    <span>Text</span>
-                    <span>LLM</span>
-                    <span>Web</span>
-                    <span>HTTP</span>
-                    <span>Save</span>
+                    <span>Developer</span>
+                    <span>Designer</span>
+                    <span>Product</span>
+                    <span>Marketing</span>
                   </div>
                 </div>
               </div>
               <div className="feature-card-text">
-                <h3>Customize your AI</h3>
-                <p>Build custom workflows and apps in minutes</p>
+                <h3>Build Your Profile</h3>
+                <p>Showcase your skills, experience, and startup goals</p>
               </div>
             </div>
 
-            {/* Card 3: Access to the right data */}
+            {/* Card 3: Team Compatibility Score */}
             <div className="feature-card">
               <div className="feature-card-visual">
                 <div className="data-preview">
                   <div className="data-header">
                     <div className="data-icon">
                       <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
-                        <circle cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="2"/>
-                        <path d="M12 6v6l4 2" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/>
+                        <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/>
+                        <polyline points="22 4 12 14.01 9 11.01" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
                       </svg>
                     </div>
-                    <span>ELI5 Account</span>
+                    <span>Compatibility: 94%</span>
                   </div>
-                  <div className="data-text">This is a sample data output which we can replace.</div>
+                  <div className="data-text">High match on skills, goals, and team culture fit</div>
                   <div className="data-actions">
-                    <button className="data-btn-delete">Delete</button>
-                    <button className="data-btn-save">Save</button>
+                    <button className="data-btn-delete">Pass</button>
+                    <button className="data-btn-save">Connect</button>
                   </div>
                 </div>
               </div>
               <div className="feature-card-text">
-                <h3>Access to the right data</h3>
-                <p>Control what your AI knows and what it forgets</p>
+                <h3>Team Compatibility</h3>
+                <p>See detailed compatibility scores before you connect</p>
               </div>
             </div>
           </div>
 
           {/* Row 2 */}
           <div className="feature-cards-row">
-            {/* Card 4: Accelerate your product */}
+            {/* Card 4: Project Ideas Hub */}
             <div className="feature-card">
               <div className="feature-card-visual">
                 <div className="api-preview">
                   <div className="api-buttons">
                     <button className="api-btn">
                       <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
-                        <path d="M12 2L2 7L12 12L22 7L12 2Z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                        <path d="M12 2v6M12 18v4M4.93 4.93l4.24 4.24M14.83 14.83l4.24 4.24M2 12h6M18 12h4M4.93 19.07l4.24-4.24M14.83 9.17l4.24-4.24" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/>
                       </svg>
                     </button>
-                    <button className="api-btn">AI</button>
+                    <button className="api-btn">New</button>
                   </div>
                   <div className="api-badge">
                     <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
                       <rect x="3" y="3" width="18" height="18" rx="2" stroke="currentColor" strokeWidth="2"/>
                     </svg>
-                    <span>Feature request on Slack</span>
+                    <span>AI SaaS Platform</span>
                   </div>
                   <div className="api-link">
                     <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
-                      <circle cx="12" cy="12" r="10" stroke="#5E6AD2" strokeWidth="2"/>
+                      <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" stroke="#5E6AD2" strokeWidth="2"/>
+                      <circle cx="9" cy="7" r="4" stroke="#5E6AD2" strokeWidth="2"/>
                     </svg>
-                    <span>Linear ticket for that feature</span>
+                    <span>Looking for technical co-founder</span>
                   </div>
                 </div>
               </div>
               <div className="feature-card-text">
-                <h3>Accelerate your product</h3>
-                <p>Use Scout API to enable AI-features for your customers</p>
+                <h3>Project Ideas Hub</h3>
+                <p>Share your startup ideas and find passionate co-founders</p>
               </div>
             </div>
 
-            {/* Card 5: Automate your work */}
+            {/* Card 5: Verified Skills */}
             <div className="feature-card">
               <div className="feature-card-visual">
                 <div className="automate-preview">
                   <div className="automate-badge">
                     <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
-                      <path d="M12 2L2 7L12 12L22 7L12 2Z" stroke="currentColor" strokeWidth="2"/>
+                      <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" stroke="currentColor" strokeWidth="2" fill="currentColor"/>
                     </svg>
-                    <span>Scout AI</span>
+                    <span>Verified Developer</span>
                   </div>
                   <div className="automate-link">
                     <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
-                      <circle cx="12" cy="12" r="10" stroke="#5E6AD2" strokeWidth="2"/>
+                      <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" stroke="#5E6AD2" strokeWidth="2"/>
+                      <polyline points="22 4 12 14.01 9 11.01" stroke="#5E6AD2" strokeWidth="2"/>
                     </svg>
-                    <span>Linear ticket for that feature</span>
+                    <span>GitHub & portfolio verified</span>
                   </div>
                 </div>
               </div>
               <div className="feature-card-text">
-                <h3>Automate your work</h3>
-                <p>Connect your existing tools and eliminate the busy work</p>
+                <h3>Verified Skills</h3>
+                <p>Connect GitHub and showcase real projects with proof</p>
               </div>
             </div>
 
-            {/* Card 6: An Inbox with superpowers */}
+            {/* Card 6: Team Chat & Collaboration */}
             <div className="feature-card">
               <div className="feature-card-visual">
                 <div className="inbox-preview">
@@ -543,15 +544,15 @@ const LandingPage = () => {
                         <circle cx="12" cy="12" r="10" fill="#B868C7"/>
                       </svg>
                     </div>
-                    <span>Thanks Scout. You just saved me a bunch of time</span>
+                    <span>Love the idea! When can we start building?</span>
                   </div>
                   <div className="inbox-option">
                     <div className="inbox-icon-sm">
                       <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
-                        <path d="M12 2L2 7L12 12L22 7L12 2Z" stroke="currentColor" strokeWidth="2"/>
+                        <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" stroke="currentColor" strokeWidth="2"/>
                       </svg>
                     </div>
-                    <span>Use the Inspect option to review previous runs</span>
+                    <span>Schedule a video call to discuss equity split</span>
                   </div>
                   <div className="inbox-option">
                     <div className="inbox-icon-sm">
@@ -559,13 +560,13 @@ const LandingPage = () => {
                         <circle cx="12" cy="12" r="10" fill="#B868C7"/>
                       </svg>
                     </div>
-                    <span>How do I replay a previous app run?</span>
+                    <span>What's your tech stack preference?</span>
                   </div>
                 </div>
               </div>
               <div className="feature-card-text">
-                <h3>An Inbox with superpowers</h3>
-                <p>Curate responses and reviews results for each interaction</p>
+                <h3>Team Chat & Collaboration</h3>
+                <p>Connect with matches and plan your startup together</p>
               </div>
             </div>
           </div>
