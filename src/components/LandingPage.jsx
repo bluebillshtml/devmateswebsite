@@ -1080,9 +1080,9 @@ const LandingPage = () => {
           <div className="support-content">
             <h3>Dedicated Support</h3>
             <p>
-              <span>We are here to help get you started with a dedicated</span>
-              <span>support engineer who can assist with scoping your first</span>
-              <span>models and getting them deployed.</span>
+              <span>We are here to help you find your perfect co-founder with</span>
+              <span>a dedicated support specialist who can assist with profile</span>
+              <span>optimization, matching strategy, and team formation.</span>
             </p>
             <h4>What's included</h4>
             <ul className="support-features">
@@ -1090,25 +1090,25 @@ const LandingPage = () => {
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
                   <path d="M15 10.0147L10.5 15.2528L8.5 13.348M21 12.3957C21 17.1295 16.9705 20.9671 12 20.9671C7.02943 20.9671 3 17.1295 3 12.3957C3 7.66178 7.02943 3.82422 12 3.82422C16.9705 3.82422 21 7.66178 21 12.3957Z" stroke="#434343" strokeWidth="1.5"/>
                 </svg>
-                <span>Shared Slack Channel</span>
+                <span>Direct 1-on-1 Consultation</span>
               </li>
               <li>
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
                   <path d="M15 10.0147L10.5 15.2528L8.5 13.348M21 12.3957C21 17.1295 16.9705 20.9671 12 20.9671C7.02943 20.9671 3 17.1295 3 12.3957C3 7.66178 7.02943 3.82422 12 3.82422C16.9705 3.82422 21 7.66178 21 12.3957Z" stroke="#434343" strokeWidth="1.5"/>
                 </svg>
-                <span>Dedicated Support Engineer</span>
+                <span>Profile Optimization Review</span>
               </li>
               <li>
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
                   <path d="M15 10.0147L10.5 15.2528L8.5 13.348M21 12.3957C21 17.1295 16.9705 20.9671 12 20.9671C7.02943 20.9671 3 17.1295 3 12.3957C3 7.66178 7.02943 3.82422 12 3.82422C16.9705 3.82422 21 7.66178 21 12.3957Z" stroke="#434343" strokeWidth="1.5"/>
                 </svg>
-                <span>Prompt Engineering Guidance</span>
+                <span>Matching Strategy Guidance</span>
               </li>
               <li>
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
                   <path d="M15 10.0147L10.5 15.2528L8.5 13.348M21 12.3957C21 17.1295 16.9705 20.9671 12 20.9671C7.02943 20.9671 3 17.1295 3 12.3957C3 7.66178 7.02943 3.82422 12 3.82422C16.9705 3.82422 21 7.66178 21 12.3957Z" stroke="#434343" strokeWidth="1.5"/>
                 </svg>
-                <span>Context Sourcing Guidance</span>
+                <span>Co-founder Team Formation Help</span>
               </li>
             </ul>
           </div>
