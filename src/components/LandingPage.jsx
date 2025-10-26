@@ -17,14 +17,14 @@ const LandingPage = () => {
       quote: "Finding a technical co-founder was always the hardest part of launching a startup. DevMates made it seamless - I connected with my CTO in just two weeks. Now we're building something incredible together.",
       author: "Sarah Chen",
       title: "Founder of TechFlow AI",
-      avatar: "/levi.jpg",
+      avatar: "/sarah-placeholder.svg",
       showStars: true
     },
     {
       quote: "The skill verification feature gave me confidence that I was connecting with real developers. Within a month, I had assembled a talented team of 4 co-founders, all verified and passionate about our vision.",
       author: "Marcus Johnson",
       title: "Co-Founder of CloudSync",
-      avatar: "/levi.jpg",
+      avatar: "/marcus-placeholder.svg",
       showStars: true
     }
   ];

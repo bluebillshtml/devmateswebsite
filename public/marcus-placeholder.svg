@@ -1,0 +1,12 @@
+<svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="80" height="80" fill="url(#gradientMJ)"/>
+  <circle cx="40" cy="40" r="40" fill="url(#gradientMJ)"/>
+  <text x="40" y="52" font-family="Arial, sans-serif" font-size="32" font-weight="600" fill="white" text-anchor="middle">MJ</text>
+  <defs>
+    <linearGradient id="gradientMJ" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#059669;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0891b2;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+</svg>
+
