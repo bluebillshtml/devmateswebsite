@@ -569,24 +569,26 @@ body {
   padding: 50px 20px 20px;
   background: rgba(255, 255, 255, 0.02);
   border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  position: relative;
 }
 
 .header-avatar {
-  width: 32px;
-  height: 32px;
-  background: linear-gradient(135deg, #10834B, #09F785);
-  border-radius: 8px;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 12px;
-  font-weight: 600;
-  color: #fff;
+  width: 32px;
+}
+
+.header-avatar-logo {
+  height: 32px;
+  width: auto;
+  object-fit: contain;
 }
 
 .header-title {
-  flex: 1;
-  text-align: center;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
   font-size: 16px;
   font-weight: 600;
   color: #fff;
@@ -607,6 +609,14 @@ body {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
+  display: flex;
+  align-items: center;
+}
+
+.header-logo-img {
+  height: 32px;
+  width: auto;
+  object-fit: contain;
 }
 
 .header-filter {
@@ -632,6 +642,14 @@ body {
   border-radius: 50%;
   margin: 0 auto 16px;
   border: 3px solid rgba(255, 255, 255, 0.1);
+  overflow: hidden;
+  position: relative;
+}
+
+.profile-photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .profile-name {
@@ -713,6 +731,14 @@ body {
   width: 100%;
   height: 200px;
   background: linear-gradient(135deg, #B868C7, #7A58DD);
+  overflow: hidden;
+  position: relative;
+}
+
+.swipe-card-photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .card-content {
@@ -747,8 +773,8 @@ body {
 
 .card-actions {
   display: flex;
-  justify-content: center;
   gap: 30px;
+  justify-content: center;
   padding: 20px;
 }
 
@@ -795,6 +821,14 @@ body {
   background: linear-gradient(135deg, #5E6AD2, #5790FF);
   border-radius: 50%;
   margin-right: 12px;
+  overflow: hidden;
+  position: relative;
+}
+
+.chat-avatar-photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .chat-name {
@@ -1093,10 +1127,12 @@ body {
   min-height: 993px;
   position: relative;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   padding: 120px 0;
   overflow: hidden;
+  gap: 80px;
 }
 
 .features-bg {
@@ -1173,6 +1209,36 @@ body {
   width: 100%;
   height: auto;
   border-radius: 16px;
+}
+
+/* Features Header */
+.features-header {
+  text-align: center;
+  max-width: 800px;
+  position: relative;
+  z-index: 10;
+}
+
+.features-title {
+  font-size: 64px;
+  font-weight: 500;
+  line-height: 70px;
+  margin-bottom: 20px;
+  letter-spacing: -3.686px;
+  font-family: Inter, -apple-system, Roboto, Helvetica, sans-serif;
+  background: linear-gradient(180deg, #FFF 0%, #BABABA 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.features-subtitle {
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.7);
+  margin: 0;
+  font-family: Inter, -apple-system, Roboto, Helvetica, sans-serif;
 }
 
 /* Feature Cards Container */
@@ -2945,6 +3011,14 @@ body {
   color: #828386;
 }
 
+.pricing-fine-print {
+  font-size: 14px !important;
+  line-height: 20px !important;
+  color: #B868C7 !important;
+  margin-top: 12px;
+  font-weight: 500;
+}
+
 .pricing-cards {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -3265,6 +3339,27 @@ body {
   text-align: center;
 }
 
+/* Blur and Coming Soon Overlay for Dedicated Support */
+.dedicated-support-card .support-content,
+.dedicated-support-card .support-pricing {
+  filter: blur(8px);
+  pointer-events: none;
+}
+
+.dedicated-support-card::after {
+  content: 'Coming Soon';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: Helvetica, -apple-system, Roboto, Helvetica, sans-serif;
+  font-size: 32px;
+  font-weight: 500;
+  color: var(--color-white);
+  z-index: 20;
+  text-align: center;
+}
+
 /* Footer */
 .footer {
   width: 100%;
@@ -3278,7 +3373,7 @@ body {
   margin: 0 auto;
   display: grid;
   grid-template-columns: 1fr 2fr;
-  gap: 60px;
+  gap: 0;
   margin-bottom: 60px;
 }
 
@@ -3286,6 +3381,8 @@ body {
   display: flex;
   flex-direction: column;
   gap: 20px;
+  border-right: 1px solid rgba(255, 255, 255, 0.1);
+  padding-right: 60px;
 }
 
 .footer-logo {
@@ -3300,7 +3397,8 @@ body {
 .footer-links {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 60px;
+  gap: 0;
+  padding-left: 60px;
 }
 
 .footer-column h4 {
@@ -3312,6 +3410,15 @@ body {
   color: var(--color-white);
   opacity: 0.6;
   margin-bottom: 24px;
+}
+
+.footer-column {
+  border-right: 1px solid rgba(255, 255, 255, 0.1);
+  padding-right: 40px;
+}
+
+.footer-column:last-child {
+  border-right: none;
 }
 
 .footer-column ul {

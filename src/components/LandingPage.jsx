@@ -5,6 +5,42 @@ import './LandingPage.css';
 const LandingPage = () => {
   const [scrolled, setScrolled] = useState(false);
   const [activeTestimonial, setActiveTestimonial] = useState(0);
+  const [currentCardIndex, setCurrentCardIndex] = useState(0);
+
+  const profileCards = [
+    {
+      name: "Alex Rodriguez",
+      role: "UI/UX Designer",
+      experience: "3 years",
+      tags: ["Figma", "Product Design"],
+      bio: "Passionate about creating delightful user experiences for early-stage startups.",
+      image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&h=500&fit=crop"
+    },
+    {
+      name: "Priya Sharma",
+      role: "Full Stack Developer",
+      experience: "5 years",
+      tags: ["React", "Node.js"],
+      bio: "Building scalable web apps and looking for a technical co-founder to launch my SaaS idea.",
+      image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400&h=500&fit=crop"
+    },
+    {
+      name: "Marcus Chen",
+      role: "Product Manager",
+      experience: "4 years",
+      tags: ["Strategy", "Growth"],
+      bio: "Ex-Google PM seeking a technical co-founder to disrupt the fintech space.",
+      image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&h=500&fit=crop"
+    }
+  ];
+
+  const handleSwipe = (direction) => {
+    if (direction === 'right') {
+      setCurrentCardIndex((prev) => (prev + 1) % profileCards.length);
+    } else {
+      setCurrentCardIndex((prev) => (prev - 1 + profileCards.length) % profileCards.length);
+    }
+  };
 
   const testimonials = [
     {
@@ -112,7 +148,7 @@ const LandingPage = () => {
               <div className="phone-notch"></div>
               <div className="phone-screen">
                 <div className="screen-header">
-                  <div className="header-avatar">DM</div>
+                  <div className="header-avatar"></div>
                   <div className="header-title">Profile</div>
                   <div className="header-action">
                     <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
@@ -123,8 +159,10 @@ const LandingPage = () => {
                   </div>
                 </div>
                 <div className="screen-content">
-                  <div className="profile-image"></div>
-                  <div className="profile-name">Sarah Chen</div>
+                  <div className="profile-image">
+                    <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=300&h=300&fit=crop" alt="Emma Chen" className="profile-photo" />
+                  </div>
+                  <div className="profile-name">Emma Chen</div>
                   <div className="profile-title">Full-Stack Developer</div>
                   <div className="profile-tags">
                     <span className="tag">React</span>
@@ -159,35 +197,41 @@ const LandingPage = () => {
               <div className="phone-notch"></div>
               <div className="phone-screen">
                 <div className="screen-header">
-                  <div className="header-logo">DevMates</div>
+                  <div className="header-logo">
+                    <img src="/logo.png" alt="DevMates" className="header-logo-img" />
+                  </div>
                   <div className="header-filter">
                     <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
                       <path d="M3 6h14M6 10h8M8 14h4" stroke="#fff" strokeWidth="2" strokeLinecap="round"/>
                     </svg>
                   </div>
                 </div>
-                <div className="swipe-card">
-                  <div className="card-image"></div>
-                  <div className="card-content">
-                    <div className="card-name">Alex Rodriguez</div>
-                    <div className="card-role">UI/UX Designer • 3 years</div>
-                    <div className="card-tags">
-                      <span className="tag">Figma</span>
-                      <span className="tag">Product Design</span>
+                <div className="swipe-card" key={currentCardIndex}>
+                  <div className="card-image">
+                    <div className="card-image-overlay"></div>
+                    <img src={profileCards[currentCardIndex].image} alt={profileCards[currentCardIndex].name} className="swipe-card-photo" />
+                    <div className="card-actions">
+                      <button className="action-btn-arrow arrow-left" onClick={() => handleSwipe('left')}>
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none">
+                          <path d="M15 18l-6-6 6-6" stroke="white" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"/>
+                        </svg>
+                      </button>
+                      <button className="action-btn-arrow arrow-right" onClick={() => handleSwipe('right')}>
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none">
+                          <path d="M9 18l6-6-6-6" stroke="white" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"/>
+                        </svg>
+                      </button>
                     </div>
-                    <div className="card-bio">Passionate about creating delightful user experiences for early-stage startups.</div>
                   </div>
-                  <div className="card-actions">
-                    <button className="action-btn reject">
-                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-                        <path d="M6 18L18 6M6 6l12 12" stroke="#ff4458" strokeWidth="2.5" strokeLinecap="round"/>
-                      </svg>
-                    </button>
-                    <button className="action-btn like">
-                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-                        <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" fill="#00d25b" stroke="#00d25b" strokeWidth="1.5"/>
-                      </svg>
-                    </button>
+                  <div className="card-content">
+                    <div className="card-name">{profileCards[currentCardIndex].name}</div>
+                    <div className="card-role">{profileCards[currentCardIndex].role} • {profileCards[currentCardIndex].experience}</div>
+                    <div className="card-tags">
+                      {profileCards[currentCardIndex].tags.map((tag, index) => (
+                        <span key={index} className="tag">{tag}</span>
+                      ))}
+                    </div>
+                    <div className="card-bio">{profileCards[currentCardIndex].bio}</div>
                   </div>
                 </div>
               </div>
@@ -205,7 +249,9 @@ const LandingPage = () => {
                       <path d="M12 16L6 10l6-6" stroke="#fff" strokeWidth="2" strokeLinecap="round"/>
                     </svg>
                   </div>
-                  <div className="chat-avatar"></div>
+                  <div className="chat-avatar">
+                    <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&h=100&fit=crop" alt="Jamie Lee" className="chat-avatar-photo" />
+                  </div>
                   <div className="chat-name">Jamie Lee</div>
                 </div>
                 <div className="chat-messages">
@@ -409,6 +455,11 @@ const LandingPage = () => {
           <div className="glow-orb-green" style={{top: '10%', left: '5%'}}></div>
           <div className="glow-orb-purple" style={{top: '70%', right: '10%'}}></div>
           <div className="glow-orb-blue" style={{top: '-10%', right: '5%'}}></div>
+        </div>
+
+        <div className="features-header">
+          <h2 className="features-title">Everything you need to build your dream team</h2>
+          <p className="features-subtitle">Connect with co-founders, validate skills, and collaborate on your next big idea</p>
         </div>
 
         <div className="feature-cards-container">
@@ -879,7 +930,8 @@ const LandingPage = () => {
         </div>
         <div className="pricing-header">
           <h2>Find your perfect co-founder.</h2>
-          <p>Choose the plan that fits your startup journey, from first-time founders to scaling teams.</p>
+          <p>These are our planned launch tiers — join the waitlist now to lock in early-bird discounts.</p>
+          <p className="pricing-fine-print">Early users get a lifetime discount on all paid plans!</p>
         </div>
         <div className="pricing-cards">
           {/* Free Plan */}
@@ -907,7 +959,7 @@ const LandingPage = () => {
               <span>DevMates and finding</span>
               <span>your first co-founder.</span>
             </p>
-            <a href="#signup" className="btn-plan">Get Started</a>
+            <a href="#signup" className="btn-plan">Join Now</a>
             <ul className="plan-features">
               <li>
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
@@ -931,15 +983,16 @@ const LandingPage = () => {
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
                   <path d="M15 10.0147L10.5 15.2528L8.5 13.348M21 12.3957C21 17.1295 16.9705 20.9671 12 20.9671C7.02943 20.9671 3 17.1295 3 12.3957C3 7.66178 7.02943 3.82422 12 3.82422C16.9705 3.82422 21 7.66178 21 12.3957Z" stroke="#434343" strokeWidth="1.5"/>
                 </svg>
-                <span>Basic Skill Verification</span>
+                <span>1 Profile Boost A Month</span>
               </li>
               <li>
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
                   <path d="M15 10.0147L10.5 15.2528L8.5 13.348M21 12.3957C21 17.1295 16.9705 20.9671 12 20.9671C7.02943 20.9671 3 17.1295 3 12.3957C3 7.66178 7.02943 3.82422 12 3.82422C16.9705 3.82422 21 7.66178 21 12.3957Z" stroke="#434343" strokeWidth="1.5"/>
                 </svg>
-                <span>Community Support</span>
+                <span>Access Public Founder Forum</span>
               </li>
             </ul>
+            <p className="pricing-fine-print"></p>
           </div>
 
           {/* Pro Plan */}
@@ -966,9 +1019,9 @@ const LandingPage = () => {
             <p className="plan-description">
               <span>Unlimited matches and</span>
               <span>premium features to</span>
-              <span>find your ideal co-founder.</span>
+              <span>find your ideal co-founders.</span>
             </p>
-            <a href="#signup" className="btn-plan btn-plan-primary">Get Pro</a>
+            <a href="#signup" className="btn-plan btn-plan-primary">Join Now</a>
             <ul className="plan-features">
               <li>
                 <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
@@ -986,25 +1039,25 @@ const LandingPage = () => {
                 <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
                   <path d="M17.5 11.6837L12.25 17.7948L9.91666 15.5725M24.5 14.4614C24.5 19.9842 19.7989 24.4614 14 24.4614C8.201 24.4614 3.5 19.9842 3.5 14.4614C3.5 8.93859 8.201 4.46143 14 4.46143C19.7989 4.46143 24.5 8.93859 24.5 14.4614Z" stroke="#434343" strokeWidth="1.5"/>
                 </svg>
-                <span>See Who Liked You</span>
+                <span>Enhanced Data Visibility</span>
               </li>
               <li>
                 <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
                   <path d="M17.5 11.6837L12.25 17.7948L9.91666 15.5725M24.5 14.4614C24.5 19.9842 19.7989 24.4614 14 24.4614C8.201 24.4614 3.5 19.9842 3.5 14.4614C3.5 8.93859 8.201 4.46143 14 4.46143C19.7989 4.46143 24.5 8.93859 24.5 14.4614Z" stroke="#434343" strokeWidth="1.5"/>
                 </svg>
-                <span>Boost Your Profile</span>
+                <span>10 Profile Boosts A Month</span>
               </li>
               <li>
                 <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
                   <path d="M17.5 11.6837L12.25 17.7948L9.91666 15.5725M24.5 14.4614C24.5 19.9842 19.7989 24.4614 14 24.4614C8.201 24.4614 3.5 19.9842 3.5 14.4614C3.5 8.93859 8.201 4.46143 14 4.46143C19.7989 4.46143 24.5 8.93859 24.5 14.4614Z" stroke="#434343" strokeWidth="1.5"/>
                 </svg>
-                <span>Advanced Skill Verification</span>
+                <span>Verified Founder Badge</span>
               </li>
               <li>
                 <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
                   <path d="M17.5 11.6837L12.25 17.7948L9.91666 15.5725M24.5 14.4614C24.5 19.9842 19.7989 24.4614 14 24.4614C8.201 24.4614 3.5 19.9842 3.5 14.4614C3.5 8.93859 8.201 4.46143 14 4.46143C19.7989 4.46143 24.5 8.93859 24.5 14.4614Z" stroke="#434343" strokeWidth="1.5"/>
                 </svg>
-                <span>Priority Support</span>
+                <span>Early Access to New Features</span>
               </li>
             </ul>
           </div>
@@ -1028,13 +1081,13 @@ const LandingPage = () => {
               </svg>
               <span>Premium</span>
             </div>
-            <div className="plan-price">$45</div>
+            <div className="plan-price">$35</div>
             <p className="plan-description">
               <span>All premium features</span>
               <span>plus exclusive perks</span>
               <span>for serious founders.</span>
             </p>
-            <a href="#signup" className="btn-plan">Get Premium</a>
+            <a href="#signup" className="btn-plan">Join Now</a>
             <ul className="plan-features">
               <li>
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
@@ -1064,13 +1117,19 @@ const LandingPage = () => {
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
                   <path d="M15 10.0147L10.5 15.2528L8.5 13.348M21 12.3957C21 17.1295 16.9705 20.9671 12 20.9671C7.02943 20.9671 3 17.1295 3 12.3957C3 7.66178 7.02943 3.82422 12 3.82422C16.9705 3.82422 21 7.66178 21 12.3957Z" stroke="#434343" strokeWidth="1.5"/>
                 </svg>
-                <span>Advanced Analytics</span>
+                <span>Startup Insights Dashboard</span>
               </li>
               <li>
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
                   <path d="M15 10.0147L10.5 15.2528L8.5 13.348M21 12.3957C21 17.1295 16.9705 20.9671 12 20.9671C7.02943 20.9671 3 17.1295 3 12.3957C3 7.66178 7.02943 3.82422 12 3.82422C16.9705 3.82422 21 7.66178 21 12.3957Z" stroke="#434343" strokeWidth="1.5"/>
                 </svg>
-                <span>Concierge Support</span>
+                <span>Dedicated Founder Concierge</span>
+              </li>
+              <li>
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                  <path d="M15 10.0147L10.5 15.2528L8.5 13.348M21 12.3957C21 17.1295 16.9705 20.9671 12 20.9671C7.02943 20.9671 3 17.1295 3 12.3957C3 7.66178 7.02943 3.82422 12 3.82422C16.9705 3.82422 21 7.66178 21 12.3957Z" stroke="#434343" strokeWidth="1.5"/>
+                </svg>
+                <span>Early Access to App</span>
               </li>
             </ul>
           </div>
@@ -1159,12 +1218,12 @@ const LandingPage = () => {
               </ul>
             </div>
             <div className="footer-column">
-              <h4>Solutions</h4>
+              <h4>Dev Updates</h4>
               <ul>
-                <li><a href="#slack">Slack Bot</a></li>
-                <li><a href="#discord">Discord Bot</a></li>
-                <li><a href="#command">Command</a></li>
-                <li><a href="#chat">Onsite Chat</a></li>
+                <li><a href="#roadmap">Roadmap</a></li>
+                <li><a href="#beta">Beta Access</a></li>
+                <li><a href="#status">Developer Updates</a></li>
+                <li><a href="#newsletter">Newsletter</a></li>
               </ul>
             </div>
             <div className="footer-column">
