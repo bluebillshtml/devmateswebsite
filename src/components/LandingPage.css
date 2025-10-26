@@ -2880,34 +2880,34 @@ body {
   position: absolute;
   border-radius: 50%;
   filter: blur(40px);
-  opacity: 0.3;
+  opacity: 0.15;
   animation: float 6s ease-in-out infinite;
 }
 
 .pricing-orb-green {
-  width: 400px;
-  height: 400px;
+  width: 600px;
+  height: 600px;
   background: linear-gradient(135deg, #10834B, #09F785);
-  top: 10%;
-  left: 5%;
+  top: 5%;
+  left: 0%;
   animation-delay: 0s;
 }
 
 .pricing-orb-purple {
-  width: 350px;
-  height: 350px;
+  width: 550px;
+  height: 550px;
   background: linear-gradient(135deg, #C495FF, #BF68CF);
-  top: 50%;
-  right: 5%;
+  top: 40%;
+  right: 0%;
   animation-delay: 2s;
 }
 
 .pricing-orb-blue {
-  width: 380px;
-  height: 380px;
+  width: 580px;
+  height: 580px;
   background: linear-gradient(135deg, #5E6AD2, #5790FF);
-  bottom: 10%;
-  left: 40%;
+  bottom: 5%;
+  left: 30%;
   animation-delay: 4s;
 }
 
