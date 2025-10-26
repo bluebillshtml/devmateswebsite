@@ -17,7 +17,7 @@ const LandingPage = () => {
       quote: "Finding a technical co-founder was always the hardest part of launching a startup. DevMates made it seamless - I connected with my CTO in just two weeks. Now we're building something incredible together.",
       author: "Sarah Chen",
       title: "Founder of TechFlow AI",
-      avatar: "https://images.unsplash.com/photo-1494790108755-2616b612b786?w=150&h=150&fit=crop&crop=face",
+      avatar: "https://images.unsplash.com/photo-1580489944761-15a19d654956?w=150&h=150&fit=crop&crop=face",
       showStars: true
     },
     {
