@@ -1171,7 +1171,7 @@ const LandingPage = () => {
               <h4>Legal</h4>
               <ul>
                 <li><Link to="/terms">Terms of Service</Link></li>
-                <li><a href="#privacy">Privacy Policy</a></li>
+                <li><Link to="/privacy">Privacy Policy</Link></li>
               </ul>
             </div>
           </div>
