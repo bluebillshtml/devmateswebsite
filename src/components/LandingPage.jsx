@@ -1004,7 +1004,7 @@ const LandingPage = () => {
             </ul>
           </div>
 
-          {/* Enterprise Plan */}
+          {/* Premium Plan */}
           <div className="pricing-card enterprise-card">
             <div className="plan-badge enterprise-badge">
               <svg width="21" height="21" viewBox="0 0 21 21" fill="none">
@@ -1021,51 +1021,51 @@ const LandingPage = () => {
                   </radialGradient>
                 </defs>
               </svg>
-              <span>Enterprise</span>
+              <span>Premium</span>
             </div>
-            <div className="plan-price">Custom</div>
+            <div className="plan-price">$45</div>
             <p className="plan-description">
-              <span>For large scale models</span>
-              <span>with large and ever-</span>
-              <span>changing context.</span>
+              <span>All premium features</span>
+              <span>plus exclusive perks</span>
+              <span>for serious founders.</span>
             </p>
-            <a href="#contact" className="btn-plan">Request Access</a>
+            <a href="#signup" className="btn-plan">Get Premium</a>
             <ul className="plan-features">
               <li>
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
                   <path d="M15 10.0147L10.5 15.2528L8.5 13.348M21 12.3957C21 17.1295 16.9705 20.9671 12 20.9671C7.02943 20.9671 3 17.1295 3 12.3957C3 7.66178 7.02943 3.82422 12 3.82422C16.9705 3.82422 21 7.66178 21 12.3957Z" stroke="#434343" strokeWidth="1.5"/>
                 </svg>
-                <span>Unlimited Interactions</span>
+                <span>Everything in Pro</span>
               </li>
               <li>
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
                   <path d="M15 10.0147L10.5 15.2528L8.5 13.348M21 12.3957C21 17.1295 16.9705 20.9671 12 20.9671C7.02943 20.9671 3 17.1295 3 12.3957C3 7.66178 7.02943 3.82422 12 3.82422C16.9705 3.82422 21 7.66178 21 12.3957Z" stroke="#434343" strokeWidth="1.5"/>
                 </svg>
-                <span>Custom Interaction Pricing</span>
+                <span>Super Like Profiles</span>
               </li>
               <li>
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
                   <path d="M15 10.0147L10.5 15.2528L8.5 13.348M21 12.3957C21 17.1295 16.9705 20.9671 12 20.9671C7.02943 20.9671 3 17.1295 3 12.3957C3 7.66178 7.02943 3.82422 12 3.82422C16.9705 3.82422 21 7.66178 21 12.3957Z" stroke="#434343" strokeWidth="1.5"/>
                 </svg>
-                <span>Unlimited Apps</span>
+                <span>Passport to Any Location</span>
               </li>
               <li>
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
                   <path d="M15 10.0147L10.5 15.2528L8.5 13.348M21 12.3957C21 17.1295 16.9705 20.9671 12 20.9671C7.02943 20.9671 3 17.1295 3 12.3957C3 7.66178 7.02943 3.82422 12 3.82422C16.9705 3.82422 21 7.66178 21 12.3957Z" stroke="#434343" strokeWidth="1.5"/>
                 </svg>
-                <span>Unlimited Collections</span>
+                <span>Rewind Last Swipe</span>
               </li>
               <li>
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
                   <path d="M15 10.0147L10.5 15.2528L8.5 13.348M21 12.3957C21 17.1295 16.9705 20.9671 12 20.9671C7.02943 20.9671 3 17.1295 3 12.3957C3 7.66178 7.02943 3.82422 12 3.82422C16.9705 3.82422 21 7.66178 21 12.3957Z" stroke="#434343" strokeWidth="1.5"/>
                 </svg>
-                <span>Unlimited Storage</span>
+                <span>Advanced Analytics</span>
               </li>
               <li>
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
                   <path d="M15 10.0147L10.5 15.2528L8.5 13.348M21 12.3957C21 17.1295 16.9705 20.9671 12 20.9671C7.02943 20.9671 3 17.1295 3 12.3957C3 7.66178 7.02943 3.82422 12 3.82422C16.9705 3.82422 21 7.66178 21 12.3957Z" stroke="#434343" strokeWidth="1.5"/>
                 </svg>
-                <span>Dedicated Support</span>
+                <span>Concierge Support</span>
               </li>
             </ul>
           </div>
