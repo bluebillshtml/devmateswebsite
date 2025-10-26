@@ -2875,6 +2875,51 @@ body {
   opacity: 0.4;
 }
 
+/* Pricing Color Orbs */
+.pricing-orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(40px);
+  opacity: 0.3;
+  animation: float 6s ease-in-out infinite;
+}
+
+.pricing-orb-green {
+  width: 200px;
+  height: 200px;
+  background: linear-gradient(135deg, #10834B, #09F785);
+  top: 20%;
+  left: 10%;
+  animation-delay: 0s;
+}
+
+.pricing-orb-purple {
+  width: 150px;
+  height: 150px;
+  background: linear-gradient(135deg, #C495FF, #BF68CF);
+  top: 60%;
+  right: 15%;
+  animation-delay: 2s;
+}
+
+.pricing-orb-blue {
+  width: 180px;
+  height: 180px;
+  background: linear-gradient(135deg, #5E6AD2, #5790FF);
+  bottom: 20%;
+  left: 50%;
+  animation-delay: 4s;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px) scale(1);
+  }
+  50% {
+    transform: translateY(-20px) scale(1.05);
+  }
+}
+
 .pricing-header {
   text-align: center;
   margin-bottom: 80px;

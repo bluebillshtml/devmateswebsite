@@ -871,6 +871,10 @@ const LandingPage = () => {
       <section className="pricing-section" id="pricing">
         <div className="pricing-bg">
           <img src="https://api.builder.io/api/v1/image/assets/TEMP/359475067136313faab3161b0d924bbc1eb6fda9?width=2850" alt="Stars" className="pricing-stars" />
+          {/* Color Orbs */}
+          <div className="pricing-orb pricing-orb-green"></div>
+          <div className="pricing-orb pricing-orb-purple"></div>
+          <div className="pricing-orb pricing-orb-blue"></div>
         </div>
         <div className="pricing-header">
           <h2>Find your perfect co-founder.</h2>
