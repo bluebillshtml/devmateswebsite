@@ -873,11 +873,11 @@ const LandingPage = () => {
           <img src="https://api.builder.io/api/v1/image/assets/TEMP/359475067136313faab3161b0d924bbc1eb6fda9?width=2850" alt="Stars" className="pricing-stars" />
         </div>
         <div className="pricing-header">
-          <h2>A plan for every need.</h2>
-          <p>Whether you are just starting or require massive scale, we have a solution.</p>
+          <h2>Find your perfect co-founder.</h2>
+          <p>Choose the plan that fits your startup journey, from first-time founders to scaling teams.</p>
         </div>
         <div className="pricing-cards">
-          {/* Hobby Plan */}
+          {/* Free Plan */}
           <div className="pricing-card hobby-card">
             <div className="plan-badge hobby-badge">
               <svg width="21" height="21" viewBox="0 0 21 21" fill="none">
@@ -894,45 +894,45 @@ const LandingPage = () => {
                   </radialGradient>
                 </defs>
               </svg>
-              <span>Hobby</span>
+              <span>Free</span>
             </div>
             <div className="plan-price">$0</div>
             <p className="plan-description">
-              <span>Great for personal use or</span>
-              <span>a first step to explore</span>
-              <span>the Scout platform.</span>
+              <span>Perfect for exploring</span>
+              <span>DevMates and finding</span>
+              <span>your first co-founder.</span>
             </p>
-            <a href="#signup" className="btn-plan">Sign Up</a>
+            <a href="#signup" className="btn-plan">Get Started</a>
             <ul className="plan-features">
               <li>
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
                   <path d="M15 10.0147L10.5 15.2528L8.5 13.348M21 12.3957C21 17.1295 16.9705 20.9671 12 20.9671C7.02943 20.9671 3 17.1295 3 12.3957C3 7.66178 7.02943 3.82422 12 3.82422C16.9705 3.82422 21 7.66178 21 12.3957Z" stroke="#434343" strokeWidth="1.5"/>
                 </svg>
-                <span>100 Interactions (GPT-3.5 Only)</span>
+                <span>Create Your Profile</span>
               </li>
               <li>
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
                   <path d="M15 10.0147L10.5 15.2528L8.5 13.348M21 12.3957C21 17.1295 16.9705 20.9671 12 20.9671C7.02943 20.9671 3 17.1295 3 12.3957C3 7.66178 7.02943 3.82422 12 3.82422C16.9705 3.82422 21 7.66178 21 12.3957Z" stroke="#434343" strokeWidth="1.5"/>
                 </svg>
-                <span>Deploy 1 App</span>
+                <span>Browse 10 Matches Daily</span>
               </li>
               <li>
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
                   <path d="M15 10.0147L10.5 15.2528L8.5 13.348M21 12.3957C21 17.1295 16.9705 20.9671 12 20.9671C7.02943 20.9671 3 17.1295 3 12.3957C3 7.66178 7.02943 3.82422 12 3.82422C16.9705 3.82422 21 7.66178 21 12.3957Z" stroke="#434343" strokeWidth="1.5"/>
                 </svg>
-                <span>Connect 1 Collection</span>
+                <span>Send 5 Messages</span>
               </li>
               <li>
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
                   <path d="M15 10.0147L10.5 15.2528L8.5 13.348M21 12.3957C21 17.1295 16.9705 20.9671 12 20.9671C7.02943 20.9671 3 17.1295 3 12.3957C3 7.66178 7.02943 3.82422 12 3.82422C16.9705 3.82422 21 7.66178 21 12.3957Z" stroke="#434343" strokeWidth="1.5"/>
                 </svg>
-                <span>10GB of Storage</span>
+                <span>Basic Skill Verification</span>
               </li>
               <li>
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
                   <path d="M15 10.0147L10.5 15.2528L8.5 13.348M21 12.3957C21 17.1295 16.9705 20.9671 12 20.9671C7.02943 20.9671 3 17.1295 3 12.3957C3 7.66178 7.02943 3.82422 12 3.82422C16.9705 3.82422 21 7.66178 21 12.3957Z" stroke="#434343" strokeWidth="1.5"/>
                 </svg>
-                <span>Community Support (Discord)</span>
+                <span>Community Support</span>
               </li>
             </ul>
           </div>
