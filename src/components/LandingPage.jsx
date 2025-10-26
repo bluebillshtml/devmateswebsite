@@ -957,7 +957,7 @@ const LandingPage = () => {
               </svg>
               <span>Pro</span>
             </div>
-            <div className="plan-price">$15</div>
+            <div className="plan-price">$20</div>
             <p className="plan-description">
               <span>Unlimited matches and</span>
               <span>premium features to</span>
