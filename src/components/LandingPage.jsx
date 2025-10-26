@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import './LandingPage.css';
 
 const LandingPage = () => {
@@ -1169,14 +1170,14 @@ const LandingPage = () => {
             <div className="footer-column">
               <h4>Legal</h4>
               <ul>
-                <li><a href="#terms">Terms of Service</a></li>
+                <li><Link to="/terms">Terms of Service</Link></li>
                 <li><a href="#privacy">Privacy Policy</a></li>
               </ul>
             </div>
           </div>
         </div>
         <div className="footer-bottom">
-          <p>Copyright © 2024 Scout. All rights reserved.</p>
+          <p>Copyright © 2024 DevMates. All rights reserved.</p>
           <div className="footer-social">
             <a href="#slack" aria-label="Slack">
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
