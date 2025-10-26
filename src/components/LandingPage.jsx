@@ -3,6 +3,31 @@ import './LandingPage.css';
 
 const LandingPage = () => {
   const [scrolled, setScrolled] = useState(false);
+  const [activeTestimonial, setActiveTestimonial] = useState(0);
+
+  const testimonials = [
+    {
+      quote: "DevMates has become an essential platform for our team to connect, collaborate, and build new ventures. It streamlines the process of finding like-minded creators, making it a core part of how we form and scale our projects.",
+      author: "Levi Carpenter",
+      title: "CEO of Devmates",
+      avatar: "/levi.jpg",
+      showStars: false
+    },
+    {
+      quote: "Finding a technical co-founder was always the hardest part of launching a startup. DevMates made it seamless - I connected with my CTO in just two weeks. Now we're building something incredible together.",
+      author: "Sarah Chen",
+      title: "Founder of TechFlow AI",
+      avatar: "/levi.jpg",
+      showStars: true
+    },
+    {
+      quote: "The skill verification feature gave me confidence that I was connecting with real developers. Within a month, I had assembled a talented team of 4 co-founders, all verified and passionate about our vision.",
+      author: "Marcus Johnson",
+      title: "Co-Founder of CloudSync",
+      avatar: "/levi.jpg",
+      showStars: true
+    }
+  ];
 
   useEffect(() => {
     const handleScroll = () => {
@@ -391,26 +416,115 @@ const LandingPage = () => {
             {/* Card 1: Smart Matching Algorithm */}
             <div className="feature-card">
               <div className="feature-card-visual">
-                <div className="workflow-diagram">
-                  <div className="workflow-node">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-                      <circle cx="12" cy="8" r="4" stroke="currentColor" strokeWidth="2"/>
-                      <path d="M6 21v-2a4 4 0 0 1 4-4h4a4 4 0 0 1 4 4v2" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/>
-                    </svg>
+                <div className="dual-phone-container">
+                  {/* Phone 1 - Profile Card */}
+                  <div className="phone-device phone-left">
+                    <div className="phone-frame-device">
+                      <div className="phone-notch-device"></div>
+                      <div className="phone-screen-device">
+                        <div className="profile-card-screen">
+                          <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=400&h=600&fit=crop" alt="Profile" className="profile-image-photo" />
+                          <div className="profile-header-bar">
+                            <span className="profile-logo">DevMates</span>
+                          </div>
+                          <div className="profile-info-bottom">
+                            <h4 className="profile-name-card">Emma Williams</h4>
+                            <p className="profile-role-card">Product Manager</p>
+                            <p className="profile-location-card">📍 San Francisco, CA</p>
+                            <div className="profile-tags-card">
+                              <span className="tag-card">Product Design</span>
+                              <span className="tag-card">Growth Hacking</span>
+                              <span className="tag-card">SEO</span>
+                              <span className="tag-card">UI/UX</span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
                   </div>
-                  <div className="workflow-connector"></div>
-                  <div className="workflow-node">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-                      <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                    </svg>
-                  </div>
-                  <div className="workflow-connector"></div>
-                  <div className="workflow-node">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-                      <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/>
-                      <circle cx="9" cy="7" r="4" stroke="currentColor" strokeWidth="2"/>
-                      <path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/>
-                    </svg>
+
+                  {/* Phone 2 - Startup Categories */}
+                  <div className="phone-device phone-right">
+                    <div className="phone-frame-device">
+                      <div className="phone-notch-device"></div>
+                      <div className="phone-screen-device">
+                        <div className="categories-screen-new">
+                          <div className="categories-header">
+                            <h3>Browse Ideas</h3>
+                            <button className="filter-btn">
+                              <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+                                <path d="M3 7h18M6 12h12M9 17h6" stroke="white" strokeWidth="2" strokeLinecap="round"/>
+                              </svg>
+                            </button>
+                          </div>
+
+                          <div className="category-list">
+                            <div className="category-item">
+                              <div className="category-icon-wrapper purple-gradient">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                  <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2M9 11a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                                </svg>
+                              </div>
+                              <div className="category-content">
+                                <h4>Find Co-Founders</h4>
+                                <p>3,284 looking</p>
+                              </div>
+                              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" className="arrow-icon">
+                                <path d="M9 18l6-6-6-6" stroke="rgba(255,255,255,0.4)" strokeWidth="2" strokeLinecap="round"/>
+                              </svg>
+                            </div>
+
+                            <div className="category-item">
+                              <div className="category-icon-wrapper blue-gradient">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                  <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14M22 4L12 14.01l-3-3" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                                </svg>
+                              </div>
+                              <div className="category-content">
+                                <h4>Skill Verified</h4>
+                                <p>1,847 developers</p>
+                              </div>
+                              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" className="arrow-icon">
+                                <path d="M9 18l6-6-6-6" stroke="rgba(255,255,255,0.4)" strokeWidth="2" strokeLinecap="round"/>
+                              </svg>
+                            </div>
+
+                            <div className="category-item">
+                              <div className="category-icon-wrapper pink-gradient">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                  <path d="M12 20.94c1.5 0 2.75 1.06 4.96 0 2.5-1.5 4.96-8.94 4.96-8.94H2.08s2.46 7.44 4.96 8.94c2.21 1.06 3.46 0 4.96 0z" fill="white"/>
+                                  <circle cx="12" cy="12" r="3" stroke="white" strokeWidth="2"/>
+                                  <path d="M12 2v4" stroke="white" strokeWidth="2" strokeLinecap="round"/>
+                                </svg>
+                              </div>
+                              <div className="category-content">
+                                <h4>Startup Ideas</h4>
+                                <p>5,621 ideas</p>
+                              </div>
+                              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" className="arrow-icon">
+                                <path d="M9 18l6-6-6-6" stroke="rgba(255,255,255,0.4)" strokeWidth="2" strokeLinecap="round"/>
+                              </svg>
+                            </div>
+
+                            <div className="category-item">
+                              <div className="category-icon-wrapper green-gradient">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                  <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                                  <path d="M8 10h8M8 14h4" stroke="white" strokeWidth="2" strokeLinecap="round"/>
+                                </svg>
+                              </div>
+                              <div className="category-content">
+                                <h4>Active Teams</h4>
+                                <p>938 teams</p>
+                              </div>
+                              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" className="arrow-icon">
+                                <path d="M9 18l6-6-6-6" stroke="rgba(255,255,255,0.4)" strokeWidth="2" strokeLinecap="round"/>
+                              </svg>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -450,20 +564,52 @@ const LandingPage = () => {
             {/* Card 3: Team Compatibility Score */}
             <div className="feature-card">
               <div className="feature-card-visual">
-                <div className="data-preview">
-                  <div className="data-header">
-                    <div className="data-icon">
-                      <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
-                        <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/>
-                        <polyline points="22 4 12 14.01 9 11.01" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                      </svg>
+                <div className="single-phone-container">
+                  <div className="phone-device-single">
+                    <div className="phone-frame-device">
+                      <div className="phone-notch-device"></div>
+                      <div className="phone-screen-device">
+                        <div className="compatibility-screen-new">
+                          <div className="compat-header">
+                            <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&h=100&fit=crop" alt="Profile" className="compat-avatar" />
+                            <div className="compat-info">
+                              <h4 className="compat-name">Sarah Chen</h4>
+                              <p className="compat-role">Full-Stack Developer</p>
+                            </div>
+                          </div>
+                          <div className="compat-score-section">
+                            <div className="score-circle-new">
+                              <svg width="90" height="90" viewBox="0 0 90 90">
+                                <circle cx="45" cy="45" r="38" fill="none" stroke="rgba(255,255,255,0.1)" strokeWidth="6"/>
+                                <circle cx="45" cy="45" r="38" fill="none" stroke="#09F785" strokeWidth="6" strokeDasharray="240" strokeDashoffset="14" strokeLinecap="round" transform="rotate(-90 45 45)"/>
+                              </svg>
+                              <div className="score-text-new">94%</div>
+                            </div>
+                            <p className="match-label">Compatibility Match</p>
+                          </div>
+                          <div className="compat-bars">
+                            <div className="compat-bar-item">
+                              <span className="bar-label">Skills</span>
+                              <div className="bar-track">
+                                <div className="bar-fill" style={{width: '92%'}}></div>
+                              </div>
+                            </div>
+                            <div className="compat-bar-item">
+                              <span className="bar-label">Goals</span>
+                              <div className="bar-track">
+                                <div className="bar-fill" style={{width: '96%'}}></div>
+                              </div>
+                            </div>
+                            <div className="compat-bar-item">
+                              <span className="bar-label">Culture</span>
+                              <div className="bar-track">
+                                <div className="bar-fill" style={{width: '94%'}}></div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
                     </div>
-                    <span>Compatibility: 94%</span>
-                  </div>
-                  <div className="data-text">High match on skills, goals, and team culture fit</div>
-                  <div className="data-actions">
-                    <button className="data-btn-delete">Pass</button>
-                    <button className="data-btn-save">Connect</button>
                   </div>
                 </div>
               </div>
@@ -501,6 +647,32 @@ const LandingPage = () => {
                     </svg>
                     <span>Looking for technical co-founder</span>
                   </div>
+                  <div className="api-tag-group">
+                    <span className="api-tag">React</span>
+                    <span className="api-tag">Python</span>
+                    <span className="api-tag">AI/ML</span>
+                  </div>
+                  <div className="api-metrics">
+                    <div className="api-metric">
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none">
+                        <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" stroke="#9a9a9c" strokeWidth="2"/>
+                      </svg>
+                      <span>24</span>
+                    </div>
+                    <div className="api-metric">
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none">
+                        <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" stroke="#9a9a9c" strokeWidth="2"/>
+                      </svg>
+                      <span>8</span>
+                    </div>
+                    <div className="api-metric">
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none">
+                        <circle cx="12" cy="12" r="10" stroke="#9a9a9c" strokeWidth="2"/>
+                        <polyline points="12 6 12 12 16 14" stroke="#9a9a9c" strokeWidth="2"/>
+                      </svg>
+                      <span>2d ago</span>
+                    </div>
+                  </div>
                 </div>
               </div>
               <div className="feature-card-text">
@@ -512,19 +684,52 @@ const LandingPage = () => {
             {/* Card 5: Verified Skills */}
             <div className="feature-card">
               <div className="feature-card-visual">
-                <div className="automate-preview">
-                  <div className="automate-badge">
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
-                      <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" stroke="currentColor" strokeWidth="2" fill="currentColor"/>
-                    </svg>
-                    <span>Verified Developer</span>
+                <div className="github-preview">
+                  <div className="github-header">
+                    <div className="github-avatar-badge">
+                      <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+                        <path d="M12 2C6.477 2 2 6.477 2 12c0 4.42 2.865 8.17 6.839 9.49.5.092.682-.217.682-.482 0-.237-.008-.866-.013-1.7-2.782.603-3.369-1.34-3.369-1.34-.454-1.156-1.11-1.463-1.11-1.463-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.831.092-.646.35-1.086.636-1.336-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.025A9.578 9.578 0 0112 6.836c.85.004 1.705.114 2.504.336 1.909-1.294 2.747-1.025 2.747-1.025.546 1.377.203 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.578.688.48C19.138 20.167 22 16.418 22 12c0-5.523-4.477-10-10-10z" fill="white"/>
+                      </svg>
+                    </div>
+                    <span className="github-username">@sarah_dev</span>
                   </div>
-                  <div className="automate-link">
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
-                      <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" stroke="#5E6AD2" strokeWidth="2"/>
-                      <polyline points="22 4 12 14.01 9 11.01" stroke="#5E6AD2" strokeWidth="2"/>
+
+                  <div className="github-stats">
+                    <div className="github-stat-item">
+                      <span className="stat-number">247</span>
+                      <span className="stat-label">Contributions</span>
+                    </div>
+                    <div className="github-stat-item">
+                      <span className="stat-number">18</span>
+                      <span className="stat-label">Repos</span>
+                    </div>
+                    <div className="github-stat-item">
+                      <span className="stat-number">342</span>
+                      <span className="stat-label">Stars</span>
+                    </div>
+                  </div>
+
+                  <div className="github-projects">
+                    <div className="github-project-item">
+                      <div className="project-dot react-dot"></div>
+                      <span className="project-name">react-dashboard</span>
+                    </div>
+                    <div className="github-project-item">
+                      <div className="project-dot python-dot"></div>
+                      <span className="project-name">ml-api-service</span>
+                    </div>
+                    <div className="github-project-item">
+                      <div className="project-dot ts-dot"></div>
+                      <span className="project-name">ui-component-lib</span>
+                    </div>
+                  </div>
+
+                  <div className="github-verified">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none">
+                      <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" stroke="#09F785" strokeWidth="2"/>
+                      <polyline points="22 4 12 14.01 9 11.01" stroke="#09F785" strokeWidth="2"/>
                     </svg>
-                    <span>GitHub & portfolio verified</span>
+                    <span>Portfolio Verified</span>
                   </div>
                 </div>
               </div>
@@ -537,30 +742,65 @@ const LandingPage = () => {
             {/* Card 6: Team Chat & Collaboration */}
             <div className="feature-card">
               <div className="feature-card-visual">
-                <div className="inbox-preview">
-                  <div className="inbox-message">
-                    <div className="inbox-icon">
-                      <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
-                        <circle cx="12" cy="12" r="10" fill="#B868C7"/>
-                      </svg>
+                <div className="chat-preview-new">
+                  <div className="chat-conversation">
+                    <div className="chat-message-item received">
+                      <div className="chat-user-avatar">
+                        <span>AM</span>
+                      </div>
+                      <div className="chat-message-content">
+                        <div className="chat-message-header">
+                          <span className="chat-user-name">Alex Martinez</span>
+                          <span className="chat-message-time">2:34 PM</span>
+                        </div>
+                        <div className="chat-message-bubble">Hey! Love your idea for the AI platform 🚀</div>
+                      </div>
                     </div>
-                    <span>Love the idea! When can we start building?</span>
+
+                    <div className="chat-message-item sent">
+                      <div className="chat-message-content sent-content">
+                        <div className="chat-message-header">
+                          <span className="chat-message-time">2:36 PM</span>
+                          <span className="chat-user-name">You</span>
+                        </div>
+                        <div className="chat-message-bubble sent-bubble">Thanks! I saw your design portfolio. Want to co-found?</div>
+                      </div>
+                    </div>
+
+                    <div className="chat-message-item received">
+                      <div className="chat-user-avatar">
+                        <span>AM</span>
+                      </div>
+                      <div className="chat-message-content">
+                        <div className="chat-message-header">
+                          <span className="chat-user-name">Alex Martinez</span>
+                          <span className="chat-message-time">2:38 PM</span>
+                        </div>
+                        <div className="chat-message-bubble">Absolutely! Let's discuss equity split and roles</div>
+                      </div>
+                    </div>
+
+                    <div className="chat-message-item received">
+                      <div className="chat-user-avatar">
+                        <span>AM</span>
+                      </div>
+                      <div className="chat-message-content">
+                        <div className="chat-message-header">
+                          <span className="chat-user-name">Alex Martinez</span>
+                          <span className="chat-message-time">2:39 PM</span>
+                        </div>
+                        <div className="chat-message-bubble">I can handle all design & frontend. You doing backend?</div>
+                      </div>
+                    </div>
                   </div>
-                  <div className="inbox-option">
-                    <div className="inbox-icon-sm">
+
+                  <div className="chat-input-bar">
+                    <input type="text" placeholder="Type a message..." className="chat-text-input" readOnly />
+                    <button className="chat-send-button">
                       <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
-                        <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" stroke="currentColor" strokeWidth="2"/>
+                        <path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
                       </svg>
-                    </div>
-                    <span>Schedule a video call to discuss equity split</span>
-                  </div>
-                  <div className="inbox-option">
-                    <div className="inbox-icon-sm">
-                      <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
-                        <circle cx="12" cy="12" r="10" fill="#B868C7"/>
-                      </svg>
-                    </div>
-                    <span>What's your tech stack preference?</span>
+                    </button>
                   </div>
                 </div>
               </div>
@@ -578,39 +818,52 @@ const LandingPage = () => {
         <div className="testimonials-bg">
           <img src="https://api.builder.io/api/v1/image/assets/TEMP/a2abe0642bbe851e74263ac6d52914d6908fcd4a?width=1366" alt="Stars" className="stars-overlay" />
         </div>
-        <div className="testimonial-content">
+        <div className="testimonial-content" key={activeTestimonial}>
           <blockquote className="testimonial-quote">
-            <p>"DevMates has become an essential</p>
-            <p>platform for our team to connect,</p>
-            <p>collaborate, and build new ventures. It</p>
-            <p>streamlines the process of finding</p>
-            <p>like-minded creators, making it a core</p>
-            <p>part of how we form and scale our projects."</p>
+            <p>"{testimonials[activeTestimonial].quote}"</p>
+            {testimonials[activeTestimonial].showStars && (
+              <div className="star-rating">
+                {[...Array(5)].map((_, i) => (
+                  <svg key={i} width="24" height="24" viewBox="0 0 24 24" fill="none">
+                    <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" fill="#FFD700"/>
+                  </svg>
+                ))}
+              </div>
+            )}
           </blockquote>
           <div className="testimonial-author">
-            <img src="/levi.jpg" alt="Levi Carpenter" className="author-avatar" />
+            <img src={testimonials[activeTestimonial].avatar} alt={testimonials[activeTestimonial].author} className="author-avatar" />
             <div className="author-info">
-              <div className="author-name">Levi Carpenter</div>
-              <div className="author-title">CEO of Devmates</div>
+              <div className="author-name">{testimonials[activeTestimonial].author}</div>
+              <div className="author-title">{testimonials[activeTestimonial].title}</div>
             </div>
           </div>
         </div>
         <div className="testimonial-logos">
-          <div className="logo-grid-item">
+          <button
+            className={`logo-grid-item ${activeTestimonial === 0 ? 'active' : ''}`}
+            onClick={() => setActiveTestimonial(0)}
+          >
             <svg width="34" height="30" viewBox="0 0 34 30" fill="none">
               <path fillRule="evenodd" clipRule="evenodd" d="M32.8561 13.5585C33.2434 14.2291 33.2434 15.0554 32.8561 15.7261L25.6534 28.2008C25.2661 28.8714 24.5505 29.2846 23.776 29.2846H9.37056C8.59609 29.2846 7.88044 28.8714 7.49313 28.2008L0.290482 15.7261C-0.0968273 15.0554 -0.0968273 14.2291 0.290482 13.5585L7.49313 1.08381C7.88044 0.413149 8.59609 0 9.37056 0H23.776C24.5505 0 25.2661 0.413149 25.6534 1.08381L32.8561 13.5585ZM26.4983 9.3054C26.7879 9.23633 27.0321 9.52737 26.9137 9.80049L24.9262 14.3853C24.8194 14.6318 24.4906 14.6797 24.3179 14.4739L23.5796 13.594L18.9748 17.6203C18.5256 18.013 17.8436 17.969 17.4488 17.5219L14.3969 14.0656L10.8868 17.121C10.9299 17.2974 10.9527 17.4818 10.9527 17.6716C10.9527 18.9484 9.91753 19.9837 8.64042 19.9837C7.36345 19.9837 6.32812 18.9484 6.32812 17.6716C6.32812 16.3945 7.36345 15.3594 8.64042 15.3594C8.92309 15.3594 9.19392 15.41 9.44423 15.5029L13.7854 11.724C14.2346 11.333 14.9153 11.3777 15.3095 11.8242L18.3598 15.2785L22.1858 11.9331L21.4449 11.0501C21.2722 10.8444 21.3764 10.5288 21.6377 10.4665L26.4983 9.3054Z" fill="white"/>
             </svg>
-          </div>
-          <div className="logo-grid-item">
+          </button>
+          <button
+            className={`logo-grid-item ${activeTestimonial === 1 ? 'active' : ''}`}
+            onClick={() => setActiveTestimonial(1)}
+          >
             <svg width="30" height="30" viewBox="0 0 30 30" fill="none">
               <path d="M9.99037 28.7841C9.9909 28.9517 10.0259 29.1174 10.0933 29.2709C10.1607 29.4244 10.259 29.5623 10.382 29.6761C10.5051 29.7898 10.6502 29.877 10.8085 29.9321C10.9667 29.9873 11.1346 30.0091 11.3016 29.9964C17.6519 29.5418 23.6496 25.0477 25.5643 18.0284C25.665 17.6247 25.9679 17.4222 26.3714 17.4222C26.5783 17.4306 26.7736 17.5201 26.9149 17.6715C27.0563 17.8228 27.1323 18.0238 27.1265 18.2309C27.1265 19.796 25.1146 23.8864 22.2377 26.2601C22.0911 26.3834 21.9742 26.5383 21.8958 26.7131C21.8172 26.888 21.7792 27.0783 21.7845 27.2699C21.7874 27.4257 21.8211 27.5794 21.8835 27.7221C21.9459 27.8649 22.0358 27.9939 22.1482 28.1018C22.2606 28.2097 22.3931 28.2943 22.5382 28.3509C22.6834 28.4075 22.8383 28.4347 22.994 28.4313C23.246 28.4313 23.6495 28.2798 24.1537 27.8252C26.1656 26.0067 29.9999 20.9065 29.9999 15.3007C29.9999 7.08206 23.646 0 14.7786 0C6.86613 0 0.0117188 6.46407 0.0117188 13.9381C0.0117188 18.8867 3.94306 22.6231 9.13356 22.6231C13.1158 22.6231 16.7951 19.796 17.8034 15.9068C17.904 15.5031 18.2058 15.3007 18.6093 15.3007C18.8163 15.309 19.0117 15.3986 19.1532 15.5499C19.2947 15.7012 19.371 15.9021 19.3656 16.1093C19.3656 17.8769 16.0389 24.0414 9.28509 24.0414C7.67206 24.0414 5.65668 23.5868 4.24482 22.7782C4.05583 22.6866 3.84995 22.635 3.64013 22.6267C3.47942 22.6205 3.31919 22.6477 3.16949 22.7064C3.01978 22.7652 2.8839 22.8543 2.77032 22.9682C2.65673 23.082 2.56791 23.2182 2.50944 23.368C2.45097 23.5179 2.42415 23.6782 2.43062 23.839C2.43715 24.0449 2.49615 24.2457 2.60197 24.4225C2.70779 24.5992 2.85696 24.7459 3.03537 24.8489C4.90046 25.9144 7.11818 26.4648 9.38568 26.4648C15.0306 26.4648 20.1715 22.6267 21.6839 16.9712C21.7845 16.5675 22.0875 16.365 22.4898 16.365C22.6968 16.3734 22.8922 16.4628 23.0337 16.6142C23.1752 16.7655 23.2515 16.9665 23.246 17.1736C23.246 19.4964 19.1135 26.9704 11.1502 27.5765C10.8421 27.5994 10.5532 27.7353 10.3392 27.9582C10.1251 28.1811 10.0009 28.4752 9.99037 28.7841Z" fill="#4B4B4C"/>
             </svg>
-          </div>
-          <div className="logo-grid-item">
+          </button>
+          <button
+            className={`logo-grid-item ${activeTestimonial === 2 ? 'active' : ''}`}
+            onClick={() => setActiveTestimonial(2)}
+          >
             <svg width="30" height="30" viewBox="0 0 30 30" fill="none">
               <path fillRule="evenodd" clipRule="evenodd" d="M5.90164 0H24.0984C27.3577 0 30 2.64225 30 5.90164V24.0984C30 27.3577 27.3577 30 24.0984 30H5.90164C2.64225 30 0 27.3577 0 24.0984V5.90164C0 2.64225 2.64225 0 5.90164 0ZM14.0714 9.13568C14.3682 8.7388 14.9993 8.9487 14.9993 9.44424V16.5168H9.58067C9.15639 16.5168 8.91393 16.0327 9.16799 15.6929L14.0714 9.13568ZM15.9287 20.6012C15.6317 20.9981 15 20.7882 15 20.2927V13.2202H20.4234C20.848 13.2202 21.0907 13.7042 20.8363 14.044L15.9287 20.6012Z" fill="#4B4B4C"/>
             </svg>
-          </div>
+          </button>
         </div>
       </section>
 
