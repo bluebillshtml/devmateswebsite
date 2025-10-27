@@ -13,7 +13,7 @@ const Footer = () => {
         <div className="footer-left">
           <div className="footer-catalog-header">
             <h2 className="catalog-title">devmates</h2>
-            <svg className="catalog-arrow" width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <svg className="catalog-arrow" width="53" height="53" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M0.75 8.75L8.75 0.75M8.75 0.75L1.89286 0.750001M8.75 0.75V7.60714" stroke="#ECEEEC" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
             </svg>
           </div>
@@ -57,22 +57,18 @@ const Footer = () => {
         <div className="footer-right">
           <div className="contact-section">
             <p className="contact-label">Contact Us</p>
-            <div className="phone-number">
-              <span className="phone-paren">(</span>
-              <span className="phone-text">+1 891 989-11-91</span>
-              <span className="phone-paren">)</span>
-            </div>
+            <p className="phone-text">support@devmatesapp.com</p>
           </div>
 
           <div className="info-group">
             <div className="info-item">
               <p className="info-label">Location</p>
-              <p className="info-text">2972 Westheimer Rd. Santa Ana,<br />Illinois 85486</p>
+              <p className="info-text">Remote Worldwide</p>
             </div>
 
             <div className="info-item">
               <p className="info-label">Email</p>
-              <p className="info-text">hello@logoipsum.com</p>
+              <p className="info-text">hello@devmates.com</p>
             </div>
           </div>
 
@@ -81,18 +77,20 @@ const Footer = () => {
             <p className="hours-text">9am—6pm</p>
           </div>
 
-          <p className="copyright">© 2023 — Copyright</p>
+          <p className="copyright">© 2025 — Copyright</p>
         </div>
       </div>
 
       <div className="footer-banner">
+        <div className="footer-decorative-line footer-line-1"></div>
+        <div className="footer-decorative-line footer-line-2"></div>
         <div className="banner-content">
           <div className="banner-text-wrapper">
             <p className="banner-text">Explore<br />our success</p>
             <div className="banner-line"></div>
           </div>
           <div className="banner-arrow-wrapper">
-            <svg className="banner-arrow" width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <svg className="banner-arrow" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M1.00019 15.8493L15.8494 1.00007M15.8494 1.00007L3.12151 1.00007M15.8494 1.00007L15.8494 13.728" stroke="#ECEEEC" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
             </svg>
             <div className="banner-divider-top"></div>
