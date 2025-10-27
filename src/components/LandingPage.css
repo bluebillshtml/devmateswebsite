@@ -134,7 +134,7 @@
 
 body {
   font-family: -apple-system, Roboto, Helvetica, sans-serif;
-  background: linear-gradient(180deg, #1B1B1D 0%, #070708 100%);
+  background: #1B1B1D;
   color: var(--color-white);
   line-height: 1.6;
 }
@@ -142,7 +142,7 @@ body {
 .landing-page {
   width: 100%;
   min-height: 100vh;
-  background: linear-gradient(180deg, #1B1B1D 0%, #070708 100%);
+  background: #1B1B1D;
   position: relative;
   overflow-x: hidden;
 }
@@ -3373,7 +3373,7 @@ body {
   margin: 0 auto;
   display: grid;
   grid-template-columns: 1fr 2fr;
-  gap: 0;
+  gap: 60px;
   margin-bottom: 60px;
 }
 
@@ -3381,8 +3381,6 @@ body {
   display: flex;
   flex-direction: column;
   gap: 20px;
-  border-right: 1px solid rgba(255, 255, 255, 0.1);
-  padding-right: 60px;
 }
 
 .footer-logo {
@@ -3397,8 +3395,7 @@ body {
 .footer-links {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 0;
-  padding-left: 60px;
+  gap: 60px;
 }
 
 .footer-column h4 {
@@ -3410,15 +3407,6 @@ body {
   color: var(--color-white);
   opacity: 0.6;
   margin-bottom: 24px;
-}
-
-.footer-column {
-  border-right: 1px solid rgba(255, 255, 255, 0.1);
-  padding-right: 40px;
-}
-
-.footer-column:last-child {
-  border-right: none;
 }
 
 .footer-column ul {

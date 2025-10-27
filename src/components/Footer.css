@@ -1,0 +1,375 @@
+@import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&display=swap');
+
+.footer-container {
+  width: 100%;
+  background: #1B1B1D;
+  padding: 120px 24px 80px;
+  position: relative;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.footer-content {
+  max-width: 1440px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  gap: 100px;
+  padding-bottom: 64px;
+}
+
+.footer-left {
+  flex: 0 0 464px;
+  position: relative;
+  max-width: calc(100% - 48px);
+}
+
+.footer-catalog-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 40px;
+  margin-left: -650px;
+}
+
+.catalog-title {
+  font-family: 'Bricolage Grotesque', -apple-system, Roboto, Helvetica, sans-serif;
+  font-size: 96px;
+  font-weight: 500;
+  line-height: 100%;
+  letter-spacing: -1.12px;
+  color: #ECEEEC;
+  margin: 0;
+}
+
+.catalog-arrow {
+  flex-shrink: 0;
+}
+
+.footer-nav-wrapper {
+  display: flex;
+  align-items: flex-start;
+  gap: 40px;
+  margin-bottom: 140px;
+}
+
+.footer-nav {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-items: flex-start;
+  align-content: flex-start;
+  gap: 12px;
+  flex: 1;
+  margin-left: -648px;
+}
+
+.nav-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.nav-link {
+  font-family: 'Bricolage Grotesque', -apple-system, Roboto, Helvetica, sans-serif;
+  font-size: 32px;
+  font-weight: 500;
+  line-height: 120%;
+  letter-spacing: -0.4px;
+  color: #ADB3AB;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.nav-link:hover {
+  color: #ECEEEC;
+}
+
+.nav-separator {
+  font-family: 'Bricolage Grotesque', -apple-system, Roboto, Helvetica, sans-serif;
+  font-size: 32px;
+  font-weight: 200;
+  line-height: 120%;
+  color: #3C403C;
+}
+
+.back-to-top {
+  width: 44px;
+  height: 44px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  transition: transform 0.2s ease;
+}
+
+.back-to-top:hover {
+  transform: translateY(-4px);
+}
+
+.footer-right {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.contact-section {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.contact-label {
+  font-family: 'Bricolage Grotesque', -apple-system, Roboto, Helvetica, sans-serif;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 130%;
+  color: #3C403C;
+  margin: 0;
+}
+
+.phone-number {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.phone-paren {
+  font-family: 'Bricolage Grotesque', -apple-system, Roboto, Helvetica, sans-serif;
+  font-size: 48px;
+  font-weight: 200;
+  line-height: 120%;
+  color: #3C403C;
+}
+
+.phone-text {
+  font-family: 'Bricolage Grotesque', -apple-system, Roboto, Helvetica, sans-serif;
+  font-size: 48px;
+  font-weight: 400;
+  line-height: 120%;
+  letter-spacing: -0.56px;
+  color: #ECEEEC;
+}
+
+.info-group {
+  display: flex;
+  gap: 148px;
+}
+
+.info-item {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.info-label {
+  font-family: 'Bricolage Grotesque', -apple-system, Roboto, Helvetica, sans-serif;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 130%;
+  color: #3C403C;
+  margin: 0;
+}
+
+.info-text {
+  font-family: 'Bricolage Grotesque', -apple-system, Roboto, Helvetica, sans-serif;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 140%;
+  color: #ADB3AB;
+  margin: 0;
+}
+
+.hours-section {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.hours-text {
+  font-family: 'Bricolage Grotesque', -apple-system, Roboto, Helvetica, sans-serif;
+  font-size: 48px;
+  font-weight: 400;
+  line-height: 120%;
+  color: #ADB3AB;
+  margin: 0;
+}
+
+.copyright {
+  font-family: 'Bricolage Grotesque', -apple-system, Roboto, Helvetica, sans-serif;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 130%;
+  color: #3C403C;
+  margin: 0;
+}
+
+.footer-banner {
+  width: calc(100% + 0px);
+  margin-left: 3px;
+  height: 260px;
+  background: linear-gradient(0deg, rgba(38, 41, 38, 0.70) 0%, rgba(38, 41, 38, 0.70) 100%),
+              url(./footer.jpg);
+  background-size: cover;
+  background-position: center;
+  border-radius: 16px;
+  position: relative;
+  overflow: hidden;
+}
+
+.banner-content {
+  display: flex;
+  height: 100%;
+}
+
+.banner-text-wrapper {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  padding: 10px 64px;
+  position: relative;
+}
+
+.banner-text {
+  font-family: 'Bricolage Grotesque', -apple-system, Roboto, Helvetica, sans-serif;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 130%;
+  letter-spacing: -0.2px;
+  color: #D1D5DB;
+  margin: 0;
+}
+
+.banner-line {
+  width: 24px;
+  height: 1px;
+  background: #3C403C;
+  mix-blend-mode: multiply;
+  position: absolute;
+  bottom: 79px;
+  left: 64px;
+  display: none;
+}
+
+.banner-arrow-wrapper {
+  width: 180px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0;
+}
+
+.banner-arrow {
+  flex-shrink: 0;
+}
+
+.banner-divider-top,
+.banner-divider-bottom {
+  width: 1px;
+  height: 24px;
+  background: #3C403C;
+  mix-blend-mode: multiply;
+  display: none;
+}
+
+@media (max-width: 1024px) {
+  .footer-content {
+    flex-direction: column;
+    gap: 60px;
+  }
+
+  .footer-left {
+    flex: none;
+    width: 100%;
+  }
+
+  .info-group {
+    gap: 60px;
+  }
+}
+
+@media (max-width: 768px) {
+  .footer-container {
+    padding: 40px 16px 0;
+  }
+
+  .catalog-title {
+    font-size: 40px;
+    letter-spacing: -0.8px;
+  }
+
+  .footer-nav {
+    padding-right: 0;
+    margin-bottom: 60px;
+  }
+
+  .nav-link,
+  .nav-separator {
+    font-size: 16px;
+  }
+
+  .phone-text,
+  .phone-paren,
+  .hours-text {
+    font-size: 24px;
+  }
+
+  .info-group {
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .footer-banner {
+    width: calc(100% + 32px);
+    margin-left: -16px;
+  }
+
+  .banner-text-wrapper {
+    padding: 10px 32px;
+  }
+
+  .banner-text {
+    font-size: 18px;
+  }
+
+  .banner-line {
+    left: 32px;
+  }
+
+  .banner-arrow-wrapper {
+    width: 120px;
+  }
+}
+
+@media (max-width: 480px) {
+  .catalog-title {
+    font-size: 32px;
+  }
+
+  .footer-nav {
+    gap: 8px 16px;
+  }
+
+  .nav-item {
+    gap: 16px;
+  }
+
+  .nav-link,
+  .nav-separator {
+    font-size: 14px;
+  }
+
+  .phone-text,
+  .phone-paren {
+    font-size: 20px;
+  }
+
+  .hours-text {
+    font-size: 24px;
+  }
+
+  .banner-text {
+    font-size: 16px;
+  }
+}

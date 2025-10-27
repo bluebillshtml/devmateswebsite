@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import Footer from './Footer';
 import './LandingPage.css';
 
 const LandingPage = () => {
@@ -1200,63 +1201,7 @@ const LandingPage = () => {
         </div>
       </section>
 
-      {/* Footer */}
-      <footer className="footer">
-        <div className="footer-content">
-          <div className="footer-brand">
-            <img className="footer-logo" src="/logo.png" alt="Scout Logo" width="110" height="20" />
-            <img src="https://api.builder.io/api/v1/image/assets/TEMP/4454fe22e3d3f4b1193821c7b2ae25596e01122b?width=674" alt="Scout illustration" className="footer-illustration" />
-          </div>
-          <div className="footer-links">
-            <div className="footer-column">
-              <h4>Links</h4>
-              <ul>
-                <li><a href="#features">Features</a></li>
-                <li><a href="#pricing">Pricing</a></li>
-                <li><a href="#docs">Docs</a></li>
-                <li><a href="#blog">Blog</a></li>
-              </ul>
-            </div>
-            <div className="footer-column">
-              <h4>Dev Updates</h4>
-              <ul>
-                <li><a href="#roadmap">Roadmap</a></li>
-                <li><a href="#beta">Beta Access</a></li>
-                <li><a href="#status">Developer Updates</a></li>
-                <li><a href="#newsletter">Newsletter</a></li>
-              </ul>
-            </div>
-            <div className="footer-column">
-              <h4>Legal</h4>
-              <ul>
-                <li><Link to="/terms">Terms of Service</Link></li>
-                <li><Link to="/privacy">Privacy Policy</Link></li>
-              </ul>
-            </div>
-          </div>
-        </div>
-        <div className="footer-bottom">
-          <p>Copyright © 2024 DevMates. All rights reserved.</p>
-          <div className="footer-social">
-            <a href="#slack" aria-label="Slack">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-                <path d="M5.04235 15.1662C5.04235 16.5538 3.9088 17.6874 2.52117 17.6874C1.13355 17.6874 0 16.5538 0 15.1662C0 13.7786 1.13355 12.645 2.52117 12.645H5.04235V15.1662Z" fill="white" fillOpacity="0.4"/>
-                <path d="M6.31274 15.1662C6.31274 13.7786 7.44629 12.645 8.83392 12.645C10.2215 12.645 11.3551 13.7786 11.3551 15.1662V21.4789C11.3551 22.8665 10.2215 24.0001 8.83392 24.0001C7.44629 24.0001 6.31274 22.8665 6.31274 21.4789V15.1662Z" fill="white" fillOpacity="0.4"/>
-              </svg>
-            </a>
-            <a href="#twitter" aria-label="Twitter">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-                <path d="M18.8916 1H22.5542L14.5542 10.2048L24 22.6867H16.5783L10.7952 15.1205L4.14458 22.6867H0.481928L9.06024 12.8554L0 1H7.61446L12.8675 7.93976L18.8916 1ZM17.5904 20.4699H19.6145L6.50602 3.07229H4.28916L17.5904 20.4699Z" fill="white" fillOpacity="0.4"/>
-              </svg>
-            </a>
-            <a href="#linkedin" aria-label="LinkedIn">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-                <path d="M20.4226 20.2213H16.8712V14.7144C16.8712 13.4012 16.8475 11.7107 15.0241 11.7107C13.1744 11.7107 12.8914 13.1415 12.8914 14.6188V20.2209H9.33991V8.89645H12.7493V10.4441H12.797C13.1382 9.86642 13.6313 9.39123 14.2237 9.06909C14.816 8.74696 15.4856 8.58994 16.1609 8.61476C19.7605 8.61476 20.4241 10.9591 20.4241 14.0089L20.4226 20.2213ZM5.33271 7.34847C4.92509 7.34854 4.5266 7.22893 4.18764 7.00476C3.84867 6.78059 3.58448 6.46193 3.42842 6.08908C3.27237 5.71623 3.23147 5.30593 3.31092 4.91007C3.39037 4.51421 3.5866 4.15056 3.87477 3.86512C4.16295 3.57968 4.53014 3.38526 4.92991 3.30645C5.32968 3.22764 5.74407 3.26798 6.12069 3.42236C6.4973 3.57675 6.81923 3.83825 7.04575 4.17379C7.27227 4.50933 7.39322 4.90385 7.39329 5.30745C7.39334 5.57544 7.34007 5.8408 7.23654 6.0884C7.13302 6.336 6.98126 6.56099 6.78992 6.75052C6.59858 6.94004 6.37139 7.0904 6.12137 7.19299C5.87134 7.29559 5.60336 7.34842 5.33271 7.34847ZM7.10843 20.2213H3.55329V8.89645H7.10843V20.2213ZM22.1932 0.0016169H1.7687C1.30512 -0.00356306 0.858404 0.173702 0.526757 0.49446C0.195109 0.815217 0.00565772 1.25322 0 1.71223V22.0195C0.00546408 22.4787 0.194804 22.917 0.526441 23.2381C0.858077 23.5592 1.30489 23.7368 1.7687 23.7319H22.1932C22.6579 23.7377 23.106 23.5606 23.4389 23.2395C23.7719 22.9184 23.9625 22.4796 23.9689 22.0195V1.71077C23.9623 1.25085 23.7715 0.812343 23.4386 0.491594C23.1056 0.170844 22.6577 -0.00591465 22.1932 0.000151116" fill="white" fillOpacity="0.4"/>
-              </svg>
-            </a>
-          </div>
-        </div>
-      </footer>
+      <Footer />
     </div>
   );
 };

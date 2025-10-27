@@ -5,6 +5,7 @@ import LandingPage from './components/LandingPage';
 import TermsOfService from './components/TermsOfService';
 import PrivacyPolicy from './components/PrivacyPolicy';
 import './components/LandingPage.css';
+import './components/Footer.css';
 import './components/TermsOfService.css';
 import './components/PrivacyPolicy.css';
 
