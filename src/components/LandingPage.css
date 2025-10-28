@@ -3545,11 +3545,11 @@ body {
     font-size: 18px;
   }
 
-  /* Hero Phone Mockups - Keep horizontal on mobile but smaller */
+  /* Hero Phone Mockups - Keep horizontal on mobile but much smaller */
   .hero-phones {
     flex-direction: row;
-    gap: 8px;
-    padding: 40px 10px;
+    gap: 6px;
+    padding: 40px 8px;
     align-items: center;
     justify-content: center;
     overflow: visible;
@@ -3574,21 +3574,194 @@ body {
   }
 
   .phone-frame {
-    width: 180px;
-    height: 380px;
-    padding: 8px;
-    border-radius: 32px;
+    width: 150px;
+    height: 320px;
+    padding: 7px;
+    border-radius: 28px;
     margin: 0;
   }
 
   .phone-notch {
-    width: 90px;
-    height: 22px;
-    border-radius: 0 0 12px 12px;
+    width: 75px;
+    height: 18px;
+    border-radius: 0 0 10px 10px;
   }
 
   .phone-screen {
-    border-radius: 26px;
+    border-radius: 22px;
+  }
+
+  /* Scale down all content inside phone screens */
+  .screen-content {
+    padding: 15px 10px;
+  }
+
+  .profile-image {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 8px;
+    border-width: 2px;
+  }
+
+  .profile-name {
+    font-size: 13px;
+    margin-bottom: 2px;
+  }
+
+  .profile-title {
+    font-size: 9px;
+    margin-bottom: 8px;
+  }
+
+  .profile-tags {
+    gap: 4px;
+    margin-bottom: 10px;
+  }
+
+  .tag {
+    padding: 3px 6px;
+    font-size: 7px;
+    border-radius: 10px;
+  }
+
+  .bio-text {
+    font-size: 8px;
+    line-height: 1.4;
+  }
+
+  .profile-bio {
+    margin-bottom: 12px;
+  }
+
+  .profile-stats {
+    padding: 10px 0;
+  }
+
+  .stat-value {
+    font-size: 12px;
+    margin-bottom: 2px;
+  }
+
+  .stat-label {
+    font-size: 7px;
+  }
+
+  /* Swipe Screen */
+  .swipe-card {
+    margin: 10px;
+    border-radius: 12px;
+  }
+
+  .card-image {
+    height: 100px;
+  }
+
+  .card-content {
+    padding: 10px;
+  }
+
+  .card-name {
+    font-size: 12px;
+    margin-bottom: 2px;
+  }
+
+  .card-role {
+    font-size: 8px;
+    margin-bottom: 6px;
+  }
+
+  .card-tags {
+    gap: 3px;
+    margin-bottom: 6px;
+  }
+
+  .card-bio {
+    font-size: 8px;
+    line-height: 1.4;
+  }
+
+  .card-actions {
+    gap: 15px;
+    padding: 10px;
+  }
+
+  .action-btn {
+    width: 35px;
+    height: 35px;
+    border-width: 1.5px;
+  }
+
+  /* Chat Screen */
+  .header-title {
+    font-size: 10px;
+  }
+
+  .back-btn {
+    width: 20px;
+    height: 20px;
+    border-radius: 5px;
+  }
+
+  .chat-avatar {
+    width: 22px;
+    height: 22px;
+    margin-right: 6px;
+  }
+
+  .chat-name {
+    font-size: 10px;
+  }
+
+  .chat-messages {
+    padding: 10px;
+    min-height: 200px;
+    gap: 6px;
+  }
+
+  .message-bubble {
+    padding: 6px 8px;
+    border-radius: 10px;
+    font-size: 8px;
+  }
+
+  .message.received .message-bubble {
+    border-bottom-left-radius: 2px;
+  }
+
+  .message.sent .message-bubble {
+    border-bottom-right-radius: 2px;
+  }
+
+  .message-time {
+    font-size: 6px;
+    margin-top: 2px;
+  }
+
+  .chat-input {
+    padding: 8px;
+    gap: 6px;
+  }
+
+  .chat-input input {
+    border-radius: 12px;
+    padding: 6px 8px;
+    font-size: 8px;
+  }
+
+  .send-btn {
+    width: 24px;
+    height: 24px;
+  }
+
+  .header-action {
+    width: 20px;
+    height: 20px;
+  }
+
+  .header-filter {
+    width: 20px;
+    height: 20px;
+    border-radius: 5px;
   }
 
   /* Feature Cards - Stack vertically */
@@ -3735,8 +3908,8 @@ body {
 
   /* Phone Mockups - Even smaller for tiny screens to fit 3 across */
   .hero-phones {
-    gap: 6px;
-    padding: 40px 8px;
+    gap: 4px;
+    padding: 30px 6px;
   }
 
   .phone-mockup {
@@ -3744,20 +3917,185 @@ body {
   }
 
   .phone-frame {
-    width: 140px;
-    height: 300px;
-    padding: 6px;
-    border-radius: 28px;
+    width: 110px;
+    height: 235px;
+    padding: 5px;
+    border-radius: 22px;
   }
 
   .phone-notch {
-    width: 70px;
-    height: 18px;
-    border-radius: 0 0 10px 10px;
+    width: 55px;
+    height: 14px;
+    border-radius: 0 0 8px 8px;
   }
 
   .phone-screen {
-    border-radius: 22px;
+    border-radius: 18px;
+  }
+
+  /* Scale down content even more for 480px */
+  .screen-content {
+    padding: 10px 6px;
+  }
+
+  .profile-image {
+    width: 35px;
+    height: 35px;
+    margin-bottom: 5px;
+    border-width: 1.5px;
+  }
+
+  .profile-name {
+    font-size: 10px;
+    margin-bottom: 1px;
+  }
+
+  .profile-title {
+    font-size: 7px;
+    margin-bottom: 5px;
+  }
+
+  .profile-tags {
+    gap: 2px;
+    margin-bottom: 6px;
+  }
+
+  .tag {
+    padding: 2px 4px;
+    font-size: 5px;
+    border-radius: 8px;
+  }
+
+  .bio-text {
+    font-size: 6px;
+    line-height: 1.3;
+  }
+
+  .profile-bio {
+    margin-bottom: 8px;
+  }
+
+  .profile-stats {
+    padding: 6px 0;
+  }
+
+  .stat-value {
+    font-size: 9px;
+    margin-bottom: 1px;
+  }
+
+  .stat-label {
+    font-size: 5px;
+  }
+
+  /* Swipe Screen */
+  .swipe-card {
+    margin: 6px;
+    border-radius: 10px;
+  }
+
+  .card-image {
+    height: 70px;
+  }
+
+  .card-content {
+    padding: 6px;
+  }
+
+  .card-name {
+    font-size: 9px;
+    margin-bottom: 1px;
+  }
+
+  .card-role {
+    font-size: 6px;
+    margin-bottom: 4px;
+  }
+
+  .card-tags {
+    gap: 2px;
+    margin-bottom: 4px;
+  }
+
+  .card-bio {
+    font-size: 6px;
+    line-height: 1.3;
+  }
+
+  .card-actions {
+    gap: 10px;
+    padding: 6px;
+  }
+
+  .action-btn {
+    width: 26px;
+    height: 26px;
+    border-width: 1px;
+  }
+
+  /* Chat Screen */
+  .header-title {
+    font-size: 8px;
+  }
+
+  .back-btn {
+    width: 16px;
+    height: 16px;
+    border-radius: 4px;
+  }
+
+  .chat-avatar {
+    width: 16px;
+    height: 16px;
+    margin-right: 4px;
+  }
+
+  .chat-name {
+    font-size: 8px;
+  }
+
+  .chat-messages {
+    padding: 6px;
+    min-height: 140px;
+    gap: 4px;
+  }
+
+  .message-bubble {
+    padding: 4px 6px;
+    border-radius: 8px;
+    font-size: 6px;
+  }
+
+  .message-time {
+    font-size: 5px;
+    margin-top: 1px;
+  }
+
+  .chat-input {
+    padding: 5px;
+    gap: 4px;
+  }
+
+  .chat-input input {
+    border-radius: 10px;
+    padding: 4px 6px;
+    font-size: 6px;
+  }
+
+  .send-btn {
+    width: 18px;
+    height: 18px;
+  }
+
+  .header-action {
+    width: 16px;
+    height: 16px;
+  }
+
+  .header-filter {
+    width: 16px;
+    height: 16px;
+    border-radius: 4px;
   }
 
   /* Reduce phone device sizes */
@@ -3836,71 +4174,4 @@ body {
     border-radius: 30px;
   }
 
-  /* Swipe cards inside phone mockups */
-  .swipe-card {
-    border-radius: 16px;
-  }
-
-  /* Profile elements in phone screens - scale down for smaller phones */
-  .profile-image {
-    width: 60px;
-    height: 60px;
-    margin-bottom: 10px;
-  }
-
-  .profile-name {
-    font-size: 14px;
-  }
-
-  .profile-title {
-    font-size: 10px;
-  }
-
-  .profile-role {
-    font-size: 10px;
-  }
-
-  .tag {
-    padding: 3px 6px;
-    font-size: 7px;
-  }
-
-  .screen-content {
-    padding: 20px 12px;
-  }
-
-  .header-title {
-    font-size: 12px;
-  }
-
-  /* Stats inside phones */
-  .profile-stats {
-    gap: 8px;
-  }
-
-  .stat-item {
-    font-size: 9px;
-  }
-
-  /* Swipe card content */
-  .swipe-card {
-    padding: 12px;
-  }
-
-  /* Chat messages */
-  .message-bubble {
-    padding: 8px 10px;
-    font-size: 9px;
-  }
-
-  /* Action buttons in phones */
-  .action-buttons {
-    gap: 8px;
-    padding: 0 12px;
-  }
-
-  .action-button {
-    width: 36px;
-    height: 36px;
-  }
 }
