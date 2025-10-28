@@ -3517,12 +3517,48 @@ body {
 }
 
 @media (max-width: 768px) {
+  /* Header fixes for mobile */
+  .header {
+    height: auto;
+    padding: 12px 16px;
+  }
+
+  .header.scrolled {
+    width: calc(100% - 32px);
+    left: 50%;
+    transform: translateX(-50%);
+    top: 12px;
+    padding: 8px 12px;
+    border-radius: 24px;
+  }
+
+  .nav-container {
+    padding: 0;
+  }
+
+  .nav-content {
+    width: 100%;
+  }
+
+  .logo {
+    font-size: 18px;
+  }
+
   .nav-links {
     display: none;
   }
 
   .nav-left {
     gap: 0;
+  }
+
+  .cta-buttons {
+    gap: 8px;
+  }
+
+  .cta-button {
+    padding: 8px 16px;
+    font-size: 14px;
   }
 
   .hero-section {
@@ -3997,6 +4033,59 @@ body {
     -webkit-backdrop-filter: blur(16px) saturate(180%);
   }
 
+  /* Testimonials Section */
+  .testimonials-section {
+    padding: 60px 20px;
+    min-height: auto;
+  }
+
+  .testimonial-content {
+    max-width: 100%;
+  }
+
+  .testimonial-quote {
+    margin-bottom: 40px;
+  }
+
+  .testimonial-quote p {
+    font-size: 22px;
+    line-height: 28px;
+    letter-spacing: -1.5px;
+  }
+
+  .star-rating svg {
+    width: 18px;
+    height: 18px;
+  }
+
+  .testimonial-author {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .author-avatar {
+    width: 48px;
+    height: 48px;
+  }
+
+  .author-info {
+    text-align: center;
+  }
+
+  .author-name {
+    font-size: 14px;
+  }
+
+  .author-title {
+    font-size: 14px;
+  }
+
+  .testimonial-logos {
+    gap: 16px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
   .support-features {
     grid-template-columns: 1fr;
   }
@@ -4013,6 +4102,27 @@ body {
 }
 
 @media (max-width: 480px) {
+  /* Header for small mobile */
+  .header {
+    padding: 10px 12px;
+  }
+
+  .header.scrolled {
+    width: calc(100% - 24px);
+    top: 8px;
+    padding: 6px 10px;
+    border-radius: 20px;
+  }
+
+  .logo {
+    font-size: 16px;
+  }
+
+  .cta-button {
+    padding: 6px 12px;
+    font-size: 12px;
+  }
+
   /* Hero Section */
   .title-line {
     font-size: 28px;
@@ -4395,6 +4505,35 @@ body {
     backdrop-filter: blur(12px) saturate(150%);
     -webkit-backdrop-filter: blur(12px) saturate(150%);
     border-radius: 30px;
+  }
+
+  /* Testimonials for small mobile */
+  .testimonials-section {
+    padding: 40px 16px;
+  }
+
+  .testimonial-quote p {
+    font-size: 18px;
+    line-height: 24px;
+    letter-spacing: -1px;
+  }
+
+  .star-rating svg {
+    width: 16px;
+    height: 16px;
+  }
+
+  .author-avatar {
+    width: 40px;
+    height: 40px;
+  }
+
+  .author-name {
+    font-size: 13px;
+  }
+
+  .author-title {
+    font-size: 13px;
   }
 
 }
