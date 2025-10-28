@@ -3,7 +3,7 @@ import './CookiePolicy.css';
 
 const CookiePolicy = () => {
   return (
-    <div className="cookie-policy-container">
+    <div className="cookie-policy-page">
       {/* Background Elements */}
       <div className="cookie-policy-bg">
         <div className="gradient-green"></div>
@@ -16,14 +16,21 @@ const CookiePolicy = () => {
         <div className="color-orb orb-1"></div>
         <div className="color-orb orb-2"></div>
         <div className="color-orb orb-3"></div>
+        <div className="color-orb orb-4"></div>
+        <div className="color-orb orb-5"></div>
+        <div className="color-orb orb-6"></div>
+        <div className="color-orb orb-7"></div>
+        <div className="color-orb orb-8"></div>
       </div>
 
-      <div className="cookie-policy-header">
-        <h2>Cookie Policy</h2>
-        <p className="last-updated">Last updated: {new Date().toLocaleDateString()}</p>
-      </div>
+      {/* Cookie Policy Content */}
+      <div className="cookie-policy-container">
+        <div className="cookie-policy-header">
+          <h1>Cookie Policy</h1>
+          <p className="last-updated">Last updated: {new Date().toLocaleDateString()}</p>
+        </div>
 
-      <div className="cookie-policy-content">
+        <div className="cookie-policy-content">
         <section className="policy-section">
           <h3>1. What Are Cookies?</h3>
           <p>
@@ -163,6 +170,7 @@ const CookiePolicy = () => {
             <li>Address: DevMates Inc., 123 Startup Street, San Francisco, CA 94105</li>
           </ul>
         </section>
+        </div>
       </div>
     </div>
   );

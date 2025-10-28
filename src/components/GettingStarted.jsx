@@ -72,7 +72,7 @@ const GettingStarted = () => {
   ];
 
   return (
-    <div className="getting-started-container">
+    <div className="getting-started-page">
       {/* Background Elements */}
       <div className="getting-started-bg">
         <div className="gradient-green"></div>
@@ -85,14 +85,21 @@ const GettingStarted = () => {
         <div className="color-orb orb-1"></div>
         <div className="color-orb orb-2"></div>
         <div className="color-orb orb-3"></div>
+        <div className="color-orb orb-4"></div>
+        <div className="color-orb orb-5"></div>
+        <div className="color-orb orb-6"></div>
+        <div className="color-orb orb-7"></div>
+        <div className="color-orb orb-8"></div>
       </div>
 
-      <div className="getting-started-header">
-        <h2>Getting Started with DevMates</h2>
-        <p>Follow this step-by-step guide to find your perfect co-founder and launch your startup</p>
-      </div>
-      
-      <div className="steps-container">
+      {/* Getting Started Content */}
+      <div className="getting-started-container">
+        <div className="getting-started-header">
+          <h1>Getting Started with DevMates</h1>
+          <p>Follow this step-by-step guide to find your perfect co-founder and launch your startup</p>
+        </div>
+        
+        <div className="steps-container">
         {steps.map((step, index) => (
           <div key={index} className="step-item">
             <div className="step-number">{step.number}</div>
@@ -110,13 +117,14 @@ const GettingStarted = () => {
             </div>
           </div>
         ))}
-      </div>
-      
-      <div className="getting-started-footer">
-        <div className="cta-section">
-          <h3>Ready to Find Your Co-Founder?</h3>
-          <p>Join thousands of entrepreneurs who've found their perfect match on DevMates</p>
-          <a href="/waitlist" className="cta-button">Join the Waitlist</a>
+        </div>
+        
+        <div className="getting-started-footer">
+          <div className="cta-section">
+            <h3>Ready to Find Your Co-Founder?</h3>
+            <p>Join thousands of entrepreneurs who've found their perfect match on DevMates</p>
+            <a href="/waitlist" className="cta-button">Join the Waitlist</a>
+          </div>
         </div>
       </div>
     </div>

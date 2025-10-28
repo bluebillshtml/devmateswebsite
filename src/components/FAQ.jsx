@@ -41,12 +41,12 @@ const FAQ = () => {
     },
     {
       question: "How do I contact support?",
-      answer: "You can reach our support team at support@devmatesapp.com or use the contact form in your account dashboard. We typically respond within 24 hours and offer priority support for Premium and Enterprise users."
+      answer: "You can reach our support team at support@devmatesapp.com or use the contact form in your account dashboard. We typically respond within 24 hours and offer priority support for Premium users."
     }
   ];
 
   return (
-    <div className="faq-container">
+    <div className="faq-page">
       {/* Background Elements */}
       <div className="faq-bg">
         <div className="gradient-green"></div>
@@ -59,24 +59,32 @@ const FAQ = () => {
         <div className="color-orb orb-1"></div>
         <div className="color-orb orb-2"></div>
         <div className="color-orb orb-3"></div>
+        <div className="color-orb orb-4"></div>
+        <div className="color-orb orb-5"></div>
+        <div className="color-orb orb-6"></div>
+        <div className="color-orb orb-7"></div>
+        <div className="color-orb orb-8"></div>
       </div>
 
-      <div className="faq-header">
-        <h2>Frequently Asked Questions</h2>
-        <p>Find answers to common questions about DevMates</p>
-      </div>
-      
-      <div className="faq-list">
-        {faqs.map((faq, index) => (
-          <div key={index} className="faq-item">
-            <h3 className="faq-question">{faq.question}</h3>
-            <p className="faq-answer">{faq.answer}</p>
-          </div>
-        ))}
-      </div>
-      
-      <div className="faq-footer">
-        <p>Still have questions? <a href="mailto:support@devmatesapp.com">Contact our support team</a></p>
+      {/* FAQ Content */}
+      <div className="faq-container">
+        <div className="faq-header">
+          <h1>Frequently Asked Questions</h1>
+          <p>Find answers to common questions about DevMates</p>
+        </div>
+
+        <div className="faq-content">
+          {faqs.map((faq, index) => (
+            <div key={index} className="faq-item">
+              <h3 className="faq-question">{faq.question}</h3>
+              <p className="faq-answer">{faq.answer}</p>
+            </div>
+          ))}
+        </div>
+        
+        <div className="faq-footer">
+          <p>Still have questions? <a href="mailto:support@devmatesapp.com">Contact our support team</a></p>
+        </div>
       </div>
     </div>
   );

@@ -3,7 +3,7 @@ import './RefundPolicy.css';
 
 const RefundPolicy = () => {
   return (
-    <div className="refund-policy-container">
+    <div className="refund-policy-page">
       {/* Background Elements */}
       <div className="refund-policy-bg">
         <div className="gradient-green"></div>
@@ -16,14 +16,21 @@ const RefundPolicy = () => {
         <div className="color-orb orb-1"></div>
         <div className="color-orb orb-2"></div>
         <div className="color-orb orb-3"></div>
+        <div className="color-orb orb-4"></div>
+        <div className="color-orb orb-5"></div>
+        <div className="color-orb orb-6"></div>
+        <div className="color-orb orb-7"></div>
+        <div className="color-orb orb-8"></div>
       </div>
 
-      <div className="refund-policy-header">
-        <h2>Refund Policy</h2>
-        <p className="last-updated">Last updated: {new Date().toLocaleDateString()}</p>
-      </div>
+      {/* Refund Policy Content */}
+      <div className="refund-policy-container">
+        <div className="refund-policy-header">
+          <h1>Refund Policy</h1>
+          <p className="last-updated">Last updated: {new Date().toLocaleDateString()}</p>
+        </div>
 
-      <div className="refund-policy-content">
+        <div className="refund-policy-content">
         <section className="policy-section">
           <h3>1. Refund Eligibility</h3>
           <p>
@@ -34,7 +41,6 @@ const RefundPolicy = () => {
             <ul>
               <li>Pro Plan ($20/month) - Full refund within 30 days</li>
               <li>Premium Plan ($35/month) - Full refund within 30 days</li>
-              <li>Enterprise Plan ($119/month) - Full refund within 30 days</li>
               <li>Annual subscriptions - Prorated refund based on unused time</li>
             </ul>
           </div>
@@ -156,6 +162,7 @@ const RefundPolicy = () => {
             We may update this Refund Policy from time to time. Any changes will be posted on this page with an updated "Last updated" date. Continued use of our service after changes constitutes acceptance of the updated policy.
           </p>
         </section>
+        </div>
       </div>
     </div>
   );

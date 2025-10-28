@@ -1,23 +1,37 @@
+/* Prevent overscroll */
+html, body {
+  overscroll-behavior: none;
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
 /* Refund Policy Page Styles */
-.refund-policy-container {
+.refund-policy-page {
   min-height: 100vh;
   background: linear-gradient(180deg, #1B1B1D 0%, #070708 100%);
   color: #FFFFFF;
   font-family: Helvetica, -apple-system, Roboto, Helvetica, sans-serif;
   position: relative;
-  overflow: hidden;
-  padding: 60px 20px;
+  overflow-x: hidden;
+  overflow-y: auto;
+  scroll-behavior: smooth;
 }
 
 /* Background Elements */
 .refund-policy-bg {
-  position: absolute;
+  position: fixed;
   width: 100%;
   height: 100%;
   top: 0;
   left: 0;
   pointer-events: none;
   overflow: hidden;
+  z-index: 1;
 }
 
 .gradient-green,
@@ -94,6 +108,51 @@
   filter: blur(80px);
 }
 
+.orb-4 {
+  width: 600px;
+  height: 600px;
+  top: 60%;
+  right: 20%;
+  background: radial-gradient(circle at center, rgba(255, 165, 0, 0.15), transparent 70%);
+  filter: blur(50px);
+}
+
+.orb-5 {
+  width: 700px;
+  height: 700px;
+  top: 20%;
+  left: 60%;
+  background: radial-gradient(circle at center, rgba(255, 20, 147, 0.12), transparent 70%);
+  filter: blur(65px);
+}
+
+.orb-6 {
+  width: 500px;
+  height: 500px;
+  bottom: 30%;
+  right: 10%;
+  background: radial-gradient(circle at center, rgba(0, 191, 255, 0.14), transparent 70%);
+  filter: blur(45px);
+}
+
+.orb-7 {
+  width: 750px;
+  height: 750px;
+  top: 50%;
+  left: 30%;
+  background: radial-gradient(circle at center, rgba(50, 205, 50, 0.11), transparent 70%);
+  filter: blur(55px);
+}
+
+.orb-8 {
+  width: 650px;
+  height: 650px;
+  bottom: 20%;
+  left: 70%;
+  background: radial-gradient(circle at center, rgba(138, 43, 226, 0.13), transparent 70%);
+  filter: blur(60px);
+}
+
 .noise-texture {
   position: absolute;
   width: 100%;
@@ -126,11 +185,14 @@
   }
 }
 
+/* Refund Policy Container */
 .refund-policy-container {
   max-width: 800px;
   margin: 0 auto;
+  padding: 60px 20px;
   position: relative;
   z-index: 10;
+  min-height: calc(100vh - 120px);
 }
 
 .refund-policy-header {
@@ -138,7 +200,7 @@
   margin-bottom: 60px;
 }
 
-.refund-policy-header h2 {
+.refund-policy-header h1 {
   font-size: 48px;
   font-weight: 400;
   line-height: 52px;
@@ -154,17 +216,17 @@
 }
 
 .refund-policy-content {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
+  line-height: 1.6;
 }
 
 .policy-section {
+  margin-bottom: 40px;
+  padding: 30px;
   background: rgba(255, 255, 255, 0.02);
   border: 1px solid rgba(255, 255, 255, 0.06);
   border-radius: 16px;
-  padding: 30px;
   backdrop-filter: blur(10px);
+  box-sizing: border-box;
 }
 
 .policy-section h3 {
@@ -308,7 +370,7 @@
     padding: 40px 16px;
   }
   
-  .refund-policy-header h2 {
+  .refund-policy-header h1 {
     font-size: 36px;
     line-height: 40px;
   }

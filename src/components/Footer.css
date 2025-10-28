@@ -145,9 +145,10 @@
   flex: 1;
   display: flex;
   flex-direction: column;
-  gap: 32px;
+  gap: 48px;
   min-width: 0;
   max-width: 100%;
+  margin-top: 100px;
 }
 
 .contact-section {
@@ -190,7 +191,7 @@
 
 .info-group {
   display: flex;
-  gap: 148px;
+  gap: 180px;
   flex-wrap: wrap;
 }
 
@@ -245,7 +246,7 @@
   font-weight: 500;
   line-height: 130%;
   color: #3C403C;
-  margin: 32px 0 0 0;
+  margin: 64px 0 0 0;
 }
 
 .footer-banner {
@@ -494,7 +495,7 @@
 
   .copyright {
     font-size: 18px;
-    margin-top: 24px;
+    margin-top: 48px;
   }
 
   .footer-banner {
@@ -604,7 +605,7 @@
 
   .copyright {
     font-size: 16px;
-    margin-top: 20px;
+    margin-top: 40px;
   }
 
   .footer-banner {

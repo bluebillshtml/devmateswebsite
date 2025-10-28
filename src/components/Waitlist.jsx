@@ -109,17 +109,6 @@ const Waitlist = () => {
                   <span className="plan-name">Premium</span>
                   <span className="plan-price">$35</span>
                 </label>
-                <label className={`plan-option ${selectedPlan === 'enterprise' ? 'selected' : ''}`}>
-                  <input
-                    type="radio"
-                    name="plan"
-                    value="enterprise"
-                    checked={selectedPlan === 'enterprise'}
-                    onChange={(e) => setSelectedPlan(e.target.value)}
-                  />
-                  <span className="plan-name">Enterprise</span>
-                  <span className="plan-price">$119</span>
-                </label>
               </div>
             </div>
             

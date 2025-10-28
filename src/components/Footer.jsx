@@ -25,7 +25,7 @@ const Footer = () => {
                 <span className="nav-separator">/</span>
               </div>
               <div className="nav-item">
-                <span className="nav-link">Special Offers</span>
+                <Link to="/special-offers" className="nav-link">Special Offers</Link>
                 <span className="nav-separator">/</span>
               </div>
               <div className="nav-item">
