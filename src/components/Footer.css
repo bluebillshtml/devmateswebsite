@@ -65,7 +65,7 @@
 
 .catalog-title {
   font-family: 'Bricolage Grotesque', -apple-system, Roboto, Helvetica, sans-serif;
-  font-size: 96px;
+  font-size: 72px;
   font-weight: 500;
   line-height: 100%;
   letter-spacing: -1.12px;
@@ -103,7 +103,7 @@
 
 .nav-link {
   font-family: 'Bricolage Grotesque', -apple-system, Roboto, Helvetica, sans-serif;
-  font-size: 32px;
+  font-size: 24px;
   font-weight: 500;
   line-height: 120%;
   letter-spacing: -0.4px;
@@ -118,7 +118,7 @@
 
 .nav-separator {
   font-family: 'Bricolage Grotesque', -apple-system, Roboto, Helvetica, sans-serif;
-  font-size: 32px;
+  font-size: 24px;
   font-weight: 200;
   line-height: 120%;
   color: #3C403C;
@@ -173,7 +173,7 @@
 
 .phone-paren {
   font-family: 'Bricolage Grotesque', -apple-system, Roboto, Helvetica, sans-serif;
-  font-size: 48px;
+  font-size: 32px;
   font-weight: 200;
   line-height: 120%;
   color: #3C403C;
@@ -181,7 +181,7 @@
 
 .phone-text {
   font-family: 'Bricolage Grotesque', -apple-system, Roboto, Helvetica, sans-serif;
-  font-size: 24px;
+  font-size: 20px;
   font-weight: 400;
   line-height: 120%;
   letter-spacing: -0.56px;
@@ -217,7 +217,7 @@
 
 .info-text {
   font-family: 'Bricolage Grotesque', -apple-system, Roboto, Helvetica, sans-serif;
-  font-size: 24px;
+  font-size: 20px;
   font-weight: 400;
   line-height: 140%;
   color: #ADB3AB;
@@ -232,7 +232,7 @@
 
 .hours-text {
   font-family: 'Bricolage Grotesque', -apple-system, Roboto, Helvetica, sans-serif;
-  font-size: 48px;
+  font-size: 32px;
   font-weight: 400;
   line-height: 120%;
   color: #ADB3AB;
@@ -334,7 +334,16 @@
   }
 
   .catalog-title {
-    font-size: 80px;
+    font-size: 64px;
+  }
+
+  .nav-link,
+  .nav-separator {
+    font-size: 22px;
+  }
+
+  .hours-text {
+    font-size: 28px;
   }
 }
 
@@ -344,12 +353,24 @@
   }
 
   .catalog-title {
-    font-size: 64px;
+    font-size: 56px;
   }
 
   .nav-link,
   .nav-separator {
-    font-size: 24px;
+    font-size: 20px;
+  }
+
+  .hours-text {
+    font-size: 26px;
+  }
+
+  .phone-text {
+    font-size: 18px;
+  }
+
+  .info-text {
+    font-size: 18px;
   }
 }
 
@@ -359,16 +380,24 @@
   }
 
   .catalog-title {
-    font-size: 56px;
+    font-size: 48px;
   }
 
   .nav-link,
   .nav-separator {
-    font-size: 22px;
+    font-size: 18px;
   }
 
   .info-group {
     gap: 60px;
+  }
+
+  .hours-text {
+    font-size: 24px;
+  }
+
+  .phone-paren {
+    font-size: 28px;
   }
 }
 
@@ -388,13 +417,22 @@
   }
 
   .catalog-title {
-    font-size: 56px;
+    font-size: 48px;
+  }
+
+  .nav-link,
+  .nav-separator {
+    font-size: 18px;
   }
 }
 
 @media (max-width: 768px) {
   .footer-container {
-    padding: 40px 16px 0;
+    padding: 60px 20px 40px;
+  }
+
+  .footer-content {
+    padding-bottom: 48px;
   }
 
   .catalog-title {
@@ -402,9 +440,25 @@
     letter-spacing: -0.8px;
   }
 
+  .footer-catalog-header {
+    margin-bottom: 32px;
+  }
+
+  .footer-nav-wrapper {
+    flex-direction: column;
+    gap: 48px;
+    margin-bottom: 80px;
+  }
+
   .footer-nav {
     padding-right: 0;
-    margin-bottom: 60px;
+  }
+
+  .back-to-top {
+    position: relative;
+    left: auto;
+    bottom: auto;
+    align-self: flex-start;
   }
 
   .nav-link,
@@ -412,7 +466,14 @@
     font-size: 16px;
   }
 
-  .phone-text,
+  .contact-label {
+    font-size: 18px;
+  }
+
+  .phone-text {
+    font-size: 20px;
+  }
+
   .phone-paren,
   .hours-text {
     font-size: 24px;
@@ -423,13 +484,29 @@
     gap: 24px;
   }
 
+  .info-label {
+    font-size: 18px;
+  }
+
+  .info-text {
+    font-size: 16px;
+  }
+
+  .copyright {
+    font-size: 18px;
+    margin-top: 24px;
+  }
+
   .footer-banner {
-    width: calc(100% + 32px);
-    margin-left: -16px;
+    width: calc(100% + 40px);
+    margin-left: -20px;
+    height: 200px;
+    border-radius: 12px;
   }
 
   .banner-text-wrapper {
-    padding: 10px 32px;
+    padding: 24px 32px;
+    margin-left: 0;
   }
 
   .banner-text {
@@ -438,24 +515,57 @@
 
   .banner-line {
     left: 32px;
+    display: none;
   }
 
   .banner-arrow-wrapper {
-    width: 120px;
+    width: 100px;
+  }
+
+  .banner-arrow {
+    width: 40px;
+    height: 40px;
+  }
+
+  .footer-decorative-line {
+    display: none;
   }
 }
 
 @media (max-width: 480px) {
+  .footer-container {
+    padding: 48px 16px 32px;
+  }
+
+  .footer-content {
+    gap: 40px;
+    padding-bottom: 32px;
+  }
+
   .catalog-title {
     font-size: 32px;
   }
 
+  .catalog-arrow {
+    width: 40px;
+    height: 40px;
+  }
+
+  .footer-catalog-header {
+    margin-bottom: 24px;
+  }
+
+  .footer-nav-wrapper {
+    gap: 32px;
+    margin-bottom: 60px;
+  }
+
   .footer-nav {
-    gap: 8px 16px;
+    gap: 8px;
   }
 
   .nav-item {
-    gap: 16px;
+    gap: 8px;
   }
 
   .nav-link,
@@ -463,16 +573,62 @@
     font-size: 14px;
   }
 
-  .phone-text,
+  .back-to-top {
+    width: 40px;
+    height: 40px;
+  }
+
+  .contact-label {
+    font-size: 16px;
+  }
+
+  .phone-text {
+    font-size: 18px;
+  }
+
   .phone-paren {
     font-size: 20px;
   }
 
   .hours-text {
-    font-size: 24px;
+    font-size: 20px;
+  }
+
+  .info-label {
+    font-size: 16px;
+  }
+
+  .info-text {
+    font-size: 14px;
+  }
+
+  .copyright {
+    font-size: 16px;
+    margin-top: 20px;
+  }
+
+  .footer-banner {
+    width: calc(100% + 32px);
+    margin-left: -16px;
+    height: 160px;
+    border-radius: 8px;
+  }
+
+  .banner-text-wrapper {
+    padding: 20px 24px;
   }
 
   .banner-text {
-    font-size: 16px;
+    font-size: 14px;
+    line-height: 140%;
+  }
+
+  .banner-arrow-wrapper {
+    width: 80px;
+  }
+
+  .banner-arrow {
+    width: 32px;
+    height: 32px;
   }
 }
