@@ -3545,17 +3545,19 @@ body {
     font-size: 18px;
   }
 
-  /* Hero Phone Mockups - Stack vertically on mobile */
+  /* Hero Phone Mockups - Keep horizontal on mobile but smaller */
   .hero-phones {
-    flex-direction: column;
-    gap: 20px;
-    padding: 40px 20px;
+    flex-direction: row;
+    gap: 8px;
+    padding: 40px 10px;
     align-items: center;
+    justify-content: center;
+    overflow: visible;
   }
 
   .phone-mockup {
-    width: 100%;
-    max-width: 280px;
+    width: auto;
+    flex: 0 0 auto;
     transform: none !important;
   }
 
@@ -3572,10 +3574,21 @@ body {
   }
 
   .phone-frame {
-    width: 100%;
-    max-width: 280px;
-    height: 580px;
-    margin: 0 auto;
+    width: 180px;
+    height: 380px;
+    padding: 8px;
+    border-radius: 32px;
+    margin: 0;
+  }
+
+  .phone-notch {
+    width: 90px;
+    height: 22px;
+    border-radius: 0 0 12px 12px;
+  }
+
+  .phone-screen {
+    border-radius: 26px;
   }
 
   /* Feature Cards - Stack vertically */
@@ -3720,25 +3733,31 @@ body {
     font-size: 16px;
   }
 
-  /* Phone Mockups - Smaller size for small screens */
+  /* Phone Mockups - Even smaller for tiny screens to fit 3 across */
+  .hero-phones {
+    gap: 6px;
+    padding: 40px 8px;
+  }
+
   .phone-mockup {
-    max-width: 240px;
+    width: auto;
   }
 
   .phone-frame {
-    max-width: 240px;
-    height: 500px;
-    padding: 10px;
-    border-radius: 35px;
+    width: 140px;
+    height: 300px;
+    padding: 6px;
+    border-radius: 28px;
   }
 
   .phone-notch {
-    width: 100px;
-    height: 24px;
+    width: 70px;
+    height: 18px;
+    border-radius: 0 0 10px 10px;
   }
 
   .phone-screen {
-    border-radius: 28px;
+    border-radius: 22px;
   }
 
   /* Reduce phone device sizes */
@@ -3822,17 +3841,66 @@ body {
     border-radius: 16px;
   }
 
-  /* Profile elements in phone screens */
+  /* Profile elements in phone screens - scale down for smaller phones */
+  .profile-image {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 10px;
+  }
+
   .profile-name {
-    font-size: 20px;
+    font-size: 14px;
+  }
+
+  .profile-title {
+    font-size: 10px;
   }
 
   .profile-role {
-    font-size: 13px;
+    font-size: 10px;
   }
 
   .tag {
-    padding: 5px 10px;
-    font-size: 10px;
+    padding: 3px 6px;
+    font-size: 7px;
+  }
+
+  .screen-content {
+    padding: 20px 12px;
+  }
+
+  .header-title {
+    font-size: 12px;
+  }
+
+  /* Stats inside phones */
+  .profile-stats {
+    gap: 8px;
+  }
+
+  .stat-item {
+    font-size: 9px;
+  }
+
+  /* Swipe card content */
+  .swipe-card {
+    padding: 12px;
+  }
+
+  /* Chat messages */
+  .message-bubble {
+    padding: 8px 10px;
+    font-size: 9px;
+  }
+
+  /* Action buttons in phones */
+  .action-buttons {
+    gap: 8px;
+    padding: 0 12px;
+  }
+
+  .action-button {
+    width: 36px;
+    height: 36px;
   }
 }
