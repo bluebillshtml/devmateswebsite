@@ -3480,15 +3480,32 @@ body {
 /* Responsive Design */
 @media (max-width: 1440px) {
   .nav-container {
-    padding: 0 40px;
+    padding: 0 60px;
   }
 
   .nav-left {
-    gap: 150px;
+    gap: 80px;
   }
 }
 
 @media (max-width: 1024px) {
+  .nav-container {
+    padding: 0 20px;
+  }
+
+  .nav-left {
+    gap: 30px;
+  }
+
+  .nav-links {
+    gap: 12px;
+  }
+
+  .nav-link {
+    font-size: 14px;
+    padding: 4px 12px;
+  }
+
   .hero-content {
     width: 90%;
   }
@@ -3513,6 +3530,38 @@ body {
 
   .footer-content {
     grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 900px) {
+  .nav-container {
+    padding: 0 16px;
+  }
+
+  .nav-left {
+    gap: 20px;
+  }
+
+  .nav-links {
+    gap: 8px;
+  }
+
+  .nav-link {
+    font-size: 13px;
+    padding: 4px 10px;
+  }
+
+  .header.scrolled {
+    padding: 0 10px;
+    border-radius: 30px;
+  }
+
+  .header.scrolled .nav-left {
+    gap: 15px;
+  }
+
+  .header.scrolled .nav-links {
+    gap: 6px;
   }
 }
 
