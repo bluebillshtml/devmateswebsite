@@ -3527,6 +3527,7 @@ body {
 
   .hero-section {
     min-height: auto;
+    padding-bottom: 60px;
   }
 
   .hero-content {
@@ -3544,8 +3545,152 @@ body {
     font-size: 18px;
   }
 
+  /* Hero Phone Mockups - Stack vertically on mobile */
+  .hero-phones {
+    flex-direction: column;
+    gap: 20px;
+    padding: 40px 20px;
+    align-items: center;
+  }
+
+  .phone-mockup {
+    width: 100%;
+    max-width: 280px;
+    transform: none !important;
+  }
+
+  .phone-mockup.phone-1 {
+    animation-delay: 0s;
+  }
+
+  .phone-mockup.phone-2 {
+    animation-delay: 0.1s;
+  }
+
+  .phone-mockup.phone-3 {
+    animation-delay: 0.2s;
+  }
+
+  .phone-frame {
+    width: 100%;
+    max-width: 280px;
+    height: 580px;
+    margin: 0 auto;
+  }
+
+  /* Feature Cards - Stack vertically */
+  .feature-cards-container {
+    padding: 0 20px;
+  }
+
+  .feature-cards-row {
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 12px;
+  }
+
+  .feature-card {
+    width: 100% !important;
+    flex: none !important;
+  }
+
+  /* Override specific flex rules for mobile */
+  .feature-cards-row:nth-child(1) .feature-card:nth-child(1),
+  .feature-cards-row:nth-child(1) .feature-card:nth-child(2),
+  .feature-cards-row:nth-child(1) .feature-card:nth-child(3),
+  .feature-cards-row:nth-child(2) .feature-card:nth-child(1),
+  .feature-cards-row:nth-child(2) .feature-card:nth-child(2),
+  .feature-cards-row:nth-child(2) .feature-card:nth-child(3) {
+    flex: none !important;
+    width: 100%;
+  }
+
+  .feature-card-visual {
+    min-height: 300px;
+    height: auto;
+  }
+
+  .feature-card-text {
+    padding: 20px;
+    height: auto;
+    min-height: 80px;
+  }
+
+  .feature-card-text h3 {
+    font-size: 16px;
+  }
+
+  .feature-card-text p {
+    font-size: 13px;
+  }
+
+  /* Dual Phone Container - Stack vertically */
+  .dual-phone-container {
+    flex-direction: column;
+    gap: 30px;
+    position: relative;
+    bottom: 0;
+    padding: 40px 20px;
+    align-items: center;
+  }
+
+  .phone-device {
+    transform: none !important;
+  }
+
+  .phone-device.phone-left,
+  .phone-device.phone-right {
+    transform: none !important;
+  }
+
+  .phone-device:hover {
+    transform: translateY(-5px) scale(1.02) !important;
+  }
+
+  .phone-frame-device {
+    width: 220px;
+    height: 440px;
+  }
+
+  /* Single Phone Device */
+  .phone-device-single {
+    transform: none !important;
+  }
+
+  .phone-device-single:hover {
+    transform: translateY(-5px) scale(1.02) !important;
+  }
+
+  .single-phone-container {
+    padding: 40px 20px;
+  }
+
+  /* Mini Phone Mockup */
+  .phone-mockup-mini {
+    padding: 20px;
+  }
+
+  /* Logo Cloud */
   .logo-cloud-grid {
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  .logo-scroll-item {
+    padding: 16px;
+    min-height: 80px;
+  }
+
+  /* Glass Card Effects - Reduce blur on mobile for performance */
+  .feature-card,
+  .feature-card-visual,
+  .feature-card-text {
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+  }
+
+  .header.scrolled {
+    backdrop-filter: blur(16px) saturate(180%);
+    -webkit-backdrop-filter: blur(16px) saturate(180%);
   }
 
   .support-features {
@@ -3560,5 +3705,134 @@ body {
   .footer-bottom {
     flex-direction: column;
     gap: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  /* Hero Section */
+  .title-line {
+    font-size: 28px;
+    line-height: 32px;
+    letter-spacing: -1.5px;
+  }
+
+  .hero-description span {
+    font-size: 16px;
+  }
+
+  /* Phone Mockups - Smaller size for small screens */
+  .phone-mockup {
+    max-width: 240px;
+  }
+
+  .phone-frame {
+    max-width: 240px;
+    height: 500px;
+    padding: 10px;
+    border-radius: 35px;
+  }
+
+  .phone-notch {
+    width: 100px;
+    height: 24px;
+  }
+
+  .phone-screen {
+    border-radius: 28px;
+  }
+
+  /* Reduce phone device sizes */
+  .phone-frame-device {
+    width: 180px;
+    height: 360px;
+    padding: 9px;
+    border-radius: 25px;
+  }
+
+  .phone-notch-device {
+    width: 65px;
+    height: 18px;
+  }
+
+  .phone-screen-device {
+    border-radius: 18px;
+  }
+
+  /* Feature Cards */
+  .feature-cards-container {
+    padding: 0 16px;
+  }
+
+  .feature-card {
+    border-radius: 12px;
+  }
+
+  .feature-card-visual {
+    min-height: 250px;
+    border-radius: 12px 12px 0 0;
+  }
+
+  .feature-card-text {
+    padding: 16px;
+    min-height: 70px;
+  }
+
+  .feature-card-text h3 {
+    font-size: 15px;
+  }
+
+  .feature-card-text p {
+    font-size: 12px;
+  }
+
+  /* Dual Phone Container */
+  .dual-phone-container {
+    gap: 20px;
+    padding: 30px 16px;
+  }
+
+  /* Logo Scroll Items */
+  .logo-scroll-item {
+    padding: 12px;
+    min-height: 60px;
+    border-radius: 16px;
+  }
+
+  .logo-scroll-item img {
+    max-width: 80px;
+    max-height: 32px;
+  }
+
+  /* Reduce glass blur further on small screens */
+  .feature-card,
+  .feature-card-visual,
+  .feature-card-text {
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+  }
+
+  .header.scrolled {
+    backdrop-filter: blur(12px) saturate(150%);
+    -webkit-backdrop-filter: blur(12px) saturate(150%);
+    border-radius: 30px;
+  }
+
+  /* Swipe cards inside phone mockups */
+  .swipe-card {
+    border-radius: 16px;
+  }
+
+  /* Profile elements in phone screens */
+  .profile-name {
+    font-size: 20px;
+  }
+
+  .profile-role {
+    font-size: 13px;
+  }
+
+  .tag {
+    padding: 5px 10px;
+    font-size: 10px;
   }
 }
