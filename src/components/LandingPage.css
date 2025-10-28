@@ -3517,64 +3517,15 @@ body {
 }
 
 @media (max-width: 768px) {
-  /* Header fixes for mobile */
+  /* Header fixes for mobile - hide empty header */
   .header {
-    height: auto;
-    padding: 0;
-    position: fixed;
-    width: 100%;
-  }
-
-  .header.scrolled {
-    width: 90%;
-    max-width: calc(100% - 32px);
-    left: 50%;
-    transform: translateX(-50%);
-    top: 12px;
-    padding: 8px 16px;
-    border-radius: 24px;
-  }
-
-  .nav-container {
-    padding: 16px 20px;
-    padding-top: 16px;
-    max-width: 100%;
-  }
-
-  .nav-content {
-    width: 100%;
-    height: auto;
-    justify-content: space-between;
-  }
-
-  .nav-left {
-    gap: 0;
-    flex: 1;
-  }
-
-  .nav-right {
-    gap: 8px;
-  }
-
-  .logo {
-    font-size: 18px;
-    width: 140px;
-    height: auto;
-  }
-
-  .nav-links {
     display: none;
-  }
-
-  .btn-login,
-  .btn-signup {
-    padding: 8px 16px;
-    font-size: 13px;
   }
 
   .hero-section {
     min-height: auto;
     padding-bottom: 60px;
+    padding-top: 20px;
   }
 
   .hero-content {
@@ -4113,37 +4064,9 @@ body {
 }
 
 @media (max-width: 480px) {
-  /* Header for small mobile */
+  /* Header hidden on mobile */
   .header {
-    padding: 0;
-  }
-
-  .header.scrolled {
-    width: 92%;
-    max-width: calc(100% - 24px);
-    top: 8px;
-    padding: 6px 12px;
-    border-radius: 20px;
-  }
-
-  .nav-container {
-    padding: 12px 16px;
-    padding-top: 12px;
-  }
-
-  .logo {
-    font-size: 16px;
-    width: 120px;
-  }
-
-  .btn-login,
-  .btn-signup {
-    padding: 6px 12px;
-    font-size: 12px;
-  }
-
-  .nav-right {
-    gap: 6px;
+    display: none;
   }
 
   /* Hero Section */
