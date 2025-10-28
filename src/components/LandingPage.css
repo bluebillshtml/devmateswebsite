@@ -3764,6 +3764,19 @@ body {
     border-radius: 5px;
   }
 
+  /* Screen Headers in hero phones */
+  .screen-header {
+    padding: 30px 12px 12px;
+  }
+
+  .header-avatar {
+    width: 20px;
+  }
+
+  .header-logo-img {
+    height: 20px;
+  }
+
   /* Feature Cards - Stack vertically */
   .feature-cards-container {
     padding: 0 20px;
@@ -3810,14 +3823,15 @@ body {
     font-size: 13px;
   }
 
-  /* Dual Phone Container - Stack vertically */
+  /* Dual Phone Container - Keep horizontal on mobile */
   .dual-phone-container {
-    flex-direction: column;
-    gap: 30px;
+    flex-direction: row;
+    gap: 8px;
     position: relative;
     bottom: 0;
-    padding: 40px 20px;
+    padding: 20px 10px;
     align-items: center;
+    justify-content: center;
   }
 
   .phone-device {
@@ -3834,8 +3848,112 @@ body {
   }
 
   .phone-frame-device {
-    width: 220px;
-    height: 440px;
+    width: 160px;
+    height: 340px;
+    padding: 7px;
+    border-radius: 26px;
+  }
+
+  .phone-notch-device {
+    width: 80px;
+    height: 18px;
+    border-radius: 0 0 10px 10px;
+  }
+
+  .phone-screen-device {
+    border-radius: 20px;
+  }
+
+  /* Scale content in dual phone devices */
+  .profile-card-screen {
+    padding: 0;
+  }
+
+  .profile-header-bar {
+    top: 20px;
+    padding: 8px;
+  }
+
+  .profile-logo {
+    font-size: 10px;
+  }
+
+  .profile-info-bottom {
+    padding: 12px 8px;
+  }
+
+  .profile-name-card {
+    font-size: 11px;
+  }
+
+  .profile-role-card {
+    font-size: 8px;
+  }
+
+  .profile-location-card {
+    font-size: 7px;
+  }
+
+  .tag-card {
+    padding: 3px 6px;
+    font-size: 6px;
+  }
+
+  /* Categories screen in dual phones */
+  .categories-screen-new {
+    padding: 18px 10px;
+  }
+
+  .categories-header {
+    margin-bottom: 12px;
+  }
+
+  .categories-header h3 {
+    font-size: 10px;
+  }
+
+  .filter-btn {
+    width: 24px;
+    height: 24px;
+    border-radius: 6px;
+  }
+
+  .filter-btn svg {
+    width: 14px;
+    height: 14px;
+  }
+
+  .category-list {
+    gap: 6px;
+  }
+
+  .category-item {
+    padding: 8px 8px;
+    border-radius: 8px;
+  }
+
+  .category-icon-wrapper {
+    width: 28px;
+    height: 28px;
+    border-radius: 8px;
+  }
+
+  .category-icon-wrapper svg {
+    width: 14px;
+    height: 14px;
+  }
+
+  .category-content h4 {
+    font-size: 9px;
+  }
+
+  .category-content p {
+    font-size: 7px;
+  }
+
+  .arrow-icon {
+    width: 12px;
+    height: 12px;
   }
 
   /* Single Phone Device */
@@ -4033,25 +4151,37 @@ body {
     border-width: 1px;
   }
 
-  /* Chat Screen */
+  /* Chat Screen and Headers */
+  .screen-header {
+    padding: 20px 8px 8px;
+  }
+
   .header-title {
-    font-size: 8px;
+    font-size: 7px;
+  }
+
+  .header-avatar {
+    width: 14px;
+  }
+
+  .header-logo-img {
+    height: 16px;
   }
 
   .back-btn {
-    width: 16px;
-    height: 16px;
-    border-radius: 4px;
+    width: 14px;
+    height: 14px;
+    border-radius: 3px;
   }
 
   .chat-avatar {
-    width: 16px;
-    height: 16px;
-    margin-right: 4px;
+    width: 14px;
+    height: 14px;
+    margin-right: 3px;
   }
 
   .chat-name {
-    font-size: 8px;
+    font-size: 7px;
   }
 
   .chat-messages {
@@ -4098,21 +4228,114 @@ body {
     border-radius: 4px;
   }
 
-  /* Reduce phone device sizes */
+  /* Reduce dual phone device sizes for 480px */
+  .dual-phone-container {
+    gap: 6px;
+    padding: 15px 6px;
+  }
+
   .phone-frame-device {
-    width: 180px;
-    height: 360px;
-    padding: 9px;
-    border-radius: 25px;
+    width: 120px;
+    height: 255px;
+    padding: 5px;
+    border-radius: 20px;
   }
 
   .phone-notch-device {
-    width: 65px;
-    height: 18px;
+    width: 60px;
+    height: 14px;
+    border-radius: 0 0 8px 8px;
   }
 
   .phone-screen-device {
-    border-radius: 18px;
+    border-radius: 16px;
+  }
+
+  /* Scale dual phone content more for 480px */
+  .profile-header-bar {
+    top: 15px;
+    padding: 6px;
+  }
+
+  .profile-logo {
+    font-size: 8px;
+  }
+
+  .profile-info-bottom {
+    padding: 8px 6px;
+  }
+
+  .profile-name-card {
+    font-size: 8px;
+  }
+
+  .profile-role-card {
+    font-size: 6px;
+  }
+
+  .profile-location-card {
+    font-size: 5px;
+  }
+
+  .tag-card {
+    padding: 2px 4px;
+    font-size: 5px;
+  }
+
+  .categories-screen-new {
+    padding: 12px 6px;
+  }
+
+  .categories-header {
+    margin-bottom: 8px;
+  }
+
+  .categories-header h3 {
+    font-size: 8px;
+  }
+
+  .filter-btn {
+    width: 18px;
+    height: 18px;
+    border-radius: 4px;
+  }
+
+  .filter-btn svg {
+    width: 10px;
+    height: 10px;
+  }
+
+  .category-list {
+    gap: 4px;
+  }
+
+  .category-item {
+    padding: 5px 5px;
+    border-radius: 6px;
+  }
+
+  .category-icon-wrapper {
+    width: 20px;
+    height: 20px;
+    border-radius: 6px;
+  }
+
+  .category-icon-wrapper svg {
+    width: 10px;
+    height: 10px;
+  }
+
+  .category-content h4 {
+    font-size: 7px;
+  }
+
+  .category-content p {
+    font-size: 5px;
+  }
+
+  .arrow-icon {
+    width: 10px;
+    height: 10px;
   }
 
   /* Feature Cards */
