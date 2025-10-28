@@ -57,12 +57,12 @@ const SpecialOffers = () => {
             <div className="comparison-box early-user-box">
               <div className="box-header">
                 <h3>Early Users</h3>
-                <span className="discount-label">40% OFF</span>
+                <span className="discount-label">20% OFF</span>
               </div>
               <div className="pricing-info">
                 <div className="price-row">
-                  <span className="old-price">$35</span>
-                  <span className="new-price">$29<span className="period">/mo</span></span>
+                  <span className="old-price">$20</span>
+                  <span className="new-price">$16<span className="period">/mo</span></span>
                 </div>
                 <p className="price-subtext">Locked in forever</p>
               </div>
@@ -81,7 +81,7 @@ const SpecialOffers = () => {
               </div>
               <div className="pricing-info">
                 <div className="price-row">
-                  <span className="future-price">$49<span className="period">/mo</span></span>
+                  <span className="future-price">$20<span className="period">/mo</span></span>
                 </div>
                 <p className="price-subtext">Subject to price increases</p>
               </div>
@@ -148,7 +148,7 @@ const SpecialOffers = () => {
             {/* Pro Plan */}
             <div className="pricing-card pro-card">
               <div className="most-popular-badge">Most Popular</div>
-              <div className="discount-badge">40% OFF</div>
+              <div className="discount-badge">20% OFF</div>
               <div className="plan-badge pro-badge">
                 <svg width="21" height="21" viewBox="0 0 21 21" fill="none">
                   <circle cx="10.5" cy="10.5" r="10" fill="url(#pro-gradient)" stroke="url(#pro-stroke)"/>
@@ -190,7 +190,7 @@ const SpecialOffers = () => {
 
             {/* Premium Plan */}
             <div className="pricing-card enterprise-card">
-              <div className="discount-badge">40% OFF</div>
+              <div className="discount-badge">20% OFF</div>
               <div className="plan-badge enterprise-badge">
                 <svg width="21" height="21" viewBox="0 0 21 21" fill="none">
                   <circle cx="10.5" cy="10.5" r="10" fill="url(#enterprise-gradient)" stroke="url(#enterprise-stroke)"/>
@@ -268,13 +268,17 @@ const SpecialOffers = () => {
 
         {/* Final CTA */}
         <section className="cta-section">
-          <h2>Lock in your lifetime discount today</h2>
-          <p>Join hundreds of founders who are building their dream teams with DevMates</p>
-          <div className="cta-buttons-group">
-            <button className="cta-button primary">Start with Pro</button>
-            <button className="cta-button secondary">Get Premium</button>
+          <div className="cta-banner-bg">
+            <div className="cta-banner-content">
+              <h2>Lock in your lifetime discount today</h2>
+              <p>Join hundreds of founders who are building their dream teams with DevMates</p>
+              <div className="cta-buttons-group">
+                <button className="cta-button primary">Start with Pro</button>
+                <button className="cta-button secondary">Get Premium</button>
+              </div>
+              <p className="guarantee-text">30-day money-back guarantee • Cancel anytime</p>
+            </div>
           </div>
-          <p className="guarantee-text">30-day money-back guarantee • Cancel anytime</p>
         </section>
       </div>
     </div>
