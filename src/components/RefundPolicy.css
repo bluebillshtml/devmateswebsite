@@ -1,0 +1,353 @@
+/* Refund Policy Page Styles */
+.refund-policy-container {
+  min-height: 100vh;
+  background: linear-gradient(180deg, #1B1B1D 0%, #070708 100%);
+  color: #FFFFFF;
+  font-family: Helvetica, -apple-system, Roboto, Helvetica, sans-serif;
+  position: relative;
+  overflow: hidden;
+  padding: 60px 20px;
+}
+
+/* Background Elements */
+.refund-policy-bg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.gradient-green,
+.gradient-pink,
+.ellipse-blur {
+  position: absolute;
+  mix-blend-mode: overlay;
+  filter: blur(64px);
+  opacity: 0.1;
+}
+
+.gradient-green {
+  width: 691px;
+  height: 818px;
+  left: 100px;
+  top: 0;
+  background: linear-gradient(135deg, #BDFFDF 0%, transparent 100%);
+  animation: glow 8s ease-in-out infinite;
+}
+
+.gradient-pink {
+  width: 519px;
+  height: 724px;
+  right: 0;
+  top: 0;
+  background: linear-gradient(135deg, #FFBDE8 0%, transparent 100%);
+  animation: glow 8s ease-in-out infinite 2s;
+}
+
+.ellipse-blur {
+  width: 572px;
+  height: 572px;
+  left: 50%;
+  top: -125px;
+  transform: translateX(-50%);
+  background: #9CEDFF;
+  border-radius: 50%;
+  opacity: 0.2;
+  animation: glow 8s ease-in-out infinite 4s;
+}
+
+/* Subtle Color Orbs */
+.color-orb {
+  position: absolute;
+  border-radius: 50%;
+  mix-blend-mode: screen;
+  pointer-events: none;
+}
+
+.orb-1 {
+  width: 800px;
+  height: 800px;
+  top: 10%;
+  left: 5%;
+  background: radial-gradient(circle at center, rgba(16, 131, 75, 0.12), transparent 70%);
+  filter: blur(60px);
+}
+
+.orb-2 {
+  width: 900px;
+  height: 900px;
+  top: 30%;
+  right: 0%;
+  background: radial-gradient(circle at center, rgba(184, 104, 199, 0.1), transparent 70%);
+  filter: blur(70px);
+}
+
+.orb-3 {
+  width: 1000px;
+  height: 1000px;
+  bottom: 10%;
+  left: 10%;
+  background: radial-gradient(circle at center, rgba(94, 106, 210, 0.08), transparent 70%);
+  filter: blur(80px);
+}
+
+.noise-texture {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%"><filter id="noise"><feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="4" /></filter><rect width="100%" height="100%" filter="url(%23noise)" opacity="0.05"/></svg>');
+  opacity: 0.4;
+}
+
+.stars-bg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(1px 1px at 20% 30%, white, transparent),
+              radial-gradient(1px 1px at 60% 70%, white, transparent),
+              radial-gradient(1px 1px at 50% 50%, white, transparent),
+              radial-gradient(1px 1px at 80% 10%, white, transparent),
+              radial-gradient(1px 1px at 90% 60%, white, transparent);
+  background-size: 200px 200px;
+  opacity: 0.4;
+}
+
+@keyframes glow {
+  0%, 100% {
+    opacity: 0.1;
+    filter: blur(64px);
+  }
+  50% {
+    opacity: 0.08;
+    filter: blur(60px);
+  }
+}
+
+.refund-policy-container {
+  max-width: 800px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 10;
+}
+
+.refund-policy-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.refund-policy-header h2 {
+  font-size: 48px;
+  font-weight: 400;
+  line-height: 52px;
+  letter-spacing: -2px;
+  color: #FFFFFF;
+  margin-bottom: 16px;
+}
+
+.last-updated {
+  font-size: 16px;
+  color: #828386;
+  opacity: 0.8;
+}
+
+.refund-policy-content {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.policy-section {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 16px;
+  padding: 30px;
+  backdrop-filter: blur(10px);
+}
+
+.policy-section h3 {
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 28px;
+  letter-spacing: -1px;
+  color: #FFFFFF;
+  margin-bottom: 16px;
+}
+
+.policy-section h4 {
+  font-size: 18px;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.8);
+  margin-bottom: 8px;
+  margin-top: 20px;
+}
+
+.policy-section p {
+  font-size: 16px;
+  line-height: 24px;
+  color: #E2E8F0;
+  margin-bottom: 16px;
+}
+
+.policy-section ul, .policy-section ol {
+  margin: 16px 0;
+  padding-left: 24px;
+}
+
+.policy-section li {
+  font-size: 16px;
+  line-height: 24px;
+  color: #E2E8F0;
+  margin-bottom: 8px;
+}
+
+.policy-section strong {
+  color: rgba(255, 255, 255, 0.9);
+  font-weight: 500;
+}
+
+.highlight-box {
+  background: rgba(189, 255, 223, 0.1);
+  border: 1px solid rgba(189, 255, 223, 0.2);
+  border-radius: 8px;
+  padding: 20px;
+  margin: 16px 0;
+}
+
+.highlight-box h4 {
+  color: #BDFFDF;
+  margin-top: 0;
+}
+
+.warning-box {
+  background: rgba(255, 165, 0, 0.1);
+  border: 1px solid rgba(255, 165, 0, 0.2);
+  border-radius: 8px;
+  padding: 20px;
+  margin: 16px 0;
+}
+
+.warning-box h4 {
+  color: #ffa500;
+  margin-top: 0;
+}
+
+.benefits-box {
+  background: rgba(156, 237, 255, 0.1);
+  border: 1px solid rgba(156, 237, 255, 0.2);
+  border-radius: 8px;
+  padding: 20px;
+  margin: 16px 0;
+}
+
+.benefits-box h4 {
+  color: #9CEDFF;
+  margin-top: 0;
+}
+
+.info-box {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  padding: 20px;
+  margin: 16px 0;
+}
+
+.info-box h4 {
+  color: rgba(255, 255, 255, 0.9);
+  margin-top: 0;
+}
+
+.refund-timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin: 20px 0;
+}
+
+.timeline-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.timeline-number {
+  flex-shrink: 0;
+  width: 40px;
+  height: 40px;
+  background: linear-gradient(135deg, #BDFFDF, #9CEDFF);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  font-weight: 500;
+  color: #1B1B1D;
+}
+
+.timeline-content h4 {
+  font-size: 16px;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: 4px;
+  margin-top: 0;
+}
+
+.timeline-content p {
+  font-size: 14px;
+  line-height: 20px;
+  color: #E2E8F0;
+  margin: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .refund-policy-container {
+    padding: 40px 16px;
+  }
+  
+  .refund-policy-header h2 {
+    font-size: 36px;
+    line-height: 40px;
+  }
+  
+  .policy-section {
+    padding: 20px;
+  }
+  
+  .policy-section h3 {
+    font-size: 20px;
+    line-height: 24px;
+  }
+  
+  .policy-section h4 {
+    font-size: 16px;
+  }
+  
+  .highlight-box,
+  .warning-box,
+  .benefits-box,
+  .info-box {
+    padding: 16px;
+  }
+  
+  .timeline-item {
+    gap: 12px;
+  }
+  
+  .timeline-number {
+    width: 35px;
+    height: 35px;
+    font-size: 16px;
+  }
+  
+  .timeline-content h4 {
+    font-size: 14px;
+  }
+  
+  .timeline-content p {
+    font-size: 12px;
+  }
+}

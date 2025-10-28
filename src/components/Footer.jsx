@@ -68,7 +68,7 @@ const Footer = () => {
 
             <div className="info-item">
               <p className="info-label">Email</p>
-              <p className="info-text">hello@devmates.com</p>
+              <p className="info-text">hello@devmatesapp.com</p>
             </div>
           </div>
 

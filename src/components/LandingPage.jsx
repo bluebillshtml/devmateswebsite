@@ -95,7 +95,7 @@ const LandingPage = () => {
               <div className="nav-links">
                 <a href="#features" className="nav-link">Features</a>
                 <a href="#pricing" className="nav-link">Pricing</a>
-                <a href="#docs" className="nav-link">Docs</a>
+                <a href="/docs" className="nav-link">Docs</a>
                 <a href="#blog" className="nav-link">Blog</a>
               </div>
             </div>
@@ -135,7 +135,7 @@ const LandingPage = () => {
             <span>DevMates connects builders who share goals, skills, and vision</span>
             <span>to form genuine startup teams — not just hire contractors.</span>
           </p>
-          <a href="#signup" className="btn-get-started">
+          <a href="/waitlist" className="btn-get-started">
             <span>Get Started</span>
             <svg width="21" height="20" viewBox="0 0 21 20" fill="none">
               <path d="M8.69995 13.5999L12.3 9.9999L8.69995 6.3999" stroke="#09090A" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
@@ -960,7 +960,7 @@ const LandingPage = () => {
               <span>DevMates and finding</span>
               <span>your first co-founder.</span>
             </p>
-            <a href="#signup" className="btn-plan">Join Now</a>
+            <a href="/waitlist?plan=free" className="btn-plan">Join Now</a>
             <ul className="plan-features">
               <li>
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
@@ -1022,7 +1022,7 @@ const LandingPage = () => {
               <span>premium features to</span>
               <span>find your ideal co-founders.</span>
             </p>
-            <a href="#signup" className="btn-plan btn-plan-primary">Join Now</a>
+            <a href="/waitlist?plan=pro" className="btn-plan btn-plan-primary">Join Now</a>
             <ul className="plan-features">
               <li>
                 <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
@@ -1088,7 +1088,7 @@ const LandingPage = () => {
               <span>plus exclusive perks</span>
               <span>for serious founders.</span>
             </p>
-            <a href="#signup" className="btn-plan">Join Now</a>
+            <a href="/waitlist?plan=premium" className="btn-plan">Join Now</a>
             <ul className="plan-features">
               <li>
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none">

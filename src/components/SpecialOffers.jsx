@@ -139,7 +139,7 @@ const SpecialOffers = () => {
                 </ul>
               </div>
 
-              <button className="plan-button">Get Pro Access</button>
+              <button className="plan-button" onClick={() => window.location.href = '/waitlist?plan=pro'}>Get Pro Access</button>
             </div>
 
             {/* Enterprise Plan */}
@@ -180,7 +180,7 @@ const SpecialOffers = () => {
                 </ul>
               </div>
 
-              <button className="plan-button featured-button">Get Enterprise Access</button>
+              <button className="plan-button featured-button" onClick={() => window.location.href = '/waitlist?plan=enterprise'}>Get Enterprise Access</button>
             </div>
           </div>
         </section>

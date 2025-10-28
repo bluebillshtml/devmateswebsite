@@ -1,14 +1,25 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import './Waitlist.css';
 
 const Waitlist = () => {
   const [email, setEmail] = useState('');
   const [submitted, setSubmitted] = useState(false);
+  const [selectedPlan, setSelectedPlan] = useState('free');
+
+  // Get plan from URL parameters
+  useEffect(() => {
+    const urlParams = new URLSearchParams(window.location.search);
+    const plan = urlParams.get('plan');
+    if (plan && ['free', 'pro', 'premium', 'enterprise'].includes(plan)) {
+      setSelectedPlan(plan);
+    }
+  }, []);
 
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log('Email submitted:', email);
+    console.log('Selected plan:', selectedPlan);
     setSubmitted(true);
     setTimeout(() => {
       setSubmitted(false);
@@ -62,6 +73,56 @@ const Waitlist = () => {
           </p>
 
           <form className="email-form" onSubmit={handleSubmit}>
+            <div className="plan-selection">
+              <label className="plan-label">Choose your plan:</label>
+              <div className="plan-options">
+                <label className={`plan-option ${selectedPlan === 'free' ? 'selected' : ''}`}>
+                  <input
+                    type="radio"
+                    name="plan"
+                    value="free"
+                    checked={selectedPlan === 'free'}
+                    onChange={(e) => setSelectedPlan(e.target.value)}
+                  />
+                  <span className="plan-name">Free</span>
+                  <span className="plan-price">$0</span>
+                </label>
+                <label className={`plan-option ${selectedPlan === 'pro' ? 'selected' : ''}`}>
+                  <input
+                    type="radio"
+                    name="plan"
+                    value="pro"
+                    checked={selectedPlan === 'pro'}
+                    onChange={(e) => setSelectedPlan(e.target.value)}
+                  />
+                  <span className="plan-name">Pro</span>
+                  <span className="plan-price">$20</span>
+                </label>
+                <label className={`plan-option ${selectedPlan === 'premium' ? 'selected' : ''}`}>
+                  <input
+                    type="radio"
+                    name="plan"
+                    value="premium"
+                    checked={selectedPlan === 'premium'}
+                    onChange={(e) => setSelectedPlan(e.target.value)}
+                  />
+                  <span className="plan-name">Premium</span>
+                  <span className="plan-price">$35</span>
+                </label>
+                <label className={`plan-option ${selectedPlan === 'enterprise' ? 'selected' : ''}`}>
+                  <input
+                    type="radio"
+                    name="plan"
+                    value="enterprise"
+                    checked={selectedPlan === 'enterprise'}
+                    onChange={(e) => setSelectedPlan(e.target.value)}
+                  />
+                  <span className="plan-name">Enterprise</span>
+                  <span className="plan-price">$119</span>
+                </label>
+              </div>
+            </div>
+            
             <div className="input-wrapper">
               <input
                 type="email"
@@ -89,11 +150,11 @@ const Waitlist = () => {
 
           <div className="social-proof">
             <div className="avatars">
-              <div className="avatar" style={{backgroundImage: 'url(https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&h=100&fit=crop)'}}></div>
-              <div className="avatar" style={{backgroundImage: 'url(https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop)'}}></div>
-              <div className="avatar" style={{backgroundImage: 'url(https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&h=100&fit=crop)'}}></div>
+              <div className="avatar" style={{backgroundImage: 'url(https://randomuser.me/api/portraits/men/32.jpg)'}}></div>
+              <div className="avatar" style={{backgroundImage: 'url(https://randomuser.me/api/portraits/women/44.jpg)'}}></div>
+              <div className="avatar" style={{backgroundImage: 'url(https://randomuser.me/api/portraits/men/68.jpg)'}}></div>
             </div>
-            <p className="signup-count"><strong>4,532</strong> founders already signed up</p>
+            <p className="signup-count"><strong>85</strong> founders already signed up.</p>
           </div>
         </div>
       </main>

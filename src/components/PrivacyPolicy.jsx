@@ -160,7 +160,7 @@ const PrivacyPolicy = () => {
               If you have any questions about this Privacy Policy or our data practices, please contact us at:
             </p>
             <ul>
-              <li>Email: privacy@devmates.com</li>
+              <li>Email: privacy@devmatesapp.com</li>
               <li>Address: DevMates Inc., 123 Startup Street, San Francisco, CA 94105</li>
             </ul>
           </section>

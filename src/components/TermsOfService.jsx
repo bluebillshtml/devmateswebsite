@@ -157,7 +157,7 @@ const TermsOfService = () => {
               If you have any questions about these Terms of Service, please contact us at:
             </p>
             <ul>
-              <li>Email: legal@devmates.com</li>
+              <li>Email: legal@devmatesapp.com</li>
               <li>Address: DevMates Inc., 123 Startup Street, San Francisco, CA 94105</li>
             </ul>
           </section>

@@ -1,0 +1,348 @@
+/* Getting Started Page Styles */
+.getting-started-container {
+  min-height: 100vh;
+  background: linear-gradient(180deg, #1B1B1D 0%, #070708 100%);
+  color: #FFFFFF;
+  font-family: Helvetica, -apple-system, Roboto, Helvetica, sans-serif;
+  position: relative;
+  overflow: hidden;
+  padding: 60px 20px;
+}
+
+/* Background Elements */
+.getting-started-bg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.gradient-green,
+.gradient-pink,
+.ellipse-blur {
+  position: absolute;
+  mix-blend-mode: overlay;
+  filter: blur(64px);
+  opacity: 0.1;
+}
+
+.gradient-green {
+  width: 691px;
+  height: 818px;
+  left: 100px;
+  top: 0;
+  background: linear-gradient(135deg, #BDFFDF 0%, transparent 100%);
+  animation: glow 8s ease-in-out infinite;
+}
+
+.gradient-pink {
+  width: 519px;
+  height: 724px;
+  right: 0;
+  top: 0;
+  background: linear-gradient(135deg, #FFBDE8 0%, transparent 100%);
+  animation: glow 8s ease-in-out infinite 2s;
+}
+
+.ellipse-blur {
+  width: 572px;
+  height: 572px;
+  left: 50%;
+  top: -125px;
+  transform: translateX(-50%);
+  background: #9CEDFF;
+  border-radius: 50%;
+  opacity: 0.2;
+  animation: glow 8s ease-in-out infinite 4s;
+}
+
+/* Subtle Color Orbs */
+.color-orb {
+  position: absolute;
+  border-radius: 50%;
+  mix-blend-mode: screen;
+  pointer-events: none;
+}
+
+.orb-1 {
+  width: 800px;
+  height: 800px;
+  top: 10%;
+  left: 5%;
+  background: radial-gradient(circle at center, rgba(16, 131, 75, 0.12), transparent 70%);
+  filter: blur(60px);
+}
+
+.orb-2 {
+  width: 900px;
+  height: 900px;
+  top: 30%;
+  right: 0%;
+  background: radial-gradient(circle at center, rgba(184, 104, 199, 0.1), transparent 70%);
+  filter: blur(70px);
+}
+
+.orb-3 {
+  width: 1000px;
+  height: 1000px;
+  bottom: 10%;
+  left: 10%;
+  background: radial-gradient(circle at center, rgba(94, 106, 210, 0.08), transparent 70%);
+  filter: blur(80px);
+}
+
+.noise-texture {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%"><filter id="noise"><feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="4" /></filter><rect width="100%" height="100%" filter="url(%23noise)" opacity="0.05"/></svg>');
+  opacity: 0.4;
+}
+
+.stars-bg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(1px 1px at 20% 30%, white, transparent),
+              radial-gradient(1px 1px at 60% 70%, white, transparent),
+              radial-gradient(1px 1px at 50% 50%, white, transparent),
+              radial-gradient(1px 1px at 80% 10%, white, transparent),
+              radial-gradient(1px 1px at 90% 60%, white, transparent);
+  background-size: 200px 200px;
+  opacity: 0.4;
+}
+
+@keyframes glow {
+  0%, 100% {
+    opacity: 0.1;
+    filter: blur(64px);
+  }
+  50% {
+    opacity: 0.08;
+    filter: blur(60px);
+  }
+}
+
+.getting-started-container {
+  max-width: 900px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 10;
+}
+
+.getting-started-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.getting-started-header h2 {
+  font-size: 48px;
+  font-weight: 400;
+  line-height: 52px;
+  letter-spacing: -2px;
+  color: #FFFFFF;
+  margin-bottom: 16px;
+}
+
+.getting-started-header p {
+  font-size: 16px;
+  color: #828386;
+  opacity: 0.8;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.steps-container {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.step-item {
+  display: flex;
+  gap: 30px;
+  align-items: flex-start;
+  padding: 30px;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 16px;
+  backdrop-filter: blur(10px);
+  transition: all 0.3s ease;
+}
+
+.step-item:hover {
+  background: rgba(255, 255, 255, 0.04);
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+.step-number {
+  flex-shrink: 0;
+  width: 60px;
+  height: 60px;
+  background: linear-gradient(135deg, #BDFFDF, #9CEDFF);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  font-weight: 500;
+  color: #1B1B1D;
+}
+
+.step-content {
+  flex: 1;
+}
+
+.step-title {
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 28px;
+  letter-spacing: -1px;
+  color: #FFFFFF;
+  margin-bottom: 16px;
+}
+
+.step-description {
+  font-size: 16px;
+  line-height: 24px;
+  color: #E2E8F0;
+  margin-bottom: 20px;
+}
+
+.step-tips {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 12px;
+  padding: 20px;
+}
+
+.step-tips h4 {
+  font-size: 16px;
+  font-weight: 500;
+  color: #BDFFDF;
+  margin-bottom: 12px;
+}
+
+.step-tips ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.step-tips li {
+  font-size: 14px;
+  line-height: 20px;
+  color: #E2E8F0;
+  margin-bottom: 8px;
+  padding-left: 20px;
+  position: relative;
+}
+
+.step-tips li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: #BDFFDF;
+  font-weight: bold;
+}
+
+.getting-started-footer {
+  margin-top: 60px;
+  text-align: center;
+}
+
+.cta-section {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 16px;
+  padding: 40px 30px;
+  backdrop-filter: blur(10px);
+}
+
+.cta-section h3 {
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 28px;
+  letter-spacing: -1px;
+  color: #FFFFFF;
+  margin-bottom: 16px;
+}
+
+.cta-section p {
+  font-size: 16px;
+  line-height: 24px;
+  color: #E2E8F0;
+  margin-bottom: 30px;
+}
+
+.cta-button {
+  display: inline-block;
+  padding: 16px 32px;
+  background: linear-gradient(135deg, #BDFFDF, #9CEDFF);
+  color: #1B1B1D;
+  text-decoration: none;
+  border-radius: 12px;
+  font-weight: 500;
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+
+.cta-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(189, 255, 223, 0.3);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .getting-started-container {
+    padding: 40px 16px;
+  }
+  
+  .getting-started-header h2 {
+    font-size: 36px;
+    line-height: 40px;
+  }
+  
+  .step-item {
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+  }
+  
+  .step-number {
+    width: 50px;
+    height: 50px;
+    font-size: 20px;
+  }
+  
+  .step-title {
+    font-size: 20px;
+    line-height: 24px;
+  }
+  
+  .step-description {
+    font-size: 14px;
+    line-height: 20px;
+  }
+  
+  .step-tips {
+    padding: 16px;
+  }
+  
+  .cta-section {
+    padding: 30px 20px;
+  }
+  
+  .cta-section h3 {
+    font-size: 20px;
+    line-height: 24px;
+  }
+  
+  .cta-section p {
+    font-size: 14px;
+    line-height: 20px;
+  }
+}
