@@ -171,6 +171,7 @@ const Features = () => {
         <div className="noise-texture"></div>
         <div className="stars-bg"></div>
         <div className="ellipse-blur"></div>
+        <div className="white-spec-texture"></div>
 
         {/* Subtle Color Orbs */}
         <div className="color-orb orb-1"></div>
