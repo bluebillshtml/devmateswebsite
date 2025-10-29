@@ -23,6 +23,20 @@ const CookiePolicy = () => {
         <div className="color-orb orb-8"></div>
       </div>
 
+      {/* Navigation */}
+      <nav className="cookie-policy-nav">
+        <div className="nav-container">
+          <div className="nav-left">
+            <a href="/" className="logo">
+              <img src="/logo.png" alt="DevMates Logo" />
+            </a>
+          </div>
+          <div className="nav-right">
+            <a href="/" className="back-link">← Back to Home</a>
+          </div>
+        </div>
+      </nav>
+
       {/* Cookie Policy Content */}
       <div className="cookie-policy-container">
         <div className="cookie-policy-header">

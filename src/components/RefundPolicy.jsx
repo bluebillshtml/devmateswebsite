@@ -23,6 +23,20 @@ const RefundPolicy = () => {
         <div className="color-orb orb-8"></div>
       </div>
 
+      {/* Navigation */}
+      <nav className="refund-policy-nav">
+        <div className="nav-container">
+          <div className="nav-left">
+            <a href="/" className="logo">
+              <img src="/logo.png" alt="DevMates Logo" />
+            </a>
+          </div>
+          <div className="nav-right">
+            <a href="/" className="back-link">← Back to Home</a>
+          </div>
+        </div>
+      </nav>
+
       {/* Refund Policy Content */}
       <div className="refund-policy-container">
         <div className="refund-policy-header">

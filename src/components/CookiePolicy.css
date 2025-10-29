@@ -185,6 +185,63 @@ body {
   }
 }
 
+/* Navigation */
+.cookie-policy-nav {
+  background: transparent;
+  border-bottom: none;
+  padding: 20px 0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.cookie-policy-nav .nav-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.cookie-policy-nav .nav-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.cookie-policy-nav .logo {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: #FFFFFF;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.cookie-policy-nav .logo img {
+  height: 64px !important;
+  width: auto !important;
+}
+
+.cookie-policy-nav .logo:hover {
+  opacity: 0.8;
+}
+
+.cookie-policy-nav .back-link {
+  color: #FFFFFF;
+  text-decoration: none;
+  font-size: 16px;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.cookie-policy-nav .back-link:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
 /* Cookie Policy Container */
 .cookie-policy-container {
   max-width: 800px;

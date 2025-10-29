@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import PrivacyPolicy from './PrivacyPolicy';
 import TermsOfService from './TermsOfService';
@@ -10,6 +10,48 @@ import './Docs.css';
 
 const Docs = () => {
   const [activeTab, setActiveTab] = useState('privacy');
+  const [isHeaderVisible, setIsHeaderVisible] = useState(true);
+  const [lastScrollY, setLastScrollY] = useState(0);
+  const [isAnimating, setIsAnimating] = useState(false);
+
+  const handleTabChange = (tab) => {
+    if (tab === activeTab) return;
+    
+    setIsAnimating(true);
+    setTimeout(() => {
+      setActiveTab(tab);
+      setTimeout(() => {
+        setIsAnimating(false);
+      }, 50);
+      // Scroll to top when switching tabs
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }, 150);
+  };
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY;
+      
+      if (currentScrollY < 10) {
+        // Show header at the top
+        setIsHeaderVisible(true);
+      } else if (currentScrollY > lastScrollY) {
+        // Scrolling down - hide header
+        setIsHeaderVisible(false);
+      } else {
+        // Scrolling up - show header
+        setIsHeaderVisible(true);
+      }
+      
+      setLastScrollY(currentScrollY);
+    };
+
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, [lastScrollY]);
 
   return (
     <div className="docs-page">
@@ -28,7 +70,7 @@ const Docs = () => {
       </div>
 
       {/* Navigation */}
-      <nav className="docs-nav">
+      <nav className={`docs-nav ${!isHeaderVisible ? 'hidden' : ''}`}>
         <div className="nav-container">
           <div className="nav-left">
             <Link to="/" className="logo">
@@ -53,49 +95,51 @@ const Docs = () => {
             <div className="docs-tabs">
               <button 
                 className={`tab-button ${activeTab === 'getting-started' ? 'active' : ''}`}
-                onClick={() => setActiveTab('getting-started')}
+                onClick={() => handleTabChange('getting-started')}
               >
                 Getting Started
               </button>
               <button 
                 className={`tab-button ${activeTab === 'faq' ? 'active' : ''}`}
-                onClick={() => setActiveTab('faq')}
+                onClick={() => handleTabChange('faq')}
               >
                 FAQ
               </button>
               <button 
                 className={`tab-button ${activeTab === 'privacy' ? 'active' : ''}`}
-                onClick={() => setActiveTab('privacy')}
+                onClick={() => handleTabChange('privacy')}
               >
                 Privacy Policy
               </button>
               <button 
                 className={`tab-button ${activeTab === 'terms' ? 'active' : ''}`}
-                onClick={() => setActiveTab('terms')}
+                onClick={() => handleTabChange('terms')}
               >
                 Terms of Service
               </button>
               <button 
                 className={`tab-button ${activeTab === 'cookies' ? 'active' : ''}`}
-                onClick={() => setActiveTab('cookies')}
+                onClick={() => handleTabChange('cookies')}
               >
                 Cookie Policy
               </button>
               <button 
                 className={`tab-button ${activeTab === 'refund' ? 'active' : ''}`}
-                onClick={() => setActiveTab('refund')}
+                onClick={() => handleTabChange('refund')}
               >
                 Refund Policy
               </button>
             </div>
 
-            <div className="docs-tab-content">
-              {activeTab === 'getting-started' && <GettingStarted />}
-              {activeTab === 'faq' && <FAQ />}
-              {activeTab === 'privacy' && <PrivacyPolicy />}
-              {activeTab === 'terms' && <TermsOfService />}
-              {activeTab === 'cookies' && <CookiePolicy />}
-              {activeTab === 'refund' && <RefundPolicy />}
+            <div className={`docs-tab-content ${isAnimating ? 'animating' : ''}`}>
+              <div key={activeTab} className="tab-content-wrapper">
+                {activeTab === 'getting-started' && <GettingStarted />}
+                {activeTab === 'faq' && <FAQ />}
+                {activeTab === 'privacy' && <PrivacyPolicy />}
+                {activeTab === 'terms' && <TermsOfService />}
+                {activeTab === 'cookies' && <CookiePolicy />}
+                {activeTab === 'refund' && <RefundPolicy />}
+              </div>
             </div>
           </div>
         </div>

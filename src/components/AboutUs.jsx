@@ -168,7 +168,7 @@ const AboutUs = () => {
                 </div>
                 <div className="mission-stats">
                   <div className="stat-item">
-                    <div className="stat-number">500+</div>
+                    <div className="stat-number">20+</div>
                     <div className="stat-label">Vetted Developers</div>
                   </div>
                   <div className="stat-item">

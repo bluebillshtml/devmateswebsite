@@ -33,11 +33,8 @@ const Footer = () => {
                 <span className="nav-separator">/</span>
               </div>
               <div className="nav-item">
-                <span className="nav-link">Payment & Delivery</span>
+                <Link to="/docs" className="nav-link">Documentation</Link>
                 <span className="nav-separator">/</span>
-              </div>
-              <div className="nav-item">
-                <span className="nav-link">Contacts</span>
               </div>
             </nav>
 
@@ -69,8 +66,11 @@ const Footer = () => {
             <div className="info-item email-item">
               <p className="info-label">Need help?</p>
               <p className="info-text">hello@devmatesapp.com</p>
+              <p className="info-label" style={{ marginTop: '24px' }}>Premium test build</p>
+              <p className="info-text">coming soon.</p>
             </div>
           </div>
+
 
 
 

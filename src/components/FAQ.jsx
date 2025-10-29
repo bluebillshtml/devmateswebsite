@@ -66,6 +66,20 @@ const FAQ = () => {
         <div className="color-orb orb-8"></div>
       </div>
 
+      {/* Navigation */}
+      <nav className="faq-nav">
+        <div className="nav-container">
+          <div className="nav-left">
+            <a href="/" className="logo">
+              <img src="/logo.png" alt="DevMates Logo" />
+            </a>
+          </div>
+          <div className="nav-right">
+            <a href="/" className="back-link">← Back to Home</a>
+          </div>
+        </div>
+      </nav>
+
       {/* FAQ Content */}
       <div className="faq-container">
         <div className="faq-header">

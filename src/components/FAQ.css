@@ -185,6 +185,63 @@ body {
   }
 }
 
+/* Navigation */
+.faq-nav {
+  background: transparent;
+  border-bottom: none;
+  padding: 20px 0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.faq-nav .nav-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.faq-nav .nav-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.faq-nav .logo {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: #FFFFFF;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.faq-nav .logo img {
+  height: 64px !important;
+  width: auto !important;
+}
+
+.faq-nav .logo:hover {
+  opacity: 0.8;
+}
+
+.faq-nav .back-link {
+  color: #FFFFFF;
+  text-decoration: none;
+  font-size: 16px;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.faq-nav .back-link:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
 /* FAQ Container */
 .faq-container {
   max-width: 800px;
