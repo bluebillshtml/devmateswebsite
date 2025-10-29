@@ -96,7 +96,7 @@ const LandingPage = () => {
                 <a href="#features" className="nav-link">Features</a>
                 <a href="#pricing" className="nav-link">Pricing</a>
                 <a href="/docs" className="nav-link">Docs</a>
-                <a href="#blog" className="nav-link">Blog</a>
+                <Link to="/about" className="nav-link">About</Link>
               </div>
             </div>
             <div className="nav-right">

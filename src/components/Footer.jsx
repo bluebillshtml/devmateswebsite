@@ -13,7 +13,7 @@ const Footer = () => {
         <div className="footer-left">
           <div className="footer-catalog-header">
             <h2 className="catalog-title">devmates</h2>
-            <svg className="catalog-arrow" width="53" height="53" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <svg className="catalog-arrow" width="37" height="37" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M0.75 8.75L8.75 0.75M8.75 0.75L1.89286 0.750001M8.75 0.75V7.60714" stroke="#ECEEEC" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
             </svg>
           </div>
@@ -29,11 +29,7 @@ const Footer = () => {
                 <span className="nav-separator">/</span>
               </div>
               <div className="nav-item">
-                <span className="nav-link">Blog</span>
-                <span className="nav-separator">/</span>
-              </div>
-              <div className="nav-item">
-                <span className="nav-link">About Us</span>
+                <Link to="/about" className="nav-link">About Us</Link>
                 <span className="nav-separator">/</span>
               </div>
               <div className="nav-item">

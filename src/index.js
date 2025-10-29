@@ -7,6 +7,7 @@ import TermsOfService from './components/TermsOfService';
 import PrivacyPolicy from './components/PrivacyPolicy';
 import Waitlist from './components/Waitlist';
 import Docs from './components/Docs';
+import AboutUs from './components/AboutUs';
 import './components/LandingPage.css';
 import './components/Footer.css';
 import './components/SpecialOffers.css';
@@ -18,6 +19,7 @@ import './components/FAQ.css';
 import './components/GettingStarted.css';
 import './components/CookiePolicy.css';
 import './components/RefundPolicy.css';
+import './components/AboutUs.css';
 
 const App = () => {
   return (
@@ -29,6 +31,7 @@ const App = () => {
         <Route path="/privacy" element={<PrivacyPolicy />} />
         <Route path="/waitlist" element={<Waitlist />} />
         <Route path="/docs" element={<Docs />} />
+        <Route path="/about" element={<AboutUs />} />
       </Routes>
     </Router>
   );
