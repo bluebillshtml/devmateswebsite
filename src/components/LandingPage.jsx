@@ -93,7 +93,7 @@ const LandingPage = () => {
           <div className="nav-content">
             <div className="nav-left">
               <div className="nav-links">
-                <a href="#features" className="nav-link">Features</a>
+                <Link to="/features" className="nav-link">Features</Link>
                 <a href="#pricing" className="nav-link">Pricing</a>
                 <a href="/docs" className="nav-link">Docs</a>
                 <Link to="/about" className="nav-link">About</Link>
