@@ -60,7 +60,6 @@ const Docs = () => {
         <div className="gradient-green"></div>
         <div className="gradient-pink"></div>
         <div className="noise-texture"></div>
-        <div className="stars-bg"></div>
         <div className="ellipse-blur"></div>
 
         {/* Subtle Color Orbs */}
@@ -68,6 +67,9 @@ const Docs = () => {
         <div className="color-orb orb-2"></div>
         <div className="color-orb orb-3"></div>
       </div>
+
+      {/* Darkened Overlay */}
+      <div className="docs-dark-overlay"></div>
 
       {/* Navigation */}
       <nav className={`docs-nav ${!isHeaderVisible ? 'hidden' : ''}`}>

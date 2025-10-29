@@ -10,157 +10,159 @@
 
 /* Background Elements - Matching Landing Page */
 .waitlist-bg {
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
   pointer-events: none;
+  overflow: hidden;
   z-index: 0;
 }
 
-.gradient-green {
+.gradient-green,
+.gradient-pink,
+.ellipse-blur {
   position: absolute;
-  width: 519px;
-  height: 519px;
-  top: 100px;
-  left: -200px;
-  background: radial-gradient(circle at center,
-    rgba(189, 255, 223, 0.15) 0%,
-    rgba(189, 255, 223, 0.10) 20%,
-    rgba(189, 255, 223, 0.06) 40%,
-    rgba(189, 255, 223, 0.03) 60%,
-    rgba(189, 255, 223, 0.01) 80%,
-    transparent 100%);
-  filter: blur(80px);
+  mix-blend-mode: overlay;
+  filter: blur(64px);
+  opacity: 0.1;
+}
+
+.gradient-green {
+  width: 691px;
+  height: 818px;
+  left: 100px;
+  top: 0;
+  background: linear-gradient(135deg, #BDFFDF 0%, transparent 100%);
   animation: glow 8s ease-in-out infinite;
 }
 
 .gradient-pink {
-  position: absolute;
   width: 519px;
-  height: 519px;
-  top: 300px;
-  right: -200px;
-  background: radial-gradient(circle at center,
-    rgba(255, 189, 232, 0.15) 0%,
-    rgba(255, 189, 232, 0.10) 20%,
-    rgba(255, 189, 232, 0.06) 40%,
-    rgba(255, 189, 232, 0.03) 60%,
-    rgba(255, 189, 232, 0.01) 80%,
-    transparent 100%);
-  filter: blur(80px);
+  height: 724px;
+  right: 0;
+  top: 0;
+  background: linear-gradient(135deg, #FFBDE8 0%, transparent 100%);
   animation: glow 8s ease-in-out infinite 2s;
 }
 
 .ellipse-blur {
-  position: absolute;
   width: 572px;
   height: 572px;
-  bottom: 200px;
   left: 50%;
+  top: -125px;
   transform: translateX(-50%);
-  background: radial-gradient(circle at center,
-    rgba(255, 255, 255, 0.03) 0%,
-    rgba(255, 255, 255, 0.02) 30%,
-    rgba(255, 255, 255, 0.01) 50%,
-    transparent 70%);
-  filter: blur(100px);
+  background: #9CEDFF;
+  border-radius: 50%;
+  opacity: 0.2;
+  animation: glow 8s ease-in-out infinite 4s;
 }
 
-.color-orb {
+/* Subtle Color Orbs - Override LandingPage styles */
+.waitlist-page .waitlist-bg .color-orb {
   position: absolute;
   border-radius: 50%;
-  filter: blur(60px);
-  animation: floatGlow 12s ease-in-out infinite;
+  pointer-events: none;
+  opacity: 0.01 !important;
+  mix-blend-mode: normal !important;
 }
 
-.orb-1 {
-  width: 400px;
-  height: 400px;
-  top: 20%;
-  left: 15%;
-  background: radial-gradient(circle at center,
-    rgba(16, 131, 75, 0.12) 0%,
-    rgba(16, 131, 75, 0.08) 30%,
-    rgba(16, 131, 75, 0.04) 50%,
-    transparent 70%);
+.waitlist-page .waitlist-bg .orb-1 {
+  width: 800px;
+  height: 800px;
+  top: 10%;
+  left: 5%;
+  background: radial-gradient(circle at center, rgba(16, 131, 75, 0.001), transparent 70%) !important;
   filter: blur(60px);
-  will-change: transform;
+  opacity: 0.01 !important;
+  mix-blend-mode: normal !important;
 }
 
-.orb-2 {
-  width: 500px;
-  height: 500px;
-  top: 50%;
-  right: 10%;
-  background: radial-gradient(circle at center,
-    rgba(184, 104, 199, 0.1) 0%,
-    rgba(184, 104, 199, 0.06) 30%,
-    rgba(184, 104, 199, 0.03) 50%,
-    transparent 70%);
+.waitlist-page .waitlist-bg .orb-2 {
+  width: 900px;
+  height: 900px;
+  top: 30%;
+  right: 0%;
+  background: radial-gradient(circle at center, rgba(184, 104, 199, 0.001), transparent 70%) !important;
   filter: blur(70px);
-  will-change: transform;
+  opacity: 0.01 !important;
+  mix-blend-mode: normal !important;
 }
 
-.orb-3 {
-  width: 450px;
-  height: 450px;
-  bottom: 20%;
-  left: 50%;
-  background: radial-gradient(circle at center,
-    rgba(94, 106, 210, 0.08) 0%,
-    rgba(94, 106, 210, 0.05) 30%,
-    rgba(94, 106, 210, 0.02) 50%,
-    transparent 70%);
+.waitlist-page .waitlist-bg .orb-3 {
+  width: 1000px;
+  height: 1000px;
+  bottom: 10%;
+  left: 10%;
+  background: radial-gradient(circle at center, rgba(94, 106, 210, 0.001), transparent 70%) !important;
   filter: blur(80px);
-  will-change: transform;
+  opacity: 0.01 !important;
+  mix-blend-mode: normal !important;
 }
 
-.noise-texture {
-  position: absolute;
+/* Darkened Overlay */
+.waitlist-dark-overlay {
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  opacity: 0.03;
-  mix-blend-mode: overlay;
+  background: rgba(0, 0, 0, 0.3);
+  pointer-events: none;
+  z-index: 1;
 }
 
-.noise-texture::before {
-  content: '';
+.noise-texture {
   position: absolute;
   width: 100%;
   height: 100%;
-  background: radial-gradient(1px 1px at 20% 30%, white, transparent),
-              radial-gradient(1px 1px at 60% 70%, white, transparent),
-              radial-gradient(1px 1px at 50% 50%, white, transparent),
-              radial-gradient(1px 1px at 80% 10%, white, transparent),
-              radial-gradient(1px 1px at 90% 60%, white, transparent);
-  background-size: 200px 200px;
+  background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%"><filter id="noise"><feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="4" /></filter><rect width="100%" height="100%" filter="url(%23noise)" opacity="0.05"/></svg>');
+  opacity: 0.4;
+}
+
+.white-spec-texture {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background:
+    radial-gradient(0.5px 0.5px at 15% 25%, white, transparent),
+    radial-gradient(1px 1px at 35% 45%, white, transparent),
+    radial-gradient(0.5px 0.5px at 55% 15%, white, transparent),
+    radial-gradient(1.5px 1.5px at 75% 65%, white, transparent),
+    radial-gradient(0.5px 0.5px at 95% 35%, white, transparent),
+    radial-gradient(1px 1px at 25% 75%, white, transparent),
+    radial-gradient(0.5px 0.5px at 45% 55%, white, transparent),
+    radial-gradient(2px 2px at 65% 85%, white, transparent),
+    radial-gradient(0.5px 0.5px at 85% 5%, white, transparent),
+    radial-gradient(1px 1px at 5% 95%, white, transparent);
+  background-size: 100px 100px;
   background-repeat: repeat;
+  opacity: 0.6;
+  pointer-events: none;
 }
 
 @keyframes glow {
   0%, 100% {
-    opacity: 0.5;
-    transform: scale(1);
+    opacity: 0.1;
   }
   50% {
-    opacity: 0.8;
-    transform: scale(1.1);
+    opacity: 0.2;
   }
 }
 
 @keyframes floatGlow {
-  0%, 100% {
+  0%,
+  100% {
     transform: translate(0, 0);
     opacity: 0.15;
   }
+
   33% {
     transform: translate(30px, -30px);
     opacity: 0.20;
   }
+
   66% {
     transform: translate(-20px, 20px);
     opacity: 0.18;
@@ -611,97 +613,205 @@
 /* Responsive Design */
 @media (max-width: 768px) {
   .waitlist-nav {
-    padding: 20px 24px;
+    padding: 16px 20px;
+  }
+
+  .nav-container {
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  .logo img {
+    height: 48px !important;
+  }
+
+  .back-link {
+    font-size: 13px;
+    padding: 6px 12px;
   }
 
   .waitlist-main {
-    padding: 60px 24px 60px;
+    padding: 40px 20px 40px;
+    min-height: calc(100vh - 80px);
+  }
+
+  .coming-soon-badge {
+    font-size: 11px;
+    padding: 6px 12px;
+    margin-bottom: 24px;
   }
 
   .main-heading {
-    font-size: 40px;
+    font-size: 36px;
     letter-spacing: -2px;
+    margin-bottom: 20px;
   }
 
   .description {
     font-size: 16px;
+    margin-bottom: 32px;
   }
 
   .benefits-grid {
     grid-template-columns: 1fr;
     gap: 16px;
+    margin-top: 32px;
+  }
+
+  .benefit-item {
+    padding: 20px;
   }
 
   .input-wrapper {
     max-width: 100%;
+    padding: 4px;
+  }
+
+  .email-input {
+    font-size: 16px;
+    padding: 10px 14px;
+  }
+
+  .submit-button {
+    width: 44px;
+    height: 44px;
+  }
+
+  .social-proof {
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 40px;
   }
 
   .waitlist-section .phone-mockup {
-    width: 220px;
-    height: 440px;
-  }
-
-  .waitlist-section .phone-left {
-    left: -5%;
-  }
-
-  .waitlist-section .phone-right {
-    right: -5%;
+    display: none;
   }
 
   .iphone-mockup {
-    width: 280px;
+    width: 240px;
     bottom: -8%;
-    right: -5%;
+    right: -8%;
+  }
+
+  .gradient-green,
+  .gradient-pink {
+    width: 400px;
+    height: 500px;
+  }
+
+  .gradient-green {
+    left: -50px;
+  }
+
+  .ellipse-blur {
+    width: 400px;
+    height: 400px;
   }
 }
 
 @media (max-width: 480px) {
+  .waitlist-nav {
+    padding: 12px 16px;
+  }
+
+  .logo img {
+    height: 40px !important;
+  }
+
+  .back-link {
+    font-size: 12px;
+    padding: 5px 10px;
+  }
+
+  .waitlist-main {
+    padding: 30px 16px 30px;
+  }
+
+  .coming-soon-badge {
+    font-size: 10px;
+    padding: 5px 10px;
+    margin-bottom: 20px;
+  }
+
   .main-heading {
-    font-size: 32px;
+    font-size: 28px;
     letter-spacing: -1.5px;
+    margin-bottom: 16px;
+  }
+
+  .description {
+    font-size: 14px;
+    margin-bottom: 24px;
+  }
+
+  .benefits-grid {
+    gap: 12px;
+    margin-top: 24px;
+  }
+
+  .benefit-item {
+    padding: 16px;
+  }
+
+  .benefit-icon {
+    width: 40px;
+    height: 40px;
+    margin-bottom: 12px;
+  }
+
+  .benefit-text h3 {
+    font-size: 14px;
+    margin-bottom: 6px;
+  }
+
+  .benefit-text p {
+    font-size: 12px;
+  }
+
+  .input-wrapper {
+    padding: 3px;
+    border-radius: 10px;
+  }
+
+  .email-input {
+    font-size: 14px;
+    padding: 8px 12px;
+  }
+
+  .submit-button {
+    width: 40px;
+    height: 40px;
+    border-radius: 6px;
   }
 
   .social-proof {
     flex-direction: column;
     gap: 12px;
+    margin-bottom: 32px;
+  }
+
+  .avatar {
+    width: 32px;
+    height: 32px;
+    margin-left: -8px;
+  }
+
+  .signup-count {
+    font-size: 12px;
   }
 
   .waitlist-section .phone-mockup {
-    width: 160px;
-    height: 320px;
-  }
-
-  .waitlist-section .phone-left {
-    left: -10%;
-    opacity: 0.5;
-  }
-
-  .waitlist-section .phone-right {
-    right: -10%;
-    opacity: 0.5;
-  }
-
-  .waitlist-section .phone-frame {
-    border-radius: 30px;
-    padding: 8px;
-  }
-
-  .waitlist-section .phone-screen {
-    border-radius: 24px;
-  }
-
-  .waitlist-section .phone-notch {
-    width: 80px;
-    height: 20px;
-    top: 8px;
+    display: none;
   }
 
   .iphone-mockup {
-    width: 200px;
-    bottom: -5%;
-    right: -10%;
-    opacity: 0.85;
+    display: none;
+  }
+
+  .gradient-green,
+  .gradient-pink,
+  .ellipse-blur {
+    display: none;
   }
 }
 

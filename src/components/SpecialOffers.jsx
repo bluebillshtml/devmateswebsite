@@ -10,7 +10,6 @@ const SpecialOffers = () => {
         <div className="gradient-green"></div>
         <div className="gradient-pink"></div>
         <div className="noise-texture"></div>
-        <div className="stars-bg"></div>
         <div className="ellipse-blur"></div>
 
         {/* Subtle Color Orbs */}

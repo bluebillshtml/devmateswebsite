@@ -114,7 +114,6 @@ const Waitlist = () => {
         <div className="gradient-green"></div>
         <div className="gradient-pink"></div>
         <div className="noise-texture"></div>
-        <div className="stars-bg"></div>
         <div className="ellipse-blur"></div>
 
         {/* Subtle Color Orbs */}
@@ -122,6 +121,9 @@ const Waitlist = () => {
         <div className="color-orb orb-2"></div>
         <div className="color-orb orb-3"></div>
       </div>
+
+      {/* Darkened Overlay */}
+      <div className="waitlist-dark-overlay"></div>
 
       {/* Navigation */}
       <nav className="waitlist-nav">

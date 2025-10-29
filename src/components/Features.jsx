@@ -169,7 +169,6 @@ const Features = () => {
         <div className="gradient-green"></div>
         <div className="gradient-pink"></div>
         <div className="noise-texture"></div>
-        <div className="stars-bg"></div>
         <div className="ellipse-blur"></div>
         <div className="white-spec-texture"></div>
 

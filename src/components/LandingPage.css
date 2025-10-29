@@ -349,15 +349,17 @@ body {
   animation: glow 8s ease-in-out infinite 4s;
 }
 
-/* Subtle Color Orbs */
-.color-orb {
+/* Subtle Color Orbs - Scoped to landing page only */
+.landing-page .color-orb,
+.hero-section .color-orb {
   position: absolute;
   border-radius: 50%;
   mix-blend-mode: screen;
   pointer-events: none;
 }
 
-.orb-1 {
+.landing-page .orb-1,
+.hero-section .orb-1 {
   width: 800px;
   height: 800px;
   top: 10%;
@@ -366,7 +368,8 @@ body {
   filter: blur(60px);
 }
 
-.orb-2 {
+.landing-page .orb-2,
+.hero-section .orb-2 {
   width: 900px;
   height: 900px;
   top: 30%;
@@ -375,7 +378,8 @@ body {
   filter: blur(70px);
 }
 
-.orb-3 {
+.landing-page .orb-3,
+.hero-section .orb-3 {
   width: 1000px;
   height: 1000px;
   bottom: 10%;

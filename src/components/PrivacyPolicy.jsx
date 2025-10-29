@@ -9,7 +9,6 @@ const PrivacyPolicy = () => {
         <div className="gradient-green"></div>
         <div className="gradient-pink"></div>
         <div className="noise-texture"></div>
-        <div className="stars-bg"></div>
         <div className="ellipse-blur"></div>
 
         {/* Subtle Color Orbs */}
@@ -22,20 +21,6 @@ const PrivacyPolicy = () => {
         <div className="color-orb orb-7"></div>
         <div className="color-orb orb-8"></div>
       </div>
-
-      {/* Navigation */}
-      <nav className="privacy-nav">
-        <div className="nav-container">
-          <div className="nav-left">
-            <a href="/" className="logo">
-              <img src="/logo.png" alt="DevMates Logo" width="110" height="32" />
-            </a>
-          </div>
-          <div className="nav-right">
-            <a href="/" className="back-link">← Back to Home</a>
-          </div>
-        </div>
-      </nav>
 
       {/* Privacy Content */}
       <div className="privacy-container">

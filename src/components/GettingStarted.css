@@ -25,13 +25,13 @@ body {
 /* Background Elements */
 .getting-started-bg {
   position: fixed;
-  width: 100%;
-  height: 100%;
   top: 0;
   left: 0;
+  width: 100%;
+  height: 100%;
   pointer-events: none;
   overflow: hidden;
-  z-index: 1;
+  z-index: 0;
 }
 
 .gradient-green,
@@ -108,51 +108,6 @@ body {
   filter: blur(80px);
 }
 
-.orb-4 {
-  width: 600px;
-  height: 600px;
-  top: 60%;
-  right: 20%;
-  background: radial-gradient(circle at center, rgba(255, 165, 0, 0.15), transparent 70%);
-  filter: blur(50px);
-}
-
-.orb-5 {
-  width: 700px;
-  height: 700px;
-  top: 20%;
-  left: 60%;
-  background: radial-gradient(circle at center, rgba(255, 20, 147, 0.12), transparent 70%);
-  filter: blur(65px);
-}
-
-.orb-6 {
-  width: 500px;
-  height: 500px;
-  bottom: 30%;
-  right: 10%;
-  background: radial-gradient(circle at center, rgba(0, 191, 255, 0.14), transparent 70%);
-  filter: blur(45px);
-}
-
-.orb-7 {
-  width: 750px;
-  height: 750px;
-  top: 50%;
-  left: 30%;
-  background: radial-gradient(circle at center, rgba(50, 205, 50, 0.11), transparent 70%);
-  filter: blur(55px);
-}
-
-.orb-8 {
-  width: 650px;
-  height: 650px;
-  bottom: 20%;
-  left: 70%;
-  background: radial-gradient(circle at center, rgba(138, 43, 226, 0.13), transparent 70%);
-  filter: blur(60px);
-}
-
 .noise-texture {
   position: absolute;
   width: 100%;
@@ -161,27 +116,51 @@ body {
   opacity: 0.4;
 }
 
-.stars-bg {
+.white-spec-texture {
   position: absolute;
   width: 100%;
   height: 100%;
-  background: radial-gradient(1px 1px at 20% 30%, white, transparent),
-              radial-gradient(1px 1px at 60% 70%, white, transparent),
-              radial-gradient(1px 1px at 50% 50%, white, transparent),
-              radial-gradient(1px 1px at 80% 10%, white, transparent),
-              radial-gradient(1px 1px at 90% 60%, white, transparent);
-  background-size: 200px 200px;
-  opacity: 0.4;
+  background:
+    radial-gradient(0.5px 0.5px at 15% 25%, white, transparent),
+    radial-gradient(1px 1px at 35% 45%, white, transparent),
+    radial-gradient(0.5px 0.5px at 55% 15%, white, transparent),
+    radial-gradient(1.5px 1.5px at 75% 65%, white, transparent),
+    radial-gradient(0.5px 0.5px at 95% 35%, white, transparent),
+    radial-gradient(1px 1px at 25% 75%, white, transparent),
+    radial-gradient(0.5px 0.5px at 45% 55%, white, transparent),
+    radial-gradient(2px 2px at 65% 85%, white, transparent),
+    radial-gradient(0.5px 0.5px at 85% 5%, white, transparent),
+    radial-gradient(1px 1px at 5% 95%, white, transparent);
+  background-size: 100px 100px;
+  background-repeat: repeat;
+  opacity: 0.6;
+  pointer-events: none;
 }
 
 @keyframes glow {
   0%, 100% {
     opacity: 0.1;
-    filter: blur(64px);
   }
   50% {
-    opacity: 0.08;
-    filter: blur(60px);
+    opacity: 0.2;
+  }
+}
+
+@keyframes floatGlow {
+  0%,
+  100% {
+    transform: translate(0, 0);
+    opacity: 0.15;
+  }
+
+  33% {
+    transform: translate(30px, -30px);
+    opacity: 0.20;
+  }
+
+  66% {
+    transform: translate(-20px, 20px);
+    opacity: 0.18;
   }
 }
 
@@ -416,19 +395,46 @@ body {
 
 /* Responsive Design */
 @media (max-width: 768px) {
+  .getting-started-nav {
+    padding: 16px 0;
+  }
+
+  .getting-started-nav .nav-container {
+    padding: 0 16px;
+  }
+
+  .getting-started-nav .logo img {
+    height: 48px !important;
+  }
+
+  .getting-started-nav .back-link {
+    font-size: 13px;
+    padding: 6px 12px;
+  }
+
   .getting-started-container {
     padding: 40px 16px;
   }
+
+  .getting-started-header {
+    margin-bottom: 40px;
+  }
   
   .getting-started-header h1 {
-    font-size: 36px;
-    line-height: 40px;
+    font-size: 32px;
+    line-height: 36px;
+    margin-bottom: 12px;
+  }
+
+  .getting-started-header p {
+    font-size: 14px;
   }
   
   .step-item {
     flex-direction: column;
     gap: 20px;
     padding: 20px;
+    margin-bottom: 32px;
   }
   
   .step-number {
@@ -440,17 +446,33 @@ body {
   .step-title {
     font-size: 20px;
     line-height: 24px;
+    margin-bottom: 12px;
   }
   
   .step-description {
     font-size: 14px;
     line-height: 20px;
+    margin-bottom: 16px;
   }
   
   .step-tips {
     padding: 16px;
   }
+
+  .step-tips h4 {
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
+
+  .step-tips li {
+    font-size: 13px;
+    line-height: 18px;
+  }
   
+  .getting-started-footer {
+    margin-top: 40px;
+  }
+
   .cta-section {
     padding: 30px 20px;
   }
@@ -458,10 +480,140 @@ body {
   .cta-section h3 {
     font-size: 20px;
     line-height: 24px;
+    margin-bottom: 12px;
   }
   
   .cta-section p {
     font-size: 14px;
     line-height: 20px;
+    margin-bottom: 24px;
+  }
+
+  .cta-button {
+    padding: 14px 28px;
+    font-size: 14px;
+  }
+
+  .gradient-green,
+  .gradient-pink {
+    width: 400px;
+    height: 500px;
+  }
+
+  .gradient-green {
+    left: -50px;
+  }
+
+  .ellipse-blur {
+    width: 400px;
+    height: 400px;
+  }
+}
+
+@media (max-width: 480px) {
+  .getting-started-nav {
+    padding: 12px 0;
+  }
+
+  .getting-started-nav .nav-container {
+    padding: 0 12px;
+  }
+
+  .getting-started-nav .logo img {
+    height: 40px !important;
+  }
+
+  .getting-started-nav .back-link {
+    font-size: 12px;
+    padding: 5px 10px;
+  }
+
+  .getting-started-container {
+    padding: 32px 12px;
+  }
+
+  .getting-started-header {
+    margin-bottom: 32px;
+  }
+  
+  .getting-started-header h1 {
+    font-size: 26px;
+    line-height: 30px;
+    margin-bottom: 10px;
+  }
+
+  .getting-started-header p {
+    font-size: 13px;
+  }
+  
+  .step-item {
+    gap: 16px;
+    padding: 16px;
+    margin-bottom: 24px;
+    border-radius: 12px;
+  }
+  
+  .step-number {
+    width: 45px;
+    height: 45px;
+    font-size: 18px;
+  }
+  
+  .step-title {
+    font-size: 18px;
+    line-height: 22px;
+    margin-bottom: 10px;
+  }
+  
+  .step-description {
+    font-size: 13px;
+    line-height: 18px;
+    margin-bottom: 12px;
+  }
+  
+  .step-tips {
+    padding: 12px;
+  }
+
+  .step-tips h4 {
+    font-size: 13px;
+    margin-bottom: 8px;
+  }
+
+  .step-tips li {
+    font-size: 12px;
+    line-height: 16px;
+    margin-bottom: 6px;
+  }
+  
+  .getting-started-footer {
+    margin-top: 32px;
+  }
+
+  .cta-section {
+    padding: 24px 16px;
+  }
+  
+  .cta-section h3 {
+    font-size: 18px;
+    line-height: 22px;
+    margin-bottom: 10px;
+  }
+  
+  .cta-section p {
+    font-size: 13px;
+    line-height: 18px;
+    margin-bottom: 20px;
+  }
+
+  .cta-button {
+    padding: 12px 24px;
+    font-size: 13px;
+  }
+
+  .gradient-green,
+  .gradient-pink,
+  .ellipse-blur {
+    display: none;
   }
 }

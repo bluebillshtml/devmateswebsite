@@ -124,19 +124,6 @@
   opacity: 0.4;
 }
 
-.stars-bg {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background: radial-gradient(1px 1px at 20% 30%, white, transparent),
-              radial-gradient(1px 1px at 60% 70%, white, transparent),
-              radial-gradient(1px 1px at 50% 50%, white, transparent),
-              radial-gradient(1px 1px at 80% 10%, white, transparent),
-              radial-gradient(1px 1px at 90% 60%, white, transparent);
-  background-size: 200px 200px;
-  opacity: 0.4;
-}
-
 .white-spec-texture {
   position: absolute;
   width: 100%;
@@ -524,59 +511,270 @@
 }
 
 @media (max-width: 768px) {
-  .features-main {
-    padding: 20px 24px 60px;
+  .features-nav {
+    padding: 16px 20px;
   }
 
-  .features-nav {
-    padding: 20px 24px;
+  .features-nav .nav-container {
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  .features-nav .logo img {
+    height: 48px !important;
+  }
+
+  .features-nav .back-link {
+    font-size: 13px;
+    padding: 6px 12px;
+  }
+
+  .features-main {
+    padding: 20px 20px 50px;
+  }
+
+  .hero-badge {
+    font-size: 11px;
+    padding: 6px 12px;
+    margin-bottom: 16px;
   }
 
   .hero-heading {
-    font-size: 40px;
+    font-size: 36px;
     letter-spacing: -1.5px;
+    margin-bottom: 16px;
   }
 
   .hero-description {
-    font-size: 18px;
+    font-size: 16px;
+    margin-bottom: 60px;
   }
 
   .section-heading {
-    font-size: 36px;
+    font-size: 32px;
+    margin-bottom: 24px;
+  }
+
+  .section-subtitle {
+    font-size: 16px;
+    margin-bottom: 40px;
+  }
+
+  .features-grid {
+    gap: 24px;
   }
 
   .feature-card-large {
-    padding: 32px 24px;
+    padding: 28px 20px;
+  }
+
+  .feature-icon-wrapper {
+    width: 56px;
+    height: 56px;
+    margin-bottom: 20px;
+  }
+
+  .feature-icon-wrapper svg {
+    width: 28px;
+    height: 28px;
   }
 
   .feature-title {
-    font-size: 24px;
+    font-size: 22px;
+    margin-bottom: 12px;
+  }
+
+  .feature-description {
+    font-size: 15px;
+    margin-bottom: 20px;
+  }
+
+  .feature-details {
+    gap: 10px;
+  }
+
+  .feature-details li {
+    font-size: 14px;
   }
 
   .additional-features-grid {
     grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .additional-feature-card {
+    padding: 24px 20px;
+  }
+
+  .additional-feature-icon {
+    font-size: 40px;
+    margin-bottom: 16px;
+  }
+
+  .additional-feature-title {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+
+  .additional-feature-description {
+    font-size: 13px;
   }
 
   .cta-section {
-    padding: 60px 24px;
+    padding: 50px 24px;
+    margin-top: 60px;
   }
 
   .cta-heading {
-    font-size: 32px;
+    font-size: 28px;
+    margin-bottom: 12px;
+  }
+
+  .cta-description {
+    font-size: 16px;
+    margin-bottom: 32px;
+  }
+
+  .cta-button {
+    padding: 14px 28px;
+    font-size: 15px;
+  }
+
+  .gradient-green,
+  .gradient-pink {
+    width: 400px;
+    height: 500px;
+  }
+
+  .gradient-green {
+    left: -50px;
+  }
+
+  .ellipse-blur {
+    width: 400px;
+    height: 400px;
   }
 }
 
 @media (max-width: 480px) {
+  .features-nav {
+    padding: 12px 16px;
+  }
+
+  .features-nav .logo img {
+    height: 40px !important;
+  }
+
+  .features-nav .back-link {
+    font-size: 12px;
+    padding: 5px 10px;
+  }
+
+  .features-main {
+    padding: 16px 16px 40px;
+  }
+
+  .hero-badge {
+    font-size: 10px;
+    padding: 5px 10px;
+    margin-bottom: 12px;
+  }
+
   .hero-heading {
-    font-size: 32px;
+    font-size: 28px;
+    letter-spacing: -1px;
+    margin-bottom: 12px;
+  }
+
+  .hero-description {
+    font-size: 14px;
+    margin-bottom: 40px;
   }
 
   .section-heading {
-    font-size: 28px;
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+
+  .section-subtitle {
+    font-size: 14px;
+    margin-bottom: 32px;
+  }
+
+  .features-grid {
+    gap: 20px;
+  }
+
+  .feature-card-large {
+    padding: 24px 16px;
+  }
+
+  .feature-icon-wrapper {
+    width: 48px;
+    height: 48px;
+    margin-bottom: 16px;
+  }
+
+  .feature-icon-wrapper svg {
+    width: 24px;
+    height: 24px;
+  }
+
+  .feature-title {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+
+  .feature-description {
+    font-size: 14px;
+    margin-bottom: 16px;
+  }
+
+  .feature-details li {
+    font-size: 13px;
+  }
+
+  .additional-feature-card {
+    padding: 20px 16px;
+  }
+
+  .additional-feature-icon {
+    font-size: 36px;
+    margin-bottom: 12px;
+  }
+
+  .additional-feature-title {
+    font-size: 16px;
+    margin-bottom: 8px;
+  }
+
+  .additional-feature-description {
+    font-size: 12px;
+  }
+
+  .cta-section {
+    padding: 40px 20px;
+    margin-top: 40px;
   }
 
   .cta-heading {
-    font-size: 24px;
+    font-size: 22px;
+  }
+
+  .cta-description {
+    font-size: 14px;
+    margin-bottom: 24px;
+  }
+
+  .cta-button {
+    padding: 12px 24px;
+    font-size: 14px;
+  }
+
+  .gradient-green,
+  .gradient-pink,
+  .ellipse-blur {
+    display: none;
   }
 }
 

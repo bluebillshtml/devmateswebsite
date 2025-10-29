@@ -8,124 +8,162 @@
 
 /* Background Elements */
 .docs-bg {
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  z-index: -1;
+  pointer-events: none;
   overflow: hidden;
+  z-index: 0;
+}
+
+.gradient-green,
+.gradient-pink,
+.ellipse-blur {
+  position: absolute;
+  mix-blend-mode: overlay;
+  filter: blur(64px);
+  opacity: 0.05;
 }
 
 .gradient-green {
-  position: absolute;
-  width: 600px;
-  height: 600px;
-  background: radial-gradient(circle, rgba(0, 255, 136, 0.15) 0%, transparent 70%);
-  border-radius: 50%;
-  top: -300px;
-  left: -300px;
-  animation: float 6s ease-in-out infinite;
+  width: 691px;
+  height: 818px;
+  left: 100px;
+  top: 0;
+  background: linear-gradient(135deg, #BDFFDF 0%, transparent 100%);
+  animation: glow 8s ease-in-out infinite;
 }
 
 .gradient-pink {
-  position: absolute;
-  width: 500px;
-  height: 500px;
-  background: radial-gradient(circle, rgba(255, 0, 136, 0.1) 0%, transparent 70%);
+  width: 519px;
+  height: 724px;
+  right: 0;
+  top: 0;
+  background: linear-gradient(135deg, #FFBDE8 0%, transparent 100%);
+  animation: glow 8s ease-in-out infinite 2s;
+}
+
+.ellipse-blur {
+  width: 572px;
+  height: 572px;
+  left: 50%;
+  top: -125px;
+  transform: translateX(-50%);
+  background: #9CEDFF;
   border-radius: 50%;
-  bottom: -250px;
-  right: -250px;
-  animation: float 8s ease-in-out infinite reverse;
+  opacity: 0.1;
+  animation: glow 8s ease-in-out infinite 4s;
+}
+
+/* Subtle Color Orbs - Override LandingPage styles */
+.docs-page .docs-bg .color-orb {
+  position: absolute;
+  border-radius: 50%;
+  pointer-events: none;
+  opacity: 0.01 !important;
+  mix-blend-mode: normal !important;
+}
+
+.docs-page .docs-bg .orb-1 {
+  width: 800px;
+  height: 800px;
+  top: 10%;
+  left: 5%;
+  background: radial-gradient(circle at center, rgba(16, 131, 75, 0.001), transparent 70%) !important;
+  filter: blur(60px);
+  opacity: 0.01 !important;
+  mix-blend-mode: normal !important;
+}
+
+.docs-page .docs-bg .orb-2 {
+  width: 900px;
+  height: 900px;
+  top: 30%;
+  right: 0%;
+  background: radial-gradient(circle at center, rgba(184, 104, 199, 0.001), transparent 70%) !important;
+  filter: blur(70px);
+  opacity: 0.01 !important;
+  mix-blend-mode: normal !important;
+}
+
+.docs-page .docs-bg .orb-3 {
+  width: 1000px;
+  height: 1000px;
+  bottom: 10%;
+  left: 10%;
+  background: radial-gradient(circle at center, rgba(94, 106, 210, 0.001), transparent 70%) !important;
+  filter: blur(80px);
+  opacity: 0.01 !important;
+  mix-blend-mode: normal !important;
+}
+
+/* Darkened Overlay */
+.docs-dark-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.3);
+  pointer-events: none;
+  z-index: 1;
 }
 
 .noise-texture {
   position: absolute;
-  top: 0;
-  left: 0;
   width: 100%;
   height: 100%;
-  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.03'/%3E%3C/svg%3E");
+  background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%"><filter id="noise"><feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="4" /></filter><rect width="100%" height="100%" filter="url(%23noise)" opacity="0.05"/></svg>');
   opacity: 0.4;
 }
 
-.stars-bg {
+.white-spec-texture {
   position: absolute;
-  top: 0;
-  left: 0;
   width: 100%;
   height: 100%;
-  background-image: radial-gradient(2px 2px at 20px 30px, rgba(255, 255, 255, 0.3), transparent),
-                    radial-gradient(2px 2px at 40px 70px, rgba(255, 255, 255, 0.2), transparent),
-                    radial-gradient(1px 1px at 90px 40px, rgba(255, 255, 255, 0.4), transparent),
-                    radial-gradient(1px 1px at 130px 80px, rgba(255, 255, 255, 0.3), transparent),
-                    radial-gradient(2px 2px at 160px 30px, rgba(255, 255, 255, 0.2), transparent);
+  background:
+    radial-gradient(0.5px 0.5px at 15% 25%, white, transparent),
+    radial-gradient(1px 1px at 35% 45%, white, transparent),
+    radial-gradient(0.5px 0.5px at 55% 15%, white, transparent),
+    radial-gradient(1.5px 1.5px at 75% 65%, white, transparent),
+    radial-gradient(0.5px 0.5px at 95% 35%, white, transparent),
+    radial-gradient(1px 1px at 25% 75%, white, transparent),
+    radial-gradient(0.5px 0.5px at 45% 55%, white, transparent),
+    radial-gradient(2px 2px at 65% 85%, white, transparent),
+    radial-gradient(0.5px 0.5px at 85% 5%, white, transparent),
+    radial-gradient(1px 1px at 5% 95%, white, transparent);
+  background-size: 100px 100px;
   background-repeat: repeat;
-  background-size: 200px 100px;
-  animation: twinkle 4s ease-in-out infinite;
+  opacity: 0.6;
+  pointer-events: none;
 }
 
-.ellipse-blur {
-  position: absolute;
-  width: 300px;
-  height: 200px;
-  background: rgba(255, 255, 255, 0.02);
-  border-radius: 50%;
-  filter: blur(40px);
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
-.color-orb {
-  position: absolute;
-  border-radius: 50%;
-  filter: blur(40px);
-  animation: float 10s ease-in-out infinite;
-}
-
-.orb-1 {
-  width: 200px;
-  height: 200px;
-  background: rgba(0, 255, 136, 0.1);
-  top: 20%;
-  left: 10%;
-  animation-delay: 0s;
-}
-
-.orb-2 {
-  width: 150px;
-  height: 150px;
-  background: rgba(255, 0, 136, 0.08);
-  top: 60%;
-  right: 15%;
-  animation-delay: 2s;
-}
-
-.orb-3 {
-  width: 180px;
-  height: 180px;
-  background: rgba(87, 144, 255, 0.06);
-  bottom: 20%;
-  left: 20%;
-  animation-delay: 4s;
-}
-
-@keyframes float {
+@keyframes glow {
   0%, 100% {
-    transform: translateY(0px);
+    opacity: 0.1;
   }
   50% {
-    transform: translateY(-20px);
+    opacity: 0.2;
   }
 }
 
-@keyframes twinkle {
-  0%, 100% {
-    opacity: 0.3;
+@keyframes floatGlow {
+  0%,
+  100% {
+    transform: translate(0, 0);
+    opacity: 0.15;
   }
-  50% {
-    opacity: 0.8;
+
+  33% {
+    transform: translate(30px, -30px);
+    opacity: 0.20;
+  }
+
+  66% {
+    transform: translate(-20px, 20px);
+    opacity: 0.18;
   }
 }
 
@@ -279,38 +317,130 @@
 
 /* Responsive Design */
 @media (max-width: 768px) {
+  .docs-nav {
+    height: 65px;
+  }
+
+  .nav-container {
+    padding: 0 16px;
+  }
+
+  .nav-left .logo img {
+    height: 48px !important;
+  }
+
+  .back-link {
+    font-size: 13px;
+    padding: 6px 12px;
+  }
+
+  .docs-main {
+    padding-top: 90px;
+  }
+
+  .docs-container {
+    padding: 0 16px;
+  }
+
+  .docs-header {
+    margin-bottom: 2rem;
+  }
+
   .docs-header h1 {
     font-size: 2rem;
+    margin-bottom: 0.75rem;
   }
   
   .docs-header p {
     font-size: 1rem;
   }
   
+  .docs-content {
+    border-radius: 12px;
+  }
+
+  .docs-tabs {
+    flex-wrap: wrap;
+  }
+
   .tab-button {
-    padding: 1rem 1.5rem;
-    font-size: 1rem;
+    padding: 0.875rem 1.25rem;
+    font-size: 0.9rem;
+    min-width: 100px;
   }
-  
-  .nav-container {
-    padding: 0 16px;
-  }
-  
-  .docs-container {
-    padding: 0 16px;
+
+  .docs-tab-content {
+    min-height: 300px;
   }
 }
 
 @media (max-width: 480px) {
+  .docs-nav {
+    height: 60px;
+  }
+
+  .nav-container {
+    padding: 0 12px;
+  }
+
+  .nav-left .logo img {
+    height: 40px !important;
+  }
+
+  .back-link {
+    font-size: 12px;
+    padding: 5px 10px;
+  }
+
+  .docs-main {
+    padding-top: 80px;
+  }
+
+  .docs-container {
+    padding: 0 12px;
+  }
+
+  .docs-header {
+    margin-bottom: 1.5rem;
+  }
+
+  .docs-header h1 {
+    font-size: 1.75rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .docs-header p {
+    font-size: 0.9rem;
+  }
+
   .docs-tabs {
     flex-direction: column;
   }
   
   .tab-button {
+    padding: 1rem;
+    font-size: 0.875rem;
+    width: 100%;
     border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    text-align: left;
+    min-width: auto;
   }
   
   .tab-button:last-child {
     border-bottom: none;
+  }
+
+  .tab-button.active::after {
+    display: none;
+  }
+
+  .docs-tab-content {
+    min-height: 250px;
+  }
+
+  .gradient-green,
+  .gradient-pink,
+  .ellipse-blur {
+    display: none;
   }
 }

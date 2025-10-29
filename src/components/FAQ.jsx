@@ -52,7 +52,6 @@ const FAQ = () => {
         <div className="gradient-green"></div>
         <div className="gradient-pink"></div>
         <div className="noise-texture"></div>
-        <div className="stars-bg"></div>
         <div className="ellipse-blur"></div>
 
         {/* Subtle Color Orbs */}
@@ -65,20 +64,6 @@ const FAQ = () => {
         <div className="color-orb orb-7"></div>
         <div className="color-orb orb-8"></div>
       </div>
-
-      {/* Navigation */}
-      <nav className="faq-nav">
-        <div className="nav-container">
-          <div className="nav-left">
-            <a href="/" className="logo">
-              <img src="/logo.png" alt="DevMates Logo" />
-            </a>
-          </div>
-          <div className="nav-right">
-            <a href="/" className="back-link">← Back to Home</a>
-          </div>
-        </div>
-      </nav>
 
       {/* FAQ Content */}
       <div className="faq-container">
