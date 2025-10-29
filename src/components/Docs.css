@@ -154,8 +154,8 @@
 }
 
 .nav-left .logo img {
-  height: 32px;
-  width: auto;
+  height: 64px !important;
+  width: auto !important;
 }
 
 .back-link {

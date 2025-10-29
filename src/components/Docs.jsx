@@ -32,7 +32,7 @@ const Docs = () => {
         <div className="nav-container">
           <div className="nav-left">
             <Link to="/" className="logo">
-              <img src="/logo.png" alt="DevMates Logo" width="110" height="32" />
+              <img src="/logo.png" alt="DevMates Logo" />
             </Link>
           </div>
           <div className="nav-right">

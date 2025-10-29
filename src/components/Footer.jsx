@@ -58,20 +58,21 @@ const Footer = () => {
 
           <div className="info-group">
             <div className="info-item">
-              <p className="info-label">Location</p>
-              <p className="info-text">Remote Worldwide</p>
+              <p className="info-label">Connect</p>
+              <div className="social-links">
+                <p className="info-text">Instagram</p>
+                <p className="info-text">TikTok</p>
+                <p className="info-text">Facebook</p>
+              </div>
             </div>
 
-            <div className="info-item">
-              <p className="info-label">Email</p>
+            <div className="info-item email-item">
+              <p className="info-label">Need help?</p>
               <p className="info-text">hello@devmatesapp.com</p>
             </div>
           </div>
 
-          <div className="hours-section">
-            <p className="info-label">Mo—Fr</p>
-            <p className="hours-text">9am—6pm</p>
-          </div>
+
 
           <p className="copyright">© 2025 — Copyright</p>
         </div>

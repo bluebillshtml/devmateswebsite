@@ -24,7 +24,7 @@ const AboutUs = () => {
         <div className="nav-container">
           <div className="nav-left">
             <Link to="/" className="logo">
-              <img src="/logo.png" alt="DevMates Logo" width="110" height="32" />
+              <img src="/logo.png" alt="DevMates Logo" />
             </Link>
           </div>
           <div className="nav-right">
@@ -48,12 +48,9 @@ const AboutUs = () => {
               After countless hours wasted on platforms like Fiverr, Upwork, and Freelancer, 
               we realized the problem wasn't us—it was the platforms themselves.
             </p>
-          </section>
-
-          {/* Problem Section */}
-          <section className="problem-section">
-            <div className="section-content">
-              <h2 className="section-heading">The Problem We Faced</h2>
+            
+            {/* Problem Section - Moved inside hero */}
+            <h2 className="section-heading">The Problem We Faced</h2>
               <div className="problem-grid">
                 <div className="problem-card">
                   <div className="problem-icon">
@@ -90,7 +87,6 @@ const AboutUs = () => {
                   <p>High platform fees, bidding wars, and projects that took 3x longer than estimated.</p>
                 </div>
               </div>
-            </div>
           </section>
 
           {/* Solution Section */}

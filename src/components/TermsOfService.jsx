@@ -28,7 +28,7 @@ const TermsOfService = () => {
         <div className="nav-container">
           <div className="nav-left">
             <a href="/" className="logo">
-              <img src="/logo.png" alt="DevMates Logo" width="110" height="20" />
+              <img src="/logo.png" alt="DevMates Logo" />
             </a>
           </div>
           <div className="nav-right">

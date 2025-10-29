@@ -220,8 +220,8 @@ body {
 }
 
 .logo img {
-  height: 32px;
-  width: auto;
+  height: 64px !important;
+  width: auto !important;
 }
 
 .logo:hover {
