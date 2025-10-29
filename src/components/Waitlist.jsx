@@ -1,11 +1,16 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import { waitlistService } from '../supabase';
 import './Waitlist.css';
 
 const Waitlist = () => {
   const [email, setEmail] = useState('');
   const [submitted, setSubmitted] = useState(false);
   const [selectedPlan, setSelectedPlan] = useState('free');
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState('');
+  const [successMessage, setSuccessMessage] = useState('');
+  const [waitlistStats, setWaitlistStats] = useState({ totalSignups: 0, planStats: {} });
 
   // Get plan from URL parameters
   useEffect(() => {
@@ -16,15 +21,91 @@ const Waitlist = () => {
     }
   }, []);
 
-  const handleSubmit = (e) => {
+  // Load waitlist statistics
+  useEffect(() => {
+    const loadStats = async () => {
+      try {
+        const stats = await waitlistService.getWaitlistStats();
+        if (stats.success) {
+          setWaitlistStats({
+            totalSignups: stats.totalSignups,
+            planStats: stats.planStats
+          });
+        }
+      } catch (error) {
+        console.error('Failed to load waitlist stats:', error);
+      }
+    };
+
+    loadStats();
+  }, []);
+
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log('Email submitted:', email);
-    console.log('Selected plan:', selectedPlan);
-    setSubmitted(true);
-    setTimeout(() => {
-      setSubmitted(false);
-      setEmail('');
-    }, 3000);
+    
+    if (!email.trim()) {
+      setError('Please enter a valid email address');
+      return;
+    }
+
+    setLoading(true);
+    setError('');
+    setSuccessMessage('');
+
+    try {
+      // Check if email already exists
+      const emailCheck = await waitlistService.checkEmailExists(email);
+      
+      if (emailCheck.exists) {
+        setError('This email is already on our waitlist!');
+        setLoading(false);
+        return;
+      }
+
+      // Collect additional data
+      const additionalData = {
+        ipAddress: '', // Will be handled by Supabase
+        userAgent: navigator.userAgent,
+        referrer: document.referrer,
+        utmSource: new URLSearchParams(window.location.search).get('utm_source'),
+        utmMedium: new URLSearchParams(window.location.search).get('utm_medium'),
+        utmCampaign: new URLSearchParams(window.location.search).get('utm_campaign'),
+        utmTerm: new URLSearchParams(window.location.search).get('utm_term'),
+        utmContent: new URLSearchParams(window.location.search).get('utm_content'),
+      };
+
+      // Add to waitlist
+      const result = await waitlistService.addToWaitlist(email, selectedPlan, additionalData);
+
+      if (result.success) {
+        setSubmitted(true);
+        setSuccessMessage('✓ You\'re on the list! We\'ll notify you when we launch.');
+        
+        // Update stats
+        setWaitlistStats(prev => ({
+          ...prev,
+          totalSignups: prev.totalSignups + 1,
+          planStats: {
+            ...prev.planStats,
+            [selectedPlan]: (prev.planStats[selectedPlan] || 0) + 1
+          }
+        }));
+
+        // Reset form after delay
+        setTimeout(() => {
+          setSubmitted(false);
+          setEmail('');
+          setSuccessMessage('');
+        }, 5000);
+      } else {
+        setError(result.error || 'Something went wrong. Please try again.');
+      }
+    } catch (error) {
+      console.error('Waitlist submission error:', error);
+      setError('Something went wrong. Please try again.');
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
@@ -120,10 +201,17 @@ const Waitlist = () => {
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 required
-                disabled={submitted}
+                disabled={loading || submitted}
               />
-              <button type="submit" className="submit-button" disabled={submitted}>
-                {submitted ? (
+              <button type="submit" className="submit-button" disabled={loading || submitted}>
+                {loading ? (
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" className="spinner">
+                    <circle cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="2" strokeDasharray="31.416" strokeDashoffset="31.416">
+                      <animate attributeName="stroke-dasharray" dur="2s" values="0 31.416;15.708 15.708;0 31.416" repeatCount="indefinite"/>
+                      <animate attributeName="stroke-dashoffset" dur="2s" values="0;-15.708;-31.416" repeatCount="indefinite"/>
+                    </circle>
+                  </svg>
+                ) : submitted ? (
                   <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
                     <path d="M20 6L9 17L4 12" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
                   </svg>
@@ -134,7 +222,8 @@ const Waitlist = () => {
                 )}
               </button>
             </div>
-            {submitted && <p className="success-message">✓ You're on the list!</p>}
+            {error && <p className="error-message">{error}</p>}
+            {successMessage && <p className="success-message">{successMessage}</p>}
           </form>
 
           <div className="social-proof">
@@ -143,7 +232,9 @@ const Waitlist = () => {
               <div className="avatar" style={{backgroundImage: 'url(https://randomuser.me/api/portraits/women/44.jpg)'}}></div>
               <div className="avatar" style={{backgroundImage: 'url(https://randomuser.me/api/portraits/men/68.jpg)'}}></div>
             </div>
-            <p className="signup-count"><strong>85</strong> founders already signed up.</p>
+            <p className="signup-count">
+              <strong>{waitlistStats.totalSignups || 85}</strong> founders already signed up.
+            </p>
           </div>
         </div>
       </main>
