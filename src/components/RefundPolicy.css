@@ -401,6 +401,64 @@ body {
 }
 
 /* Responsive Design */
+/* Tablet (max-width: 968px) */
+@media (max-width: 968px) {
+  .refund-policy-nav {
+    padding: 18px 0;
+  }
+
+  .refund-policy-nav .nav-container {
+    padding: 0 24px;
+  }
+
+  .refund-policy-nav .logo img {
+    height: 56px !important;
+  }
+
+  .refund-policy-container {
+    padding: 50px 24px;
+  }
+
+  .refund-policy-header h1 {
+    font-size: 40px;
+    line-height: 44px;
+  }
+
+  .policy-section {
+    padding: 28px;
+    margin-bottom: 36px;
+  }
+
+  .policy-section h3 {
+    font-size: 22px;
+    line-height: 26px;
+  }
+
+  .highlight-box,
+  .warning-box,
+  .benefits-box,
+  .info-box {
+    padding: 18px;
+  }
+
+  .timeline-number {
+    width: 38px;
+    height: 38px;
+    font-size: 17px;
+  }
+
+  .gradient-green,
+  .gradient-pink {
+    width: 550px;
+    height: 650px;
+  }
+
+  .ellipse-blur {
+    width: 480px;
+    height: 480px;
+  }
+}
+
 @media (max-width: 768px) {
   .refund-policy-nav {
     padding: 16px 0;

@@ -298,6 +298,51 @@ body {
 }
 
 /* Responsive Design */
+/* Tablet (max-width: 968px) */
+@media (max-width: 968px) {
+  .privacy-nav {
+    padding: 18px 0;
+  }
+
+  .nav-container {
+    padding: 0 24px;
+  }
+
+  .logo img {
+    height: 56px !important;
+  }
+
+  .privacy-container {
+    padding: 50px 24px;
+  }
+
+  .privacy-header h1 {
+    font-size: 40px;
+    line-height: 44px;
+  }
+
+  .privacy-section {
+    padding: 28px;
+    margin-bottom: 36px;
+  }
+
+  .privacy-section h2 {
+    font-size: 22px;
+    line-height: 26px;
+  }
+
+  .gradient-green,
+  .gradient-pink {
+    width: 550px;
+    height: 650px;
+  }
+
+  .ellipse-blur {
+    width: 480px;
+    height: 480px;
+  }
+}
+
 @media (max-width: 768px) {
   .privacy-nav {
     padding: 16px 0;

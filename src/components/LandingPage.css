@@ -3515,6 +3515,70 @@ body {
 }
 
 /* Responsive Design */
+/* Tablet (max-width: 968px) */
+@media (max-width: 968px) {
+  .nav-container {
+    padding: 0 40px;
+  }
+
+  .nav-left {
+    gap: 50px;
+  }
+
+  .nav-links {
+    gap: 16px;
+  }
+
+  .nav-link {
+    font-size: 15px;
+    padding: 4px 14px;
+  }
+
+  .hero-content {
+    width: 92%;
+    padding-top: 60px;
+  }
+
+  .title-line {
+    font-size: 52px;
+    line-height: 58px;
+    letter-spacing: -3px;
+  }
+
+  .hero-description span {
+    font-size: 19px;
+  }
+
+  .pricing-cards {
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 700px;
+  }
+
+  .dedicated-support-card {
+    grid-template-columns: 1fr;
+  }
+
+  .support-pricing {
+    border-radius: 0 0 12px 12px;
+  }
+
+  .footer-content {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 50px;
+  }
+
+  .gradient-green,
+  .gradient-pink {
+    width: 550px;
+    height: 650px;
+  }
+
+  .ellipse-blur {
+    width: 480px;
+    height: 480px;
+  }
+}
+
 @media (max-width: 1440px) {
   .nav-container {
     padding: 0 60px;

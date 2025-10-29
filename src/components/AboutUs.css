@@ -622,6 +622,60 @@
 }
 
 /* Responsive Design */
+/* Tablet (max-width: 968px) */
+@media (max-width: 968px) {
+  .about-nav {
+    padding: 20px 30px;
+  }
+
+  .nav-container {
+    padding: 0 20px;
+  }
+
+  .logo img {
+    height: 56px !important;
+  }
+
+  .about-main {
+    padding: 20px 30px 60px;
+  }
+
+  .hero-heading {
+    font-size: 52px;
+    letter-spacing: -2px;
+  }
+
+  .hero-description {
+    font-size: 18px;
+    margin-bottom: 70px;
+  }
+
+  .section-heading {
+    font-size: 40px;
+  }
+
+  .problem-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 40px !important;
+  }
+
+  .problem-card {
+    padding: 36px 28px;
+  }
+
+  .solution-content {
+    gap: 60px;
+  }
+
+  .mission-content {
+    gap: 60px;
+  }
+
+  .cta-section {
+    padding: 70px 40px;
+  }
+}
+
 @media (max-width: 768px) {
   .about-nav {
     padding: 16px 20px;

@@ -973,6 +973,82 @@
 }
 
 /* Responsive Design */
+/* Tablet (max-width: 968px) */
+@media (max-width: 968px) {
+  .offers-nav {
+    padding: 18px 0;
+  }
+
+  .nav-container {
+    padding: 0 24px;
+  }
+
+  .logo img {
+    height: 56px !important;
+  }
+
+  .offers-container {
+    padding: 50px 24px;
+  }
+
+  .offers-hero h1 {
+    font-size: 40px;
+  }
+
+  .hero-subtitle {
+    font-size: 17px;
+  }
+
+  .content-section h2 {
+    font-size: 28px;
+  }
+
+  .comparison-container,
+  .plans-container {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .pricing-section {
+    padding: 100px 0;
+  }
+
+  .pricing-header {
+    margin-bottom: 70px;
+    padding: 0 24px;
+  }
+
+  .pricing-header h2 {
+    font-size: 32px;
+  }
+
+  .pricing-header p {
+    font-size: 18px;
+  }
+
+  .pricing-cards {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+    padding: 0 24px;
+  }
+
+  .perks-container {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+
+  .gradient-green,
+  .gradient-pink {
+    width: 550px;
+    height: 650px;
+  }
+
+  .ellipse-blur {
+    width: 480px;
+    height: 480px;
+  }
+}
+
 @media (max-width: 768px) {
   .offers-nav {
     padding: 16px 0;

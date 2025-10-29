@@ -394,6 +394,61 @@ body {
 }
 
 /* Responsive Design */
+/* Tablet (max-width: 968px) */
+@media (max-width: 968px) {
+  .getting-started-nav {
+    padding: 18px 0;
+  }
+
+  .getting-started-nav .nav-container {
+    padding: 0 24px;
+  }
+
+  .getting-started-nav .logo img {
+    height: 56px !important;
+  }
+
+  .getting-started-container {
+    padding: 50px 24px;
+  }
+
+  .getting-started-header h1 {
+    font-size: 40px;
+    line-height: 44px;
+  }
+
+  .step-item {
+    padding: 28px;
+    margin-bottom: 36px;
+  }
+
+  .step-number {
+    width: 56px;
+    height: 56px;
+    font-size: 22px;
+  }
+
+  .step-title {
+    font-size: 22px;
+    line-height: 26px;
+  }
+
+  .cta-section {
+    padding: 36px 28px;
+  }
+
+  .gradient-green,
+  .gradient-pink {
+    width: 550px;
+    height: 650px;
+  }
+
+  .ellipse-blur {
+    width: 480px;
+    height: 480px;
+  }
+}
+
 @media (max-width: 768px) {
   .getting-started-nav {
     padding: 16px 0;
