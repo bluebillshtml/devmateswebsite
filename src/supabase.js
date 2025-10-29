@@ -14,22 +14,41 @@ export const waitlistService = {
   // Add email to waitlist
   async addToWaitlist(email, plan, additionalData = {}) {
     try {
+      // Prepare data object, only including non-empty values
+      const insertData = {
+        email: email.toLowerCase().trim(),
+        plan,
+      }
+
+      // Only add optional fields if they have values
+      if (additionalData.ipAddress && additionalData.ipAddress.trim()) {
+        insertData.ip_address = additionalData.ipAddress
+      }
+      if (additionalData.userAgent && additionalData.userAgent.trim()) {
+        insertData.user_agent = additionalData.userAgent
+      }
+      if (additionalData.referrer && additionalData.referrer.trim()) {
+        insertData.referrer = additionalData.referrer
+      }
+      if (additionalData.utmSource && additionalData.utmSource.trim()) {
+        insertData.utm_source = additionalData.utmSource
+      }
+      if (additionalData.utmMedium && additionalData.utmMedium.trim()) {
+        insertData.utm_medium = additionalData.utmMedium
+      }
+      if (additionalData.utmCampaign && additionalData.utmCampaign.trim()) {
+        insertData.utm_campaign = additionalData.utmCampaign
+      }
+      if (additionalData.utmTerm && additionalData.utmTerm.trim()) {
+        insertData.utm_term = additionalData.utmTerm
+      }
+      if (additionalData.utmContent && additionalData.utmContent.trim()) {
+        insertData.utm_content = additionalData.utmContent
+      }
+
       const { data, error } = await supabase
         .from('waitlist')
-        .insert([
-          {
-            email: email.toLowerCase().trim(),
-            plan,
-            ip_address: additionalData.ipAddress,
-            user_agent: additionalData.userAgent,
-            referrer: additionalData.referrer,
-            utm_source: additionalData.utmSource,
-            utm_medium: additionalData.utmMedium,
-            utm_campaign: additionalData.utmCampaign,
-            utm_term: additionalData.utmTerm,
-            utm_content: additionalData.utmContent,
-          }
-        ])
+        .insert([insertData])
         .select()
 
       if (error) {

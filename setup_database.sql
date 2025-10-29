@@ -1,21 +1,24 @@
 -- DevMates Waitlist Database Setup
 -- Run this in your Supabase SQL Editor
 
+-- Drop existing table if it exists (to fix the INET issue)
+DROP TABLE IF EXISTS waitlist CASCADE;
+
 -- Create the waitlist table
-CREATE TABLE IF NOT EXISTS waitlist (
+CREATE TABLE waitlist (
     id UUID DEFAULT gen_random_uuid() PRIMARY KEY,
     email VARCHAR(255) NOT NULL UNIQUE,
     plan VARCHAR(50) NOT NULL DEFAULT 'free',
     created_at TIMESTAMP WITH TIME ZONE DEFAULT NOW(),
     updated_at TIMESTAMP WITH TIME ZONE DEFAULT NOW(),
-    ip_address INET,
-    user_agent TEXT,
-    referrer TEXT,
-    utm_source VARCHAR(100),
-    utm_medium VARCHAR(100),
-    utm_campaign VARCHAR(100),
-    utm_term VARCHAR(100),
-    utm_content VARCHAR(100)
+    ip_address INET NULL,
+    user_agent TEXT NULL,
+    referrer TEXT NULL,
+    utm_source VARCHAR(100) NULL,
+    utm_medium VARCHAR(100) NULL,
+    utm_campaign VARCHAR(100) NULL,
+    utm_term VARCHAR(100) NULL,
+    utm_content VARCHAR(100) NULL
 );
 
 -- Create indexes for better performance

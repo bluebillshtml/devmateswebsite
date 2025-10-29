@@ -64,7 +64,6 @@ const Waitlist = () => {
 
       // Collect additional data
       const additionalData = {
-        ipAddress: '', // Will be handled by Supabase
         userAgent: navigator.userAgent,
         referrer: document.referrer,
         utmSource: new URLSearchParams(window.location.search).get('utm_source'),
