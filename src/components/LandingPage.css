@@ -3690,7 +3690,12 @@ body {
   }
 
   .hero-description span {
-    font-size: 18px;
+    font-size: 15px;
+    line-height: 20px;
+  }
+
+  .hero-description {
+    margin-bottom: 30px;
   }
 
   /* Hero Phone Mockups - Keep horizontal on mobile but much smaller */
@@ -4248,7 +4253,12 @@ body {
   }
 
   .hero-description span {
-    font-size: 16px;
+    font-size: 14px;
+    line-height: 18px;
+  }
+
+  .hero-description {
+    margin-bottom: 24px;
   }
 
   /* Phone Mockups - Even smaller for tiny screens to fit 3 across */

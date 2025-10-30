@@ -76,10 +76,9 @@
   height: 800px;
   top: 10%;
   left: 5%;
-  background: radial-gradient(circle at center, rgba(16, 131, 75, 0.001), transparent 70%) !important;
+  background: radial-gradient(circle at center, rgba(16, 131, 75, 0.12), transparent 70%) !important;
   filter: blur(60px);
-  opacity: 0.01 !important;
-  mix-blend-mode: normal !important;
+  mix-blend-mode: screen !important;
 }
 
 .about-page .about-bg .orb-2 {
@@ -87,10 +86,9 @@
   height: 900px;
   top: 30%;
   right: 0%;
-  background: radial-gradient(circle at center, rgba(184, 104, 199, 0.001), transparent 70%) !important;
+  background: radial-gradient(circle at center, rgba(184, 104, 199, 0.1), transparent 70%) !important;
   filter: blur(70px);
-  opacity: 0.01 !important;
-  mix-blend-mode: normal !important;
+  mix-blend-mode: screen !important;
 }
 
 .about-page .about-bg .orb-3 {
@@ -98,10 +96,60 @@
   height: 1000px;
   bottom: 10%;
   left: 10%;
-  background: radial-gradient(circle at center, rgba(94, 106, 210, 0.001), transparent 70%) !important;
+  background: radial-gradient(circle at center, rgba(94, 106, 210, 0.08), transparent 70%) !important;
   filter: blur(80px);
-  opacity: 0.01 !important;
-  mix-blend-mode: normal !important;
+  mix-blend-mode: screen !important;
+}
+
+.about-page .about-bg .orb-4 {
+  width: 750px;
+  height: 750px;
+  top: 50%;
+  right: 10%;
+  background: radial-gradient(circle at center, rgba(16, 131, 75, 0.12), transparent 70%) !important;
+  filter: blur(65px);
+  mix-blend-mode: screen !important;
+}
+
+.about-page .about-bg .orb-5 {
+  width: 850px;
+  height: 850px;
+  top: 60%;
+  left: 15%;
+  background: radial-gradient(circle at center, rgba(184, 104, 199, 0.1), transparent 70%) !important;
+  filter: blur(75px);
+  mix-blend-mode: screen !important;
+}
+
+.about-page .about-bg .orb-6 {
+  width: 950px;
+  height: 950px;
+  bottom: 20%;
+  right: 5%;
+  background: radial-gradient(circle at center, rgba(94, 106, 210, 0.08), transparent 70%) !important;
+  filter: blur(85px);
+  mix-blend-mode: screen !important;
+}
+
+.about-page .about-bg .orb-7 {
+  width: 700px;
+  height: 700px;
+  top: 75%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: radial-gradient(circle at center, rgba(16, 131, 75, 0.12), transparent 70%) !important;
+  filter: blur(70px);
+  mix-blend-mode: screen !important;
+}
+
+.about-page .about-bg .orb-8 {
+  width: 800px;
+  height: 800px;
+  bottom: 30%;
+  left: 30%;
+  background: radial-gradient(circle at center, rgba(184, 104, 199, 0.1), transparent 70%) !important;
+  filter: blur(75px);
+  mix-blend-mode: screen !important;
 }
 
 /* Darkened Overlay */
