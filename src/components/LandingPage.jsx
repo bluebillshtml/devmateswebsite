@@ -6,42 +6,7 @@ import './LandingPage.css';
 const LandingPage = () => {
   const [scrolled, setScrolled] = useState(false);
   const [activeTestimonial, setActiveTestimonial] = useState(0);
-  const [currentCardIndex, setCurrentCardIndex] = useState(0);
-
-  const profileCards = [
-    {
-      name: "Alex Rodriguez",
-      role: "UI/UX Designer",
-      experience: "3 years",
-      tags: ["Figma", "Product Design"],
-      bio: "Passionate about creating delightful user experiences for early-stage startups.",
-      image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&h=500&fit=crop"
-    },
-    {
-      name: "Priya Sharma",
-      role: "Full Stack Developer",
-      experience: "5 years",
-      tags: ["React", "Node.js"],
-      bio: "Building scalable web apps and looking for a technical co-founder to launch my SaaS idea.",
-      image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400&h=500&fit=crop"
-    },
-    {
-      name: "Marcus Chen",
-      role: "Product Manager",
-      experience: "4 years",
-      tags: ["Strategy", "Growth"],
-      bio: "Ex-Google PM seeking a technical co-founder to disrupt the fintech space.",
-      image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&h=500&fit=crop"
-    }
-  ];
-
-  const handleSwipe = (direction) => {
-    if (direction === 'right') {
-      setCurrentCardIndex((prev) => (prev + 1) % profileCards.length);
-    } else {
-      setCurrentCardIndex((prev) => (prev - 1 + profileCards.length) % profileCards.length);
-    }
-  };
+  const [showPopup, setShowPopup] = useState(false);
 
   const testimonials = [
     {
@@ -83,6 +48,24 @@ const LandingPage = () => {
     };
   }, []);
 
+  // Popup timer - show after 10 seconds if not dismissed before
+  useEffect(() => {
+    const hasSeenPopup = localStorage.getItem('devmates-popup-dismissed');
+
+    if (!hasSeenPopup) {
+      const timer = setTimeout(() => {
+        setShowPopup(true);
+      }, 10000); // 10 seconds
+
+      return () => clearTimeout(timer);
+    }
+  }, []);
+
+  const closePopup = () => {
+    setShowPopup(false);
+    localStorage.setItem('devmates-popup-dismissed', 'true');
+  };
+
   const headerClass = `header ${scrolled ? 'scrolled' : ''}`;
 
   return (
@@ -108,16 +91,12 @@ const LandingPage = () => {
       {/* Hero Section */}
       <section className="hero-section">
         <div className="hero-bg">
-          <div className="gradient-green"></div>
-          <div className="gradient-pink"></div>
+          <div className="hero-gradient hero-gradient-1"></div>
+          <div className="hero-gradient hero-gradient-2"></div>
+          <div className="hero-gradient hero-gradient-3"></div>
+          <div className="hero-gradient hero-gradient-4"></div>
           <div className="noise-texture"></div>
           <div className="stars-bg"></div>
-          <div className="ellipse-blur"></div>
-
-          {/* Subtle Color Orbs */}
-          <div className="color-orb orb-1"></div>
-          <div className="color-orb orb-2"></div>
-          <div className="color-orb orb-3"></div>
         </div>
         <div className="hero-content">
           <div className="beta-badge">
@@ -128,152 +107,367 @@ const LandingPage = () => {
             </svg>
           </div>
           <h1 className="hero-title">
-            <span className="title-line">Find your perfect team,</span>
-            <span className="title-line">not freelancers.</span>
+            <span className="title-line">Find Your Co-Founder</span>
+            <span className="title-line">Who Actually Builds.</span>
           </h1>
           <p className="hero-description">
-            <span>DevMates connects builders who share goals, skills, and vision</span>
-            <span>to form genuine startup teams — not just hire contractors.</span>
+            <span>Stop wasting time on freelance platforms. Connect with verified</span>
+            <span>technical co-founders who are ready to build, not just talk.</span>
           </p>
           <a href="/waitlist" className="btn-get-started">
-            <span>Get Started</span>
+            <span>Join the Waitlist</span>
             <svg width="21" height="20" viewBox="0 0 21 20" fill="none">
               <path d="M8.69995 13.5999L12.3 9.9999L8.69995 6.3999" stroke="#09090A" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
             </svg>
           </a>
         </div>
         <div className="hero-phones">
-          {/* Phone Mockup 1 - Profile Screen */}
+          {/* Phone Mockup 1 - Profile/Swipe Screen */}
           <div className="phone-mockup phone-1">
             <div className="phone-frame">
               <div className="phone-notch"></div>
               <div className="phone-screen">
-                <div className="screen-header">
-                  <div className="header-avatar"></div>
-                  <div className="header-title">Profile</div>
-                  <div className="header-action">
-                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
-                      <circle cx="10" cy="5" r="1.5" fill="#fff"/>
-                      <circle cx="10" cy="10" r="1.5" fill="#fff"/>
-                      <circle cx="10" cy="15" r="1.5" fill="#fff"/>
+                <div className="app-header">
+                  <div className="app-logo">
+                    <span className="logo-text">devmates.</span>
+                  </div>
+                  <div className="app-filter-icon">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                      <line x1="4" y1="6" x2="20" y2="6" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/>
+                      <line x1="4" y1="12" x2="20" y2="12" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/>
+                      <line x1="4" y1="18" x2="20" y2="18" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/>
                     </svg>
                   </div>
                 </div>
-                <div className="screen-content">
-                  <div className="profile-image">
-                    <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=300&h=300&fit=crop" alt="Emma Chen" className="profile-photo" />
-                  </div>
-                  <div className="profile-name">Emma Chen</div>
-                  <div className="profile-title">Full-Stack Developer</div>
-                  <div className="profile-tags">
-                    <span className="tag">React</span>
-                    <span className="tag">Node.js</span>
-                    <span className="tag">TypeScript</span>
-                  </div>
-                  <div className="profile-bio">
-                    <div className="bio-text">Building the future, one startup at a time. Looking for co-founders to create something amazing.</div>
-                  </div>
-                  <div className="profile-stats">
-                    <div className="stat">
-                      <div className="stat-value">12</div>
-                      <div className="stat-label">Projects</div>
+                <div className="swipe-card-container">
+                  <div className="profile-card">
+                    <div className="profile-card-image">
+                      <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=600&h=800&fit=crop" alt="Profile" />
                     </div>
-                    <div className="stat">
-                      <div className="stat-value">4.8</div>
-                      <div className="stat-label">Rating</div>
+                    <div className="profile-card-info">
+                      <div className="profile-verified">
+                        <h3 className="profile-card-name">Sarah Martinez</h3>
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                          <circle cx="10" cy="10" r="9" fill="#FF4458"/>
+                          <path d="M6 10L9 13L14 7" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                        </svg>
+                      </div>
+                      <p className="profile-card-role">UI/UX Designer</p>
+                      <div className="profile-card-location">
+                        <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+                          <path d="M7 7.5C7.82843 7.5 8.5 6.82843 8.5 6C8.5 5.17157 7.82843 4.5 7 4.5C6.17157 4.5 5.5 5.17157 5.5 6C5.5 6.82843 6.17157 7.5 7 7.5Z" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round"/>
+                          <path d="M7 12.5C9 10 11 8.21 11 6C11 3.79 9.21 2 7 2C4.79 2 3 3.79 3 6C3 8.21 5 10 7 12.5Z" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round"/>
+                        </svg>
+                        <span>New York, NY</span>
+                      </div>
+                      <p className="profile-card-bio">Design systems enthusiast. Building beautiful interfaces.</p>
+                      <div className="profile-card-skills">
+                        <span className="skill-tag">Figma</span>
+                        <span className="skill-tag">UI/UX</span>
+                        <span className="skill-tag">Brand Design</span>
+                        <span className="skill-tag-more">+2</span>
+                      </div>
+                      <div className="profile-card-connections">
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                          <path d="M12 14V12.6667C12 11.9594 11.719 11.2811 11.219 10.781C10.7189 10.281 10.0406 10 9.33333 10H6.66667C5.95942 10 5.28115 10.281 4.78105 10.781C4.28095 11.2811 4 11.9594 4 12.6667V14M10.6667 4.66667C10.6667 6.13943 9.47276 7.33333 8 7.33333C6.52724 7.33333 5.33333 6.13943 5.33333 4.66667C5.33333 3.19391 6.52724 2 8 2C9.47276 2 10.6667 3.19391 10.6667 4.66667Z" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round"/>
+                        </svg>
+                        <span>24.3K</span>
+                      </div>
                     </div>
-                    <div className="stat">
-                      <div className="stat-value">156</div>
-                      <div className="stat-label">Matches</div>
-                    </div>
+                  </div>
+                  <div className="swipe-actions">
+                    <button className="swipe-action-btn swipe-dismiss">
+                      <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+                        <path d="M20 12L12 20M12 12L20 20" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"/>
+                      </svg>
+                    </button>
+                    <button className="swipe-action-btn swipe-like">
+                      <svg width="36" height="36" viewBox="0 0 36 36" fill="none">
+                        <path d="M18 30L15.9 28.08C9.6 22.32 5.4 18.48 5.4 13.8C5.4 10.08 8.28 7.2 12 7.2C14.04 7.2 16.08 8.16 17.52 9.72H18.48C19.92 8.16 21.96 7.2 24 7.2C27.72 7.2 30.6 10.08 30.6 13.8C30.6 18.48 26.4 22.32 20.1 28.08L18 30Z" fill="currentColor"/>
+                      </svg>
+                    </button>
+                    <button className="swipe-action-btn swipe-message">
+                      <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+                        <circle cx="16" cy="16" r="10" fill="currentColor"/>
+                      </svg>
+                    </button>
+                  </div>
+                  <div className="swipe-hint">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                      <path d="M10 6L6 10M6 6L10 10" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                    </svg>
+                    <span>Swipe to explore</span>
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                      <path d="M6 6L10 10M10 6L6 10" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                    </svg>
+                  </div>
+                </div>
+                <div className="app-nav">
+                  <div className="nav-item nav-active">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                      <path d="M21 8.25L12 13.5L3 8.25M21 12L12 17.25L3 12" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                    </svg>
+                    <span>Home</span>
+                  </div>
+                  <div className="nav-item">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                      <circle cx="12" cy="12" r="3" stroke="currentColor" strokeWidth="2"/>
+                      <path d="M19.4 15C19.1277 15.6171 18.7583 16.1986 18.3 16.73C17.2 17.93 15.71 18.75 14 19M4.6 9C4.87229 8.38289 5.24172 7.80138 5.7 7.27C6.8 6.07 8.29 5.25 10 5" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/>
+                    </svg>
+                    <span>Explore</span>
+                  </div>
+                  <div className="nav-item">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                      <path d="M21 15C21 15.5304 20.7893 16.0391 20.4142 16.4142C20.0391 16.7893 19.5304 17 19 17H7L3 21V5C3 4.46957 3.21071 3.96086 3.58579 3.58579C3.96086 3.21071 4.46957 3 5 3H19C19.5304 3 20.0391 3.21071 20.4142 3.58579C20.7893 3.96086 21 4.46957 21 5V15Z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                    </svg>
+                    <span>Messages</span>
+                  </div>
+                  <div className="nav-item">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                      <path d="M20 21V19C20 17.9391 19.5786 16.9217 18.8284 16.1716C18.0783 15.4214 17.0609 15 16 15H8C6.93913 15 5.92172 15.4214 5.17157 16.1716C4.42143 16.9217 4 17.9391 4 19V21M16 7C16 9.20914 14.2091 11 12 11C9.79086 11 8 9.20914 8 7C8 4.79086 9.79086 3 12 3C14.2091 3 16 4.79086 16 7Z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                    </svg>
+                    <span>Profile</span>
                   </div>
                 </div>
               </div>
             </div>
           </div>
 
-          {/* Phone Mockup 2 - Swipe Screen */}
+          {/* Phone Mockup 2 - Explore/Teams Screen */}
           <div className="phone-mockup phone-2">
             <div className="phone-frame">
               <div className="phone-notch"></div>
               <div className="phone-screen">
-                <div className="screen-header">
-                  <div className="header-logo">
-                    <img src="/logo.png" alt="DevMates" className="header-logo-img" />
-                  </div>
-                  <div className="header-filter">
-                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
-                      <path d="M3 6h14M6 10h8M8 14h4" stroke="#fff" strokeWidth="2" strokeLinecap="round"/>
+                <div className="explore-header">
+                  <div className="search-bar">
+                    <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
+                      <circle cx="8" cy="8" r="6" stroke="currentColor" strokeWidth="1.5"/>
+                      <path d="M12.5 12.5L16 16" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/>
                     </svg>
+                    <input type="text" placeholder="Search teams, projects, roles..." readOnly />
+                  </div>
+                  <button className="filter-btn">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                      <line x1="4" y1="5" x2="16" y2="5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/>
+                      <line x1="4" y1="10" x2="16" y2="10" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/>
+                      <line x1="4" y1="15" x2="16" y2="15" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/>
+                    </svg>
+                  </button>
+                </div>
+                <div className="category-filters">
+                  <button className="category-btn category-active">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                      <rect x="2" y="2" width="5" height="5" rx="1" fill="currentColor"/>
+                      <rect x="9" y="2" width="5" height="5" rx="1" fill="currentColor"/>
+                      <rect x="2" y="9" width="5" height="5" rx="1" fill="currentColor"/>
+                      <rect x="9" y="9" width="5" height="5" rx="1" fill="currentColor"/>
+                    </svg>
+                    <span>All</span>
+                  </button>
+                  <button className="category-btn">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                      <path d="M8 2L9.5 6H13.5L10.5 8.5L11.5 12.5L8 10L4.5 12.5L5.5 8.5L2.5 6H6.5L8 2Z" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round"/>
+                    </svg>
+                    <span>AI & ML</span>
+                  </button>
+                  <button className="category-btn">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                      <circle cx="8" cy="8" r="6" stroke="currentColor" strokeWidth="1.2"/>
+                      <path d="M2 8H14M8 2C9.5 4 10 6 10 8C10 10 9.5 12 8 14M8 2C6.5 4 6 6 6 8C6 10 6.5 12 8 14" stroke="currentColor" strokeWidth="1.2"/>
+                    </svg>
+                    <span>Web Dev</span>
+                  </button>
+                  <button className="category-btn">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                      <rect x="3" y="2" width="10" height="12" rx="1" stroke="currentColor" strokeWidth="1.2"/>
+                      <path d="M6 2V14M10 6H13" stroke="currentColor" strokeWidth="1.2"/>
+                    </svg>
+                    <span>Mobile</span>
+                  </button>
+                </div>
+                <div className="stats-row">
+                  <div className="stat-card">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                      <path d="M17 21V19C17 17.9391 16.5786 16.9217 15.8284 16.1716C15.0783 15.4214 14.0609 15 13 15H5C3.93913 15 2.92172 15.4214 2.17157 16.1716C1.42143 16.9217 1 17.9391 1 19V21M23 21V19C23 17.9391 22.5786 16.9217 21.8284 16.1716C21.0783 15.4214 20.0609 15 19 15M13 7C13 9.20914 11.2091 11 9 11C6.79086 11 5 9.20914 5 7C5 4.79086 6.79086 3 9 3C11.2091 3 13 4.79086 13 7ZM19 7C19 8.65685 17.6569 10 16 10C14.3431 10 13 8.65685 13 7C13 5.34315 14.3431 4 16 4C17.6569 4 19 5.34315 19 7Z" stroke="#FF4458" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                    </svg>
+                    <div className="stat-info">
+                      <div className="stat-value">1,200+</div>
+                      <div className="stat-label">Active Teams</div>
+                    </div>
+                  </div>
+                  <div className="stat-card">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                      <rect x="3" y="7" width="18" height="14" rx="2" stroke="#FF4458" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                      <path d="M8 7V5C8 4.46957 8.21071 3.96086 8.58579 3.58579C8.96086 3.21071 9.46957 3 10 3H14C14.5304 3 15.0391 3.21071 15.4142 3.58579C15.7893 3.96086 16 4.46957 16 5V7M12 14V12" stroke="#FF4458" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                    </svg>
+                    <div className="stat-info">
+                      <div className="stat-value">450+</div>
+                      <div className="stat-label">Open Roles</div>
+                    </div>
                   </div>
                 </div>
-                <div className="swipe-card" key={currentCardIndex}>
-                  <div className="card-image">
-                    <div className="card-image-overlay"></div>
-                    <img src={profileCards[currentCardIndex].image} alt={profileCards[currentCardIndex].name} className="swipe-card-photo" />
-                    <div className="card-actions">
-                      <button className="action-btn-arrow arrow-left" onClick={() => handleSwipe('left')}>
-                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none">
-                          <path d="M15 18l-6-6 6-6" stroke="white" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"/>
+                <div className="teams-list">
+                  <div className="teams-count">6 teams found</div>
+                  <div className="team-card">
+                    <div className="team-image">
+                      <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=400&h=300&fit=crop" alt="Team" />
+                      <span className="team-badge">Remote</span>
+                      <button className="team-bookmark">
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                          <circle cx="8" cy="8" r="7" fill="white"/>
+                          <path d="M5 7L7 9L11 5" stroke="#FF4458" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
                         </svg>
                       </button>
-                      <button className="action-btn-arrow arrow-right" onClick={() => handleSwipe('right')}>
-                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none">
-                          <path d="M9 18l6-6-6-6" stroke="white" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"/>
-                        </svg>
-                      </button>
+                    </div>
+                    <div className="team-info">
+                      <h4 className="team-name">AI-Powered Code Assistant</h4>
+                      <p className="team-company">TechStudio</p>
+                      <div className="team-tags">
+                        <span className="team-tag">Startup</span>
+                        <span className="team-tag">Full-time</span>
+                      </div>
+                      <div className="team-meta">
+                        <span className="team-members">
+                          <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+                            <path d="M10 12V11C10 9.89543 9.10457 9 8 9H4C2.89543 9 2 9.89543 2 11V12M12 9V12M8 5C8 6.10457 7.10457 7 6 7C4.89543 7 4 6.10457 4 5C4 3.89543 4.89543 3 6 3C7.10457 3 8 3.89543 8 5Z" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round"/>
+                          </svg>
+                          4/6
+                        </span>
+                        <span className="team-openings">2 open</span>
+                      </div>
                     </div>
                   </div>
-                  <div className="card-content">
-                    <div className="card-name">{profileCards[currentCardIndex].name}</div>
-                    <div className="card-role">{profileCards[currentCardIndex].role} • {profileCards[currentCardIndex].experience}</div>
-                    <div className="card-tags">
-                      {profileCards[currentCardIndex].tags.map((tag, index) => (
-                        <span key={index} className="tag">{tag}</span>
-                      ))}
+                  <div className="team-card">
+                    <div className="team-image">
+                      <img src="https://images.unsplash.com/photo-1472851294608-062f824d29cc?w=400&h=300&fit=crop" alt="Team" />
+                      <span className="team-badge">Remote</span>
+                      <button className="team-bookmark">
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                          <circle cx="8" cy="8" r="7" fill="white"/>
+                          <path d="M5 7L7 9L11 5" stroke="#FF4458" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                        </svg>
+                      </button>
                     </div>
-                    <div className="card-bio">{profileCards[currentCardIndex].bio}</div>
+                    <div className="team-info">
+                      <h4 className="team-name">EcoCart - Sustainable Shopping</h4>
+                      <p className="team-company">GreenTech Collective</p>
+                      <div className="team-tags">
+                        <span className="team-tag">Startup</span>
+                        <span className="team-tag">Full-time</span>
+                      </div>
+                      <div className="team-meta">
+                        <span className="team-members">
+                          <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+                            <path d="M10 12V11C10 9.89543 9.10457 9 8 9H4C2.89543 9 2 9.89543 2 11V12M12 9V12M8 5C8 6.10457 7.10457 7 6 7C4.89543 7 4 6.10457 4 5C4 3.89543 4.89543 3 6 3C7.10457 3 8 3.89543 8 5Z" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round"/>
+                          </svg>
+                          5/8
+                        </span>
+                        <span className="team-openings">3 open</span>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
 
-          {/* Phone Mockup 3 - Chat Screen */}
+          {/* Phone Mockup 3 - Project Detail Screen */}
           <div className="phone-mockup phone-3">
             <div className="phone-frame">
               <div className="phone-notch"></div>
               <div className="phone-screen">
-                <div className="screen-header">
-                  <div className="back-btn">
-                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
-                      <path d="M12 16L6 10l6-6" stroke="#fff" strokeWidth="2" strokeLinecap="round"/>
+                <div className="detail-header">
+                  <button className="back-btn">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                      <path d="M15 18L9 12L15 6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
                     </svg>
-                  </div>
-                  <div className="chat-avatar">
-                    <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&h=100&fit=crop" alt="Jamie Lee" className="chat-avatar-photo" />
-                  </div>
-                  <div className="chat-name">Jamie Lee</div>
+                  </button>
+                  <button className="share-btn">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                      <circle cx="18" cy="5" r="3" stroke="currentColor" strokeWidth="2"/>
+                      <circle cx="6" cy="12" r="3" stroke="currentColor" strokeWidth="2"/>
+                      <circle cx="18" cy="19" r="3" stroke="currentColor" strokeWidth="2"/>
+                      <path d="M8.5 13.5L15.5 17.5M15.5 6.5L8.5 10.5" stroke="currentColor" strokeWidth="2"/>
+                    </svg>
+                  </button>
                 </div>
-                <div className="chat-messages">
-                  <div className="message received">
-                    <div className="message-bubble">Hey! Love your portfolio. Want to collaborate on a project?</div>
-                    <div className="message-time">2:45 PM</div>
-                  </div>
-                  <div className="message sent">
-                    <div className="message-bubble">Absolutely! I've been looking for a designer to team up with.</div>
-                    <div className="message-time">2:47 PM</div>
-                  </div>
-                  <div className="message received">
-                    <div className="message-bubble">Perfect! Let's schedule a call this week?</div>
-                    <div className="message-time">2:48 PM</div>
-                  </div>
+                <div className="project-hero">
+                  <img src="https://images.unsplash.com/photo-1550745165-9bc0b252726f?w=800&h=600&fit=crop" alt="Project" />
                 </div>
-                <div className="chat-input">
-                  <input type="text" placeholder="Type a message..." />
-                  <button className="send-btn">
+                <div className="project-content">
+                  <h2 className="project-title">GameDev Studio - Indie RPG</h2>
+                  <p className="project-author">by Pixel Dreams</p>
+                  <div className="project-badges">
+                    <span className="project-badge badge-gaming">
+                      <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+                        <path d="M5 8L3 10M9 6L11 4M7 7L9 5M5 5L7 7" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                        <rect x="2" y="2" width="10" height="10" rx="2" stroke="currentColor" strokeWidth="1.5"/>
+                      </svg>
+                      gaming
+                    </span>
+                    <span className="project-badge badge-side">
+                      <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+                        <rect x="3" y="2" width="8" height="10" rx="1" stroke="currentColor" strokeWidth="1.5"/>
+                        <path d="M5 2V12" stroke="currentColor" strokeWidth="1.5"/>
+                      </svg>
+                      Side Project
+                    </span>
+                    <span className="project-badge badge-flexible">
+                      <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+                        <circle cx="7" cy="7" r="5" stroke="currentColor" strokeWidth="1.5"/>
+                        <path d="M7 4V7L9 9" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/>
+                      </svg>
+                      Flexible
+                    </span>
+                  </div>
+                  <div className="project-location">
+                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+                      <path d="M7 7.5C7.82843 7.5 8.5 6.82843 8.5 6C8.5 5.17157 7.82843 4.5 7 4.5C6.17157 4.5 5.5 5.17157 5.5 6C5.5 6.82843 6.17157 7.5 7 7.5Z" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round"/>
+                      <path d="M7 12.5C9 10 11 8.21 11 6C11 3.79 9.21 2 7 2C4.79 2 3 3.79 3 6C3 8.21 5 10 7 12.5Z" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round"/>
+                    </svg>
+                    <span>Remote</span>
+                  </div>
+                  <div className="project-stats">
+                    <div className="project-stat">
+                      <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
+                        <path d="M13 16V14.6667C13 13.9594 12.719 13.2811 12.219 12.781C11.7189 12.281 11.0406 12 10.3333 12H7.66667C6.95942 12 6.28115 12.281 5.78105 12.781C5.28095 13.2811 5 13.9594 5 14.6667V16M11.6667 5.66667C11.6667 7.13943 10.4728 8.33333 9 8.33333C7.52724 8.33333 6.33333 7.13943 6.33333 5.66667C6.33333 4.19391 7.52724 3 9 3C10.4728 3 11.6667 4.19391 11.6667 5.66667Z" stroke="#FF4458" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                      </svg>
+                      <div className="stat-details">
+                        <div className="stat-number">7</div>
+                        <div className="stat-text">Members</div>
+                      </div>
+                    </div>
+                    <div className="project-stat-divider"></div>
+                    <div className="project-stat">
+                      <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
+                        <rect x="4" y="6" width="10" height="10" rx="1" stroke="#FF4458" strokeWidth="1.5"/>
+                        <path d="M6 6V4C6 3.46957 6.21071 2.96086 6.58579 2.58579C6.96086 2.21071 7.46957 2 8 2H10C10.5304 2 11.0391 2.21071 11.4142 2.58579C11.7893 2.96086 12 3.46957 12 4V6M9 11V10" stroke="#FF4458" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                      </svg>
+                      <div className="stat-details">
+                        <div className="stat-number">3</div>
+                        <div className="stat-text">Open Roles</div>
+                      </div>
+                    </div>
+                    <div className="project-stat-divider"></div>
+                    <div className="project-stat">
+                      <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
+                        <rect x="3" y="4" width="12" height="11" rx="2" stroke="#FF4458" strokeWidth="1.5"/>
+                        <path d="M3 7H15M6 3V5M12 3V5" stroke="#FF4458" strokeWidth="1.5" strokeLinecap="round"/>
+                      </svg>
+                      <div className="stat-details">
+                        <div className="stat-number">202</div>
+                        <div className="stat-text">Founded</div>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="project-section">
+                    <h3 className="section-title">About</h3>
+                    <p className="section-text">Developing an indie RPG with unique mechanics and beautiful pixel art. Inspired by classics like Final Fantasy.</p>
+                  </div>
+                  <button className="apply-btn">
+                    <span>Apply to Join</span>
                     <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
-                      <path d="M18 2L9 11M18 2l-6 16-3-7-7-3 16-6z" fill="#fff"/>
+                      <path d="M7.5 15L12.5 10L7.5 5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
                     </svg>
                   </button>
                 </div>
@@ -452,6 +646,10 @@ const LandingPage = () => {
       {/* Features Section */}
       <section className="features-section">
         <div className="features-bg"></div>
+        <div className="features-gradient features-gradient-1"></div>
+        <div className="features-gradient features-gradient-2"></div>
+        <div className="features-gradient features-gradient-3"></div>
+        <div className="features-gradient features-gradient-4"></div>
         <div className="features-glow-orbs">
           <div className="glow-orb-green" style={{top: '10%', left: '5%'}}></div>
           <div className="glow-orb-purple" style={{top: '70%', right: '10%'}}></div>
@@ -634,7 +832,7 @@ const LandingPage = () => {
                             <div className="score-circle-new">
                               <svg width="90" height="90" viewBox="0 0 90 90">
                                 <circle cx="45" cy="45" r="38" fill="none" stroke="rgba(255,255,255,0.1)" strokeWidth="6"/>
-                                <circle cx="45" cy="45" r="38" fill="none" stroke="#09F785" strokeWidth="6" strokeDasharray="240" strokeDashoffset="14" strokeLinecap="round" transform="rotate(-90 45 45)"/>
+                                <circle cx="45" cy="45" r="38" fill="none" stroke="rgba(128, 128, 128, 0.3)" strokeWidth="6" strokeDasharray="240" strokeDashoffset="14" strokeLinecap="round" transform="rotate(-90 45 45)"/>
                               </svg>
                               <div className="score-text-new">94%</div>
                             </div>
@@ -1202,6 +1400,54 @@ const LandingPage = () => {
       </section>
 
       <Footer />
+
+      {/* Waitlist Popup Overlay */}
+      {showPopup && (
+        <div className="popup-overlay" onClick={closePopup}>
+          <div className="popup-content" onClick={(e) => e.stopPropagation()}>
+            <button className="popup-close" onClick={closePopup} aria-label="Close popup">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                <path d="M18 6L6 18M6 6L18 18" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+              </svg>
+            </button>
+
+            <div className="popup-header">
+              <h2 className="popup-title">Find Your Co-Founder</h2>
+              <p className="popup-subtitle">Connect with verified builders ready to launch</p>
+            </div>
+
+            <div className="popup-benefits">
+              <div className="popup-benefit">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                  <path d="M16.6 7.45833L8.35 15.7083L3.5 10.8583" stroke="#09F785" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                </svg>
+                <span>Verified technical co-founders</span>
+              </div>
+              <div className="popup-benefit">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                  <path d="M16.6 7.45833L8.35 15.7083L3.5 10.8583" stroke="#09F785" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                </svg>
+                <span>Match with builders, not talkers</span>
+              </div>
+              <div className="popup-benefit">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                  <path d="M16.6 7.45833L8.35 15.7083L3.5 10.8583" stroke="#09F785" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                </svg>
+                <span>Early access to beta launch</span>
+              </div>
+            </div>
+
+            <a href="/waitlist" className="popup-cta">
+              <span>Join the Waitlist</span>
+              <svg width="21" height="20" viewBox="0 0 21 20" fill="none">
+                <path d="M8.69995 13.5999L12.3 9.9999L8.69995 6.3999" stroke="#09090A" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+              </svg>
+            </a>
+
+            <p className="popup-disclaimer">Get notified when we launch. No spam, ever.</p>
+          </div>
+        </div>
+      )}
     </div>
   );
 };
